@@ -1,0 +1,267 @@
+$width-full-sidebar: 300px;
+$width-collapse-sidebar: 80px;
+
+$height-navbar: 70px;
+
+$primary-color: var(--admin-color-1);
+
+#admin-dashboard-container {
+  #admin-sidebar {
+    background: var(--admin-color-1);
+    width: $width-collapse-sidebar;
+    transition: 0.3s;
+
+    min-height: 100vh;
+    height: 100%;
+
+    position: fixed;
+    // overflow: visible;
+    padding-bottom: 10px;
+    padding-left: 0px;
+
+    #admin-sidebar__header {
+      height: $height-navbar;
+      width: $width-collapse-sidebar;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      position: fixed;
+      left: auto;
+      transition: all 0.3s;
+      .brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        h1 {
+          display: none;
+        }
+      }
+    }
+    .menu-container {
+      position: fixed;
+      top: $height-navbar;
+      width: $width-collapse-sidebar;
+      transition: all 0.3s;
+
+      // height: calc(100% - $height-navbar);
+      height: calc(100% - 90px);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .menu-list {
+        position: relative;
+        height: 100%;
+        display: "flex";
+        flex-direction: columns;
+        padding: 5px 10px 5px 10px;
+        overflow-y: scroll;
+        .menu-item {
+          cursor: pointer;
+          border-radius: 17px;
+          margin-bottom: 10px;
+          .menu-item__title {
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 15px 15px;
+
+            // display: grid;
+            // grid-template-columns: 25px max-content 1fr;
+            // column-gap: 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            &__icon {
+              font-size: 30px;
+            }
+            &__name {
+              display: none;
+              font-size: 18px;
+              font-weight: 500;
+            }
+            &__submenu-icon {
+              display: none;
+              font-size: 25px;
+              justify-self: flex-end;
+              transform: rotate(-90deg);
+              transition: 0.3s;
+            }
+          }
+
+          .submenu-list {
+            display: none;
+            color: rgba(255, 255, 255, 0.7);
+            flex-direction: column;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            li {
+              padding: 8px 55px;
+              font-size: 16px;
+              font-weight: 400;
+              &:hover {
+                color: ghostwhite;
+              }
+            }
+          }
+
+          &:hover {
+            background-color: #554abe;
+            .menu-item__title {
+            }
+            .submenu-list {
+              background-color: #554abe;
+              border-radius: 5px;
+              display: block;
+              position: fixed;
+              z-index: 1000;
+              left: $width-collapse-sidebar;
+              transform: translate(-12px, -60px);
+            }
+          }
+          &.active {
+            background-color: #554abe;
+            .menu-item__title {
+              &__submenu-icon {
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+
+      .menu-list::-webkit-scrollbar-track {
+        // -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 1);
+        background-color: var(--admin-color-1);
+      }
+      .menu-list::-webkit-scrollbar {
+        width: 5px;
+        background-color: #f5f5f5;
+        // display: none;
+      }
+      .menu-list::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.76);
+      }
+      .btn-logout-wrapper {
+        width: 100%;
+        padding: 10px 10px;
+        .btn-logout {
+          background-color: white;
+          color: var(--admin-color-1);
+          border-radius: 20px;
+          justify-content: center;
+          display: flex;
+          cursor: pointer;
+          padding: 15px 15px;
+          &__icon {
+            font-size: 30px;
+          }
+          &__name {
+            display: none;
+            font-size: 18px;
+            margin-left: 10px;
+            font-weight: 500;
+          }
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+    }
+  }
+  // ==================================================================
+
+  // expand sidebar
+
+  // ==================================================================
+  &.show-sidebar {
+    #admin-sidebar {
+      width: $width-full-sidebar;
+      #admin-sidebar__header {
+        width: $width-full-sidebar;
+        .brand {
+          h1 {
+            display: block;
+          }
+        }
+      }
+      .menu-container {
+        width: $width-full-sidebar;
+        .menu-list {
+          .menu-item {
+            &__title {
+              display: grid;
+              grid-template-columns: 25px max-content 1fr;
+              column-gap: 15px;
+
+              &__name {
+                display: inline-block;
+              }
+              &__submenu-icon {
+                display: inline-block;
+              }
+            }
+            .submenu-list {
+              position: relative;
+            }
+            &:hover {
+              .submenu-list {
+                display: none;
+                position: relative;
+                transform: none;
+                background-color: transparent;
+                left: 0px;
+              }
+            }
+            &.active {
+              .submenu-list {
+                display: flex;
+              }
+            }
+          }
+        }
+        .btn-logout-wrapper {
+          .btn-logout {
+            &__name {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    #admin-main {
+      width: calc(100% - 300px);
+      margin-left: $width-full-sidebar;
+    }
+  }
+  #admin-main {
+    transition: 0.3s;
+
+    width: calc(100% - 80px);
+    margin-left: $width-collapse-sidebar;
+
+    min-height: 100vh;
+    height: 100%;
+    #admin__navbar {
+      position: fixed;
+      width: 100%;
+      height: $height-navbar;
+      border-bottom: 1px solid #eee;
+      background-color: var(--admin-color-2);
+      z-index: 1;
+      #header-toggle-icon {
+        font-size: 35px;
+        color: var(--admin-color-1);
+      }
+    }
+    .main-admin-page {
+      // min-height: calc(100vh - $height-navbar);
+      width: 100%;
+      padding: 20px;
+      z-index: 0;
+      min-height: calc(100vh - 70px);
+      padding-top: $height-navbar;
+      background-color: #f9f9f9;
+    }
+  }
+}
