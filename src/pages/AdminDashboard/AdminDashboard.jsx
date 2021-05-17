@@ -50,6 +50,7 @@ export default function LandingPage() {
     SHOWTIME_MANAGEMENT,
     THEATER_SYSTEM_MANAGEMENT,
     PHONGCHIEU_MANAGEMENT,
+    MOVIE_TYPE_MANAGEMENT,
   } = AdminRoutes;
 
   return (
@@ -106,12 +107,19 @@ export default function LandingPage() {
                 </ul>
               </li>
               <li className="menu-item">
-                <Link to={MOVIE_MANAGEMENT}>
-                  <div className="menu-item__title">
-                    <i className="bx bx-film menu-item__title__icon"></i>
-                    <span className="menu-item__title__name">Quản lý phim</span>
-                  </div>
-                </Link>
+                <div className="menu-item__title">
+                  <i className="bx bx-film menu-item__title__icon"></i>
+                  <span className="menu-item__title__name">Quản lý phim</span>
+                  <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
+                </div>
+                <ul className="submenu-list">
+                  <li>
+                    <Link to={MOVIE_TYPE_MANAGEMENT}>Thể loại phim</Link>
+                  </li>
+                  <li>
+                    <Link to={MOVIE_MANAGEMENT}>Phim</Link>
+                  </li>
+                </ul>
               </li>
               <li className="menu-item">
                 <div className="menu-item__title">

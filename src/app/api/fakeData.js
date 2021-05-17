@@ -419,3 +419,37 @@ export const listMovies = JSON.parse(`
   "rate": 4.5
 }]
 `);
+
+export const listMovieTypes = JSON.parse(
+  `[{
+    "id": 1,
+    "name": "Drama"
+  }, {
+    "id": 2,
+    "name": "Drama"
+  }, {
+    "id": 3,
+    "name": "Animation"
+  }, {
+    "id": 4,
+    "name": "Horror"
+  }, {
+    "id": 5,
+    "name": "Comedy"
+  }, {
+    "id": 6,
+    "name": "Drama|Romance|War"
+  }, {
+    "id": 7,
+    "name": "Fantasy|Horror|Thriller"
+  }, {
+    "id": 8,
+    "name": "Drama|Western"
+  }, {
+    "id": 9,
+    "name": "Mystery|Thriller"
+  }, {
+    "id": 10,
+    "name": "Drama|Western"
+  }]`
+);

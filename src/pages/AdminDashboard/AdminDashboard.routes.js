@@ -3,6 +3,9 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import { AdminRoutes } from "routes.const";
 
 const MovieManagement = lazy(() => import("./MovieManagement/MovieManagement"));
+const MovieTypeManagement = lazy(() =>
+  import("./MovieManagement/MovieTypeManagement")
+);
 const TheaterManagement = lazy(() =>
   import("./TheaterManagement/TheaterManagement")
 );
@@ -29,6 +32,7 @@ const {
   INTRODUCTION,
   THEATER_SYSTEM_MANAGEMENT,
   PHONGCHIEU_MANAGEMENT,
+  MOVIE_TYPE_MANAGEMENT,
 } = AdminRoutes;
 
 export default function AdminDashboardRoutes() {
@@ -39,6 +43,7 @@ export default function AdminDashboardRoutes() {
       <Route path={THEATER_MANAGEMENT} component={CumRapManagement} />
       <Route path={SHOWTIME_MANAGEMENT} component={ShowTimeManagement} />
       <Route path={PHONGCHIEU_MANAGEMENT} component={PhongChieuManagement} />
+      <Route path={MOVIE_TYPE_MANAGEMENT} component={MovieTypeManagement} />
       <Route
         path={THEATER_SYSTEM_MANAGEMENT}
         component={TheaterSystemManagement}
