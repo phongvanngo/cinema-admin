@@ -70,15 +70,16 @@ export const createPhongChieu = createAsyncThunk(
   "phongChieu/createPhongChieu",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+    let selectedCumRap = thunkApi.getState().phongChieu.selectedCumRap;
+    let newPhongChieu = { ...payload, ...selectedCumRap };
     dispatch(startLoading());
     try {
-      const response = await phongChieuApi.postPhongChieu(payload);
+      const response = await phongChieuApi.postPhongChieu(newPhongChieu);
       switch (response.status) {
         case 200:
           // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
           dispatch(stopLoading());
-          return { newPhongChieu: payload, responseData: response.data };
+          return { newPhongChieu: newPhongChieu, responseData: response.data };
         case 401:
           throw new Error("Unauthorize");
         case 400:

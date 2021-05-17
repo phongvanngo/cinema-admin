@@ -51,6 +51,7 @@ export default function PhongChieuTable({ listPhongChieu }) {
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-medium">Danh sách phòng chiếu</h1>
             <button
+              disabled={!isActiveCreatePhongChieu}
               onClick={() => {
                 dispatch(openPhongChieuFormDialog({ id: null }));
               }}

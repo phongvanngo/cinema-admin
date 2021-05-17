@@ -32,7 +32,9 @@ export default function FilterTheaterSystem() {
         onChange={(cumRap) => {
           console.log("change selected");
           setSelected(cumRap);
-          dispatch(setSelectedCumRap({ cumRapId: cumRap.id }));
+          dispatch(
+            setSelectedCumRap({ cumRapId: cumRap.id, cumRapName: cumRap.name })
+          );
           dispatch(activeCreatePhongChieu());
           dispatch(fetchListPhongChieuInCumRap({ cumRapId: cumRap.id }));
         }}

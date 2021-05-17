@@ -64,12 +64,12 @@ export const dialogSlice = createSlice({
       state.movieTypeFormDialog.defaultData = null;
     },
     openPhongChieuFormDialog: (state, action) => {
-      state.cumRapFormDialog.defaultData = action.payload;
-      state.cumRapFormDialog.isOpen = true;
+      state.phongChieuFormDialog.defaultData = action.payload;
+      state.phongChieuFormDialog.isOpen = true;
     },
     closePhongChieuFormDialog: (state) => {
-      state.cumRapFormDialog.isOpen = false;
-      state.cumRapFormDialog.defaultData = null;
+      state.phongChieuFormDialog.isOpen = false;
+      state.phongChieuFormDialog.defaultData = null;
     },
     openErrorNofificationDialog: (state, action) => {
       state.errorNotificationDialog.defaultData = action.payload;

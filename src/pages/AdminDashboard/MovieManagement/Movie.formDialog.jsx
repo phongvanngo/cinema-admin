@@ -9,6 +9,7 @@ import React, { forwardRef, useState } from "react";
 import { createMovie, updateMovie } from "app/redux/movieSlice";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import FilterMovieType from "./Movie.formDialog.filterMovieType";
 
 const CustomDatePickerInput = forwardRef(
   ({ value, onClick, onChange }, ref) => (
@@ -28,6 +29,12 @@ const schema = yup.object().shape({
 
 export default function MovieFormModal() {
   const dispatch = useDispatch();
+  let listMovieType = useSelector((state) => state.movieType.listMovieType);
+  listMovieType = [{ id: null, name: "Không" }, ...listMovieType];
+  const [selectedMovieType, setSelectedTheaterSytem] = useState(
+    listMovieType[0]
+  );
+
   let {
     register,
     handleSubmit,
@@ -45,9 +52,19 @@ export default function MovieFormModal() {
   const [startDate, setStartDate] = useState(new Date());
 
   function onSaveData(data) {
+    let movieTypeInfo = {
+      movieTypeId: selectedMovieType?.id,
+      movieTypeName: selectedMovieType?.name,
+    };
     if (defaultData?.id === null) {
       console.log(data);
-      dispatch(createMovie({ ...data, premiereDay: startDate.toDateString() }));
+      dispatch(
+        createMovie({
+          ...data,
+          premiereDay: startDate.toDateString(),
+          ...movieTypeInfo,
+        })
+      );
       dispatch(closeMovieFormDialog());
     } else {
       dispatch(
@@ -55,6 +72,7 @@ export default function MovieFormModal() {
           ...data,
           premiereDay: startDate.toDateString(),
           id: defaultData.id,
+          ...movieTypeInfo,
         })
       );
       dispatch(closeMovieFormDialog());
@@ -177,6 +195,17 @@ export default function MovieFormModal() {
                         className="h-full w-full appearance-none rounded-full border w-30 py-4 px-6 leading-tight focus:outline-none focus:border-indigo-500 text-gray-500"
                       />
                     </div>
+                    {/* 
+                    <div className="mb-8">
+                      <span className="font-extrabold mb-2 flex flex-col">
+                        Thể loại phim
+                      </span>
+                      <FilterMovieType
+                        listMovieType={listMovieType}
+                        selected={selectedMovieType}
+                        setSelected={setSelectedTheaterSytem}
+                      />
+                    </div> */}
 
                     <div className="mb-8">
                       <span className="font-extrabold mb-2 flex flex-col">

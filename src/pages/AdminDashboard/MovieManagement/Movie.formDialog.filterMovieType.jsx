@@ -3,12 +3,12 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function FilterTheaterSystem({
+export default function FilterMovieType({
   selected,
   setSelected,
-  listTheaterSystem,
+  listMovieType,
 }) {
-  // const [selected, setSelected] = useState(listTheaterSystem[0]);
+  // const [selected, setSelected] = useState(listMovieType[0]);
   return (
     <div className="">
       <Listbox value={selected} onChange={setSelected}>
@@ -29,9 +29,9 @@ export default function FilterTheaterSystem({
             leaveTo="opacity-0"
           >
             <Listbox.Options className="absolute w-full z-20 py-1 mt-1 overflow-y-scroll max-h-50 text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {listTheaterSystem.map((theaterSystem, theaterSystemIdx) => (
+              {listMovieType.map((movieType, movieTypeIdx) => (
                 <Listbox.Option
-                  key={theaterSystemIdx}
+                  key={movieTypeIdx}
                   className={({ active }) =>
                     `${
                       active
@@ -40,7 +40,7 @@ export default function FilterTheaterSystem({
                     }
                           cursor-default select-none relative py-2 pl-10 pr-4`
                   }
-                  value={theaterSystem}
+                  value={movieType}
                 >
                   {({ selected, active }) => (
                     <>
@@ -49,7 +49,7 @@ export default function FilterTheaterSystem({
                           selected ? "font-medium" : "font-normal"
                         } block truncate`}
                       >
-                        {theaterSystem.name}
+                        {movieType.name}
                       </span>
                       {selected ? (
                         <span

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import MovieTable from "./Movie.table";
 import MovieFormModal from "./Movie.formDialog";
+import { fetchListMovieType } from "app/redux/movieTypeSlice";
 
 export default function MovieManagement() {
   const dispatch = useDispatch();
@@ -11,6 +12,7 @@ export default function MovieManagement() {
 
   useEffect(() => {
     dispatch(changeAdminNavbarTitle("Quản lý phim"));
+    dispatch(fetchListMovieType({}));
     dispatch(fetchListMovie({}));
   }, [dispatch]);
 
