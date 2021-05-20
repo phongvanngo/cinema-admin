@@ -95,15 +95,15 @@ export default function LandingPage() {
                   <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
                 </div>
                 <ul className="submenu-list">
-                  <li>
-                    <Link to={THEATER_SYSTEM_MANAGEMENT}>Hệ thống rạp</Link>
-                  </li>
-                  <li>
-                    <Link to={THEATER_MANAGEMENT}>Cụm rạp</Link>
-                  </li>
-                  <li>
-                    <Link to={PHONGCHIEU_MANAGEMENT}>Phòng chiếu</Link>
-                  </li>
+                  <Link to={THEATER_SYSTEM_MANAGEMENT}>
+                    <li>Hệ thống rạp</li>
+                  </Link>
+                  <Link to={THEATER_MANAGEMENT}>
+                    <li>Cụm rạp</li>
+                  </Link>
+                  <Link to={PHONGCHIEU_MANAGEMENT}>
+                    <li>Phòng chiếu</li>
+                  </Link>
                 </ul>
               </li>
               <li className="menu-item">
@@ -113,22 +113,24 @@ export default function LandingPage() {
                   <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
                 </div>
                 <ul className="submenu-list">
-                  <li>
-                    <Link to={MOVIE_TYPE_MANAGEMENT}>Thể loại phim</Link>
-                  </li>
-                  <li>
-                    <Link to={MOVIE_MANAGEMENT}>Phim</Link>
-                  </li>
+                  <Link to={MOVIE_TYPE_MANAGEMENT}>
+                    <li>Thể loại phim</li>
+                  </Link>
+                  <Link to={MOVIE_MANAGEMENT}>
+                    <li>Phim</li>
+                  </Link>
                 </ul>
               </li>
-              <li className="menu-item">
-                <div className="menu-item__title">
-                  <i className="bx bx-camera-movie menu-item__title__icon"></i>
-                  <span className="menu-item__title__name">
-                    Quản lý suất chiếu
-                  </span>
-                </div>
-              </li>
+              <Link to={SHOWTIME_MANAGEMENT}>
+                <li className="menu-item">
+                  <div className="menu-item__title">
+                    <i className="bx bx-camera-movie menu-item__title__icon"></i>
+                    <span className="menu-item__title__name">
+                      Quản lý suất chiếu
+                    </span>
+                  </div>
+                </li>
+              </Link>
               <li className="menu-item">
                 <div className="menu-item__title">
                   <i className="bx bx-store-alt menu-item__title__icon"></i>
