@@ -131,7 +131,7 @@ export default function LandingPage() {
                   </div>
                 </li>
               </Link>
-              <li className="menu-item">
+              {/* <li className="menu-item">
                 <div className="menu-item__title">
                   <i className="bx bx-store-alt menu-item__title__icon"></i>
                   <span className="menu-item__title__name">Quản lý rạp</span>
@@ -145,7 +145,7 @@ export default function LandingPage() {
                   <li>Cụm rạp</li>
                   <li>Cụm rạp</li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
             <div className="btn-logout-wrapper">
               <div

@@ -28,6 +28,7 @@ export default function AdminSignInUI({ handleLogin }) {
     //   dispatch(updateTheaterSystem({ ...data, id: defaultData.id }));
     //   dispatch(closeTheaterSystemFormDialog());
     // }
+    handleLogin(data);
   }
 
   return (

@@ -102,7 +102,7 @@ export default function PhongChieuTable({ listPhongChieu }) {
                       <strong>{index + 1}</strong>
                     </td>
                     <td className="px-2 py-4">{name}</td>
-                    <td className="px-2 py-4">{amountSeats}</td>
+                    <td className="px-2 py-4">{120}</td>
                     <td className="px-2 py-4">{cumRapName}</td>
                     <td className="px-2 py-4">
                       <MenuDropdown

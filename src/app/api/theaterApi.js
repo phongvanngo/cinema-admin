@@ -2,8 +2,15 @@
 import { fakeApi } from "./fakeApi";
 import { listTheaterSystem } from "./fakeData";
 
+function schemaMapping(a, b, direction) {
+  //direction:1 <-> a to b
+  //direction:2 <-> b to a
+}
+
 const theaterApi = {
   getListTheaterSystem: async (loginInfo) => {
+    const url = `/he-thong-raps`;
+
     let response = await fakeApi({
       // request: loginInfo,
       response: {
