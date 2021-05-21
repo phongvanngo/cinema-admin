@@ -73,7 +73,7 @@ export const updateMovie = createAsyncThunk(
     console.log(payload);
     dispatch(startLoading());
     try {
-      const response = await movieApi.postMovie(payload);
+      const response = await movieApi.patchMovie(payload);
       switch (response.status) {
         case 200:
           dispatch(stopLoading());

@@ -25,6 +25,8 @@ const CustomDatePickerInput = forwardRef(
 
 const schema = yup.object().shape({
   name: yup.string().required(),
+  trailer: yup.string().required(),
+  image: yup.string().required(),
 });
 
 export default function MovieFormModal() {
@@ -148,9 +150,7 @@ export default function MovieFormModal() {
                 >
                   <div className="pr-5 pl-5 pt-4 pb-3 w-full flex justify-between">
                     <h1 className="font-normal">
-                      {defaultData?.id
-                        ? "Chỉnh sửa hệ thống rạp chiếu phim"
-                        : "Thêm hệ thống rạp chiếu"}
+                      {defaultData?.id ? "Chỉnh sửa  phim" : "Thêm phim mới"}
                     </h1>
                     <button
                       onClick={handleCloseModal}
@@ -164,7 +164,7 @@ export default function MovieFormModal() {
                   <div className="mt-2 p-6">
                     <div className="mb-8">
                       <span className="mb-2 flex flex-col font-extrabold">
-                        Tên hệ thống rạp chiếu
+                        Tên phim
                       </span>
                       <input
                         type="text"
