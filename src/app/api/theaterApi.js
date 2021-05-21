@@ -130,15 +130,27 @@ const theaterApi = {
     //   return response;
   },
   deleteTheaterSystem: async (theaterSystem) => {
-    let response = await fakeApi({
-      // request: loginInfo,
-      response: {
-        status: 200,
-        data: {},
-      },
-      timeOut: 1000,
+    let data_response = null;
+    let status = null;
+    const id = theaterSystem;
+    const url = `/he-thong-raps/${id}`;
+    let send = await axiosClient.delete(url).then((response) => {
+      console.log(response);
+      status = response.status;
+      if (status === 204) status = 200;
+      if (status === 200) {
+        data_response = {};
+      } else {
+        data_response = null;
+      }
     });
-    return response;
+    console.log(data_response, status);
+    return new Promise((resolve, reject) => {
+      resolve({
+        status: status,
+        data: data_response,
+      });
+    });
   },
 };
 
