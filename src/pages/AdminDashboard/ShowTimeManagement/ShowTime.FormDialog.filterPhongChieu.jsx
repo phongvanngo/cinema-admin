@@ -1,32 +1,19 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchListCumRapInTheaterSystem } from "app/redux/cumRapSlice";
-import { setEmtyListShowTime } from "app/redux/showTimeSlice";
 
-export default function ComboBoxTheaterSystem() {
-  const dispatch = useDispatch();
-  let listTheaterSystem = useSelector(
-    (state) => state.theater.listTheaterSystem
-  );
-  const [selected, setSelected] = useState(listTheaterSystem[0] || []);
-
+export default function FilterPhongChieu({
+  selected,
+  setSelected,
+  listPhongChieu,
+}) {
+  // const [selected, setSelected] = useState(listPhongChieu[0]);
   return (
-    <div className="mt-5 mr-10 flex items-center">
-      <div className="mr-5">
-        <span>Chọn hệ thống rạp</span>
-      </div>
-      <Listbox
-        value={selected}
-        onChange={(e) => {
-          setSelected(e);
-          dispatch(fetchListCumRapInTheaterSystem({ theaterSystemId: e?.id }));
-          dispatch(setEmtyListShowTime());
-        }}
-      >
+    <div className="">
+      <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
-          <Listbox.Button className="h-10 relative w-60 py-2 pl-3 pr-10 text-left bg-white rounded-2xl shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+          <Listbox.Button className="h-14 relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-3xl border cursor-default focus:border-indigo-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
             <span className="block truncate">{selected.name}</span>
             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <SelectorIcon
@@ -41,10 +28,10 @@ export default function ComboBoxTheaterSystem() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="z-20 absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {listTheaterSystem.map((theaterSystem, theaterSystemIdx) => (
+            <Listbox.Options className="absolute w-full z-20 py-1 mt-1 overflow-y-scroll max-h-50 text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              {listPhongChieu.map((phongChieu, phongChieuIdx) => (
                 <Listbox.Option
-                  key={theaterSystemIdx}
+                  key={phongChieuIdx}
                   className={({ active }) =>
                     `${
                       active
@@ -53,7 +40,7 @@ export default function ComboBoxTheaterSystem() {
                     }
                           cursor-default select-none relative py-2 pl-10 pr-4`
                   }
-                  value={theaterSystem}
+                  value={phongChieu}
                 >
                   {({ selected, active }) => (
                     <>
@@ -62,7 +49,7 @@ export default function ComboBoxTheaterSystem() {
                           selected ? "font-medium" : "font-normal"
                         } block truncate`}
                       >
-                        {theaterSystem.name}
+                        {phongChieu.name}
                       </span>
                       {selected ? (
                         <span

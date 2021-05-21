@@ -17,6 +17,10 @@ const initialState = {
     isOpen: false,
     defaultData: null,
   },
+  showTimeFormDialog: {
+    isOpen: false,
+    defaultData: null,
+  },
   movieTypeFormDialog: {
     isOpen: false,
     defaultData: null,
@@ -63,6 +67,14 @@ export const dialogSlice = createSlice({
       state.movieTypeFormDialog.isOpen = false;
       state.movieTypeFormDialog.defaultData = null;
     },
+    openShowTimeFormDialog: (state, action) => {
+      state.showTimeFormDialog.defaultData = action.payload;
+      state.showTimeFormDialog.isOpen = true;
+    },
+    closeShowTimeFormDialog: (state) => {
+      state.showTimeFormDialog.isOpen = false;
+      state.showTimeFormDialog.defaultData = null;
+    },
     openPhongChieuFormDialog: (state, action) => {
       state.phongChieuFormDialog.defaultData = action.payload;
       state.phongChieuFormDialog.isOpen = true;
@@ -95,6 +107,8 @@ export const {
   closePhongChieuFormDialog,
   openMovieTypeFormDialog,
   closeMovieTypeFormDialog,
+  openShowTimeFormDialog,
+  closeShowTimeFormDialog,
 } = dialogSlice.actions;
 
 export default dialogSlice.reducer;

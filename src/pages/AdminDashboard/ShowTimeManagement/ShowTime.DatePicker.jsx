@@ -1,6 +1,8 @@
 import React, { forwardRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useDispatch } from "react-redux";
+import { fetchListShowTime, setSelectedDate } from "app/redux/showTimeSlice";
 
 const CustomDatePickerInput = forwardRef(
   ({ value, onClick, onChange }, ref) => (
@@ -15,6 +17,7 @@ const CustomDatePickerInput = forwardRef(
 );
 
 export default function ShowTimeDatePicker() {
+  const dispatch = useDispatch();
   const [startDate, setStartDate] = useState(new Date());
 
   return (
@@ -22,7 +25,11 @@ export default function ShowTimeDatePicker() {
       <DatePicker
         dateFormat="dd/MM/yyyy"
         selected={startDate}
-        onChange={(date) => setStartDate(date)}
+        onChange={(date) => {
+          setStartDate(date);
+          dispatch(setSelectedDate(date.toString()));
+          dispatch(fetchListShowTime({}));
+        }}
         customInput={<CustomDatePickerInput />}
       />
     </>

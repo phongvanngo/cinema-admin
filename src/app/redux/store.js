@@ -10,6 +10,7 @@ import movieReducer from "./movieSlice";
 import cumRapReducer from "./cumRapSlice";
 import phongChieuReducer from "./phongChieuSlice";
 import movieTypeReducer from "./movieTypeSlice";
+import showTimeReducer from "./showTimeSlice";
 
 export const store = configureStore({
   reducer: {
@@ -24,5 +25,6 @@ export const store = configureStore({
     cumRap: cumRapReducer,
     phongChieu: phongChieuReducer,
     movieType: movieTypeReducer,
+    showTime: showTimeReducer,
   },
 });

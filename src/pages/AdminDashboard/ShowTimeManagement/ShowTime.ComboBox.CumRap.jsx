@@ -1,12 +1,15 @@
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import {
-  activeCreatePhongChieu,
-  deactiveCreatePhongChieu,
   fetchListPhongChieuInCumRap,
   setEmtyListPhongChieu,
-  setSelectedCumRap,
 } from "app/redux/phongChieuSlice";
+import {
+  activeCreateShowTime,
+  deactiveCreateShowTime,
+  fetchListShowTime,
+  setSelectedCumRap,
+} from "app/redux/showTimeSlice";
 import { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -19,7 +22,7 @@ export default function ComboBoxCumRap() {
   useEffect(() => {
     setSelected({});
     dispatch(setEmtyListPhongChieu());
-    dispatch(deactiveCreatePhongChieu());
+    dispatch(deactiveCreateShowTime());
   }, [listCumRap, setSelected]);
 
   return (
@@ -36,6 +39,8 @@ export default function ComboBoxCumRap() {
           dispatch(
             setSelectedCumRap({ cumRapId: cumRap.id, cumRapName: cumRap.name })
           );
+          dispatch(activeCreateShowTime());
+          dispatch(fetchListShowTime({}));
           dispatch(fetchListPhongChieuInCumRap({ cumRapId: cumRap.id }));
         }}
       >
