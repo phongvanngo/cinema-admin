@@ -60,10 +60,10 @@ export default function MyModal() {
                   as="h3"
                   className="p-5  text-4xl font-medium leading-6 text-white text-center"
                 >
-                  Lỗi !
+                  {defaultData?.title}
                 </Dialog.Title>
                 <div className="mt-2 text-center">
-                  <p className="text-sm text-white">{defaultData?.title}</p>
+                  <p className="text-sm text-white">{defaultData?.content}</p>
                   <div className="flex justify-center text-white mt-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

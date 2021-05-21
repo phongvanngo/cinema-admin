@@ -9,6 +9,7 @@ function checkContains(theArray, value) {
 }
 
 export default function SeatingChart() {
+  console.log(process.env.REACT_APP_API_ENDPOINT);
   let seatsInTheater = [];
   for (let index = 0; index < 120; index++) {
     seatsInTheater.push(index);

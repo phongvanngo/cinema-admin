@@ -85,7 +85,7 @@ export default function AdminSignInUI({ handleLogin }) {
               <div className="mb-4  flex justify-center">
                 <input
                   type="submit"
-                  value="Lưu"
+                  value="Đăng nhập"
                   className="px-20  w-full  py-2 text-lg  font-medium text-blue-900 bg-blue-100 border border-transparent rounded-3xl hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                   onClick={() => {
                     handleSubmit(onSaveData);

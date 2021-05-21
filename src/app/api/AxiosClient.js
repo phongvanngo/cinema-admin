@@ -1,27 +1,27 @@
-import axios from 'axios';
+import axios from "axios";
 // import { get, save } from './localStorage';
-import queryString from 'query-string';
+import queryString from "query-string";
 // import { get, save } from './localStorage';
 
 const instance = axios.create({
-  baseURL: 'https://www.api.hoasinhchampionship.com/api/v1',
+  baseURL: process.env.REACT_APP_API_ENDPOINT,
   headers: {
-    'content-type': 'application/json',
+    "content-type": "application/json",
   },
-  paramsSerializer: params => queryString.stringify(params),
+  paramsSerializer: (params) => queryString.stringify(params),
 });
 
 // ADD Token into Headers
 instance.interceptors.request.use(
-  config => {
-    const token = localStorage.getItem('id_token');
+  (config) => {
+    const token = localStorage.getItem("id_token");
     if (token) {
       // config.headers["Authorization"] = `${token}`;
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
-  err => err
+  (err) => err
 );
 
 // const getNewTokenAndReattemptRequest = async (config, refToken) => {
@@ -44,8 +44,8 @@ instance.interceptors.request.use(
 // };
 
 instance.interceptors.response.use(
-  res => res,
-  error => {
+  (res) => res,
+  (error) => {
     // const {
     //   config,
     //   config: { validateStatus },
