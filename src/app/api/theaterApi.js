@@ -1,51 +1,133 @@
-// import axiosClient from './AxiosClient';
+import axiosClient from "./AxiosClient";
 import { fakeApi } from "./fakeApi";
 import { listTheaterSystem } from "./fakeData";
 
-function schemaMapping(a, b, direction) {
-  //direction:1 <-> a to b
-  //direction:2 <-> b to a
-}
-
 const theaterApi = {
-  getListTheaterSystem: async (loginInfo) => {
-    const url = `/he-thong-raps`;
+  getListTheaterSystem: async (data_request) => {
+    let data_response = null;
+    let status = null;
+    const url = "/he-thong-raps";
+    let send = await axiosClient.get(url).then((response) => {
+      console.log(response);
+      status = response.status;
+      if (response.status === 200) {
+        let listTheaterSystem = [];
+        response.data.forEach((element) => {
+          const { maHeThongRap, tenHeThongRap, biDanh, logo } = element;
+          let theaterSystem = {
+            id: maHeThongRap,
+            name: tenHeThongRap,
+            alias: biDanh,
+            logo: logo,
+          };
+          listTheaterSystem.push(theaterSystem);
+        });
 
-    let response = await fakeApi({
-      // request: loginInfo,
-      response: {
-        status: 200,
-        data: {
-          listTheaterSystem: listTheaterSystem,
-        },
-      },
-      timeOut: 1000,
+        data_response = {
+          listTheaterSystem,
+        };
+      } else {
+        data_response = null;
+      }
     });
-    return response;
+    console.log(data_response, status);
+    return new Promise((resolve, reject) => {
+      resolve({
+        status: status,
+        data: data_response,
+      });
+    });
+
+    // let response = await fakeApi({
+    //   // request: loginInfo,
+    //   response: {
+    //     status: 200,
+    //     data: {
+    //       listTheaterSystem: listTheaterSystem,
+    //     },
+    //   },
+    //   timeOut: 1000,
+    // });
+    // return response;
   },
   postTheaterSystem: async (theaterSystem) => {
-    let response = await fakeApi({
-      // request: loginInfo,
-      response: {
-        status: 200,
-        data: {
-          id: Math.floor(Math.random() * 1000),
-        },
-      },
-      timeOut: 1000,
+    console.log(theaterSystem);
+    let data_response = null;
+    let status = null;
+    const url = "/he-thong-raps";
+    const { name, logo, alias } = theaterSystem;
+    const data_request = {
+      maHeThongRap: name,
+      tenHeThongRap: name,
+      biDanh: alias,
+      logo: logo,
+    };
+    let send = await axiosClient.post(url, data_request).then((response) => {
+      console.log(response);
+      status = response.status;
+      if (response.status === 200) {
+        data_response = { id: name };
+      } else {
+        data_response = null;
+      }
     });
-    return response;
+    console.log(data_response, status);
+    return new Promise((resolve, reject) => {
+      resolve({
+        status: status,
+        data: data_response,
+      });
+    });
+
+    // let response = await fakeApi({
+    //   // request: loginInfo,
+    //   response: {
+    //     status: 200,
+    //     data: {
+    //       id: Math.floor(Math.random() * 1000),
+    //     },
+    //   },
+    //   timeOut: 1000,
+    // });
+    // return response;
   },
   patchTheaterSystem: async (theaterSystem) => {
-    let response = await fakeApi({
-      // request: loginInfo,
-      response: {
-        status: 200,
-        data: {},
-      },
-      timeOut: 1000,
+    let data_response = null;
+    let status = null;
+    const { name, logo, alias, id } = theaterSystem;
+    const url = `/he-thong-raps/${id}`;
+    const data_request = {
+      tenHeThongRap: name,
+      biDanh: alias,
+      logo: logo,
+    };
+    let send = await axiosClient.patch(url, data_request).then((response) => {
+      console.log(response);
+      status = response.status;
+      if (status === 204) status = 200;
+      if (status === 200) {
+        data_response = { id: name };
+      } else {
+        data_response = null;
+      }
     });
-    return response;
+    console.log(data_response, status);
+    return new Promise((resolve, reject) => {
+      resolve({
+        status: status,
+        data: data_response,
+      });
+    });
+
+    //   let response = await fakeApi({
+    //     // request: loginInfo,
+    //     response: {
+    //       status: 200,
+    //       data: {},
+    //     },
+    //     timeOut: 1000,
+    //   });
+    //   return response;
   },
   deleteTheaterSystem: async (theaterSystem) => {
     let response = await fakeApi({

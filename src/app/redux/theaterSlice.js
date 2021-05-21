@@ -72,7 +72,7 @@ export const updateTheaterSystem = createAsyncThunk(
     console.log(payload);
     dispatch(startLoading());
     try {
-      const response = await theaterApi.postTheaterSystem(payload);
+      const response = await theaterApi.patchTheaterSystem(payload);
       switch (response.status) {
         case 200:
           dispatch(stopLoading());
