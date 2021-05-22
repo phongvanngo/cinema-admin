@@ -18,7 +18,10 @@ export const fetchListShowTime = createAsyncThunk(
     const { dispatch, getState } = thunkApi;
     const { selectedCumRap, selectedDate } = getState().showTime;
     console.log(selectedCumRap, selectedDate);
-    let params = { cumRapId: selectedCumRap.cumRapId, time: selectedDate };
+    let params = {
+      cumRapId: selectedCumRap.cumRapId,
+      time: selectedDate,
+    };
     console.log(params);
     dispatch(startLoading());
     try {
@@ -47,7 +50,8 @@ export const createShowTime = createAsyncThunk(
   async (payload, thunkApi) => {
     const { dispatch, getState } = thunkApi;
     let selectedDate = new Date(getState().showTime.selectedDate);
-    const { hour, minute, phongChieuId, movieId } = payload;
+    let selectedCumRap = getState().showTime.selectedCumRap;
+    const { hour, minute, phongChieuId, movieId, giaVe, thoiLuong } = payload;
     console.log(selectedDate, payload);
     console.log(
       selectedDate.getFullYear(),
@@ -62,9 +66,16 @@ export const createShowTime = createAsyncThunk(
       selectedDate.getDate(),
       hour,
       minute
-    ).toString();
+    ).toISOString();
 
-    let dataToSend = { time: time, movieId, phongChieuId };
+    let dataToSend = {
+      time: time,
+      movieId,
+      phongChieuId,
+      giaVe,
+      thoiLuong,
+      maCumRap: selectedCumRap.cumRapId,
+    };
 
     dispatch(startLoading());
     try {

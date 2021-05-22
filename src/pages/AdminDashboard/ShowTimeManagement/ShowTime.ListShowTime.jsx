@@ -78,6 +78,7 @@ export default function ListShowTime() {
         {listShowTimeByMovie.map((showTimeByMovie, index) => {
           const { movie, showTimes } = showTimeByMovie;
           console.log(showTimeByMovie);
+          if (!movie) return;
           const { name, image } = movie;
           return (
             <div key={index} className="flex mb-3">

@@ -1,5 +1,7 @@
 import axiosClient from "./AxiosClient";
 import { fakeApi } from "./fakeApi";
+import { isDateEqual } from "app/myLibrary/utilities";
+
 import { listShowTime } from "./fakeData";
 
 const theaterApi = {
@@ -9,7 +11,42 @@ const theaterApi = {
 
     let data_response = null;
     let status = null;
-    const url = "/cum-raps";
+    const url = "/lich-chieu";
+
+    // {
+    //   "where": {
+    //     "maCumRap":"bhd-hvt"
+    //   },
+    //   "fields": {
+    //     "maLichChieu": true,
+    //     "ngayChieuGioChieu": true,
+    //     "giaVe": true,
+    //     "thoiLuong": true,
+    //     "maRap": true,
+    //     "maHeThongRap": true,
+    //     "maCumRap": true,
+    //     "maPhim": true
+    //   }
+    // }
+
+    let dataRequest = {
+      where: {
+        maCumRap: cumRapId,
+      },
+      field: {
+        maLichChieu: true,
+        ngayChieuGioChieu: true,
+        giaVe: true,
+        thoiLuong: true,
+        maRap: true,
+        maHeThongRap: true,
+        maCumRap: true,
+        maPhim: true,
+      },
+    };
+
+    console.log("fsekjfsejflselk fjlksjflj sej");
+
     let send = await axiosClient.get(url).then((response) => {
       console.log(response);
       console.log(response.data);
@@ -17,23 +54,42 @@ const theaterApi = {
       if (response.status === 200) {
         let listShowTime = [];
         response.data.forEach((element) => {
-          // "maShowTime": "cgv-3/2",
-          // "tenShowTime": "CGV 3 thang 2",
-          // "thongTin": "blabla",
-          // "maHeThongRap": "CGV"
-          const { maShowTime, tenShowTime, thongTin, maHeThongRap } = element;
+          // "maLichChieu": true,
+          // "ngayChieuGioChieu": true,
+          // "giaVe": true,
+          // "thoiLuong": true,
+          // "maRap": true,
+          // "maHeThongRap": true,
+          // "maCumRap": true,
+          // "maPhim": true
+          const {
+            maPhim,
+            thoiLuong,
+            maLichChieu,
+            ngayChieuGioChieu,
+            giaVe,
+            maRap,
+            maCumRap,
+          } = element;
           let showTime = {
-            id: maShowTime,
-            name: tenShowTime,
-            information: thongTin,
-            theaterSystemId: maHeThongRap,
-            theaterSystemName: null,
+            id: maLichChieu,
+            time: ngayChieuGioChieu,
+            giaVe: giaVe,
+            phongChieuId: maRap,
+            movieId: maPhim,
+            thoiLuong: thoiLuong,
+            cumRapId: maCumRap,
           };
           listShowTime.push(showTime);
         });
 
+        let showTimes = listShowTime.filter((e) => e.cumRapId === cumRapId);
+        showTimes = showTimes.filter((e) =>
+          isDateEqual(e.time, time.toString())
+        );
+
         data_response = {
-          listShowTime,
+          listShowTime: showTimes,
         };
       } else {
         data_response = null;
@@ -101,22 +157,26 @@ const theaterApi = {
     });
   },
   postShowTime: async (showTime) => {
-    console.log(showTime);
+    console.log("showTime: ", showTime);
     let data_response = null;
     let status = null;
-    const url = "/cum-raps";
-    const { name, information, theaterSystemId } = showTime;
+    const url = "/lich-chieu";
+    const { time, phongChieuId, movieId, giaVe, thoiLuong, maCumRap } =
+      showTime;
     const data_request = {
-      maShowTime: name,
-      tenShowTime: name,
-      maHeThongRap: theaterSystemId,
-      thongTin: information,
+      ngayChieuGioChieu: time,
+      giaVe: giaVe,
+      maPhim: movieId,
+      maRap: phongChieuId,
+      thoiLuong: thoiLuong,
+      maCumRap: maCumRap,
     };
+    console.log(data_request);
     let send = await axiosClient.post(url, data_request).then((response) => {
-      console.log(response);
+      console.log("suat chieu response: ", response);
       status = response.status;
       if (response.status === 200) {
-        data_response = { id: name };
+        data_response = { id: null };
       } else {
         data_response = null;
       }

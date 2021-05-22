@@ -13,6 +13,8 @@ import MinuteOption from "./ShowTime.FormDialog.Minute";
 
 const schema = yup.object().shape({
   // name: yup.string().required(),
+  giaVe: yup.number().integer().required(),
+  thoiLuong: yup.number().integer().required(),
 });
 
 export default function ShowTimeFormModal() {
@@ -42,6 +44,7 @@ export default function ShowTimeFormModal() {
   console.log(defaultData);
 
   function onSaveData(data) {
+    console.log("suat chieu ", data);
     let phongChieuInfo = {
       phongChieuId: selectedPhongChieu?.id,
       phongChieuName: selectedPhongChieu?.name,
@@ -216,7 +219,50 @@ export default function ShowTimeFormModal() {
                         <span>Phút</span>
                       </div>
                     </div>
-
+                    <div className="mb-8">
+                      <span className="mb-2 flex flex-col font-extrabold">
+                        Thời lượng
+                      </span>
+                      <input
+                        type="text"
+                        {...register("thoiLuong", {})}
+                        className={
+                          "h-full w-full appearance-none rounded-full  w-30 py-4 px-6 leading-tight focus:outline-none border  text-gray-500" +
+                          (errors.name
+                            ? " border-red-500"
+                            : " focus:border-indigo-500")
+                        }
+                      />
+                      {errors.thoiLuong ? (
+                        <span className="ml-2 mt-2 text-red-500">
+                          *Dữ liệu phải là số và không được đê trống
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                    <div className="mb-8">
+                      <span className="mb-2 flex flex-col font-extrabold">
+                        Giá vé
+                      </span>
+                      <input
+                        type="text"
+                        {...register("giaVe", {})}
+                        className={
+                          "h-full w-full appearance-none rounded-full  w-30 py-4 px-6 leading-tight focus:outline-none border  text-gray-500" +
+                          (errors.name
+                            ? " border-red-500"
+                            : " focus:border-indigo-500")
+                        }
+                      />
+                      {errors.giaVe ? (
+                        <span className="ml-2 mt-2 text-red-500">
+                          *Dữ liệu phải là số và không được đê trống
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </div>
                     {/* <div className="mb-8">
                       <span className="font-extrabold mb-2 flex flex-col">
                         Thông tin

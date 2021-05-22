@@ -124,7 +124,7 @@ const theaterApi = {
       trailer: trailer,
       hinhAnh: image,
       moTa: description,
-      ngayKhoiChieu: new Date(premiereDay).toISO.String(),
+      ngayKhoiChieu: new Date(premiereDay).toISOString(),
       biDanh: `${Math.floor(Math.random() * 100)}`,
       danhGia: 0,
     };

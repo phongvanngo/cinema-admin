@@ -10,7 +10,9 @@ export default function FilterMovie({ selected, setSelected, listMovie }) {
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
           <Listbox.Button className="h-14 relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-3xl border cursor-default focus:border-indigo-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
-            <span className="block truncate">{selected.name}</span>
+            <span className="block truncate">{`${
+              selected.name ? selected.name : ""
+            } - ${selected.id ? selected.id : ""}`}</span>
             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <SelectorIcon
                 className="w-5 h-5 text-gray-400"
@@ -45,7 +47,9 @@ export default function FilterMovie({ selected, setSelected, listMovie }) {
                           selected ? "font-medium" : "font-normal"
                         } block truncate`}
                       >
-                        {movie.name}
+                        {`${movie.name ? movie.name : ""} - ${
+                          movie.id ? movie.id : ""
+                        }`}
                       </span>
                       {selected ? (
                         <span
