@@ -8,8 +8,6 @@ const theaterApi = {
     let status = null;
     const url = "/phim";
     let send = await axiosClient.get(url).then((response) => {
-      console.log(response);
-      console.log(response.data);
       status = response.status;
       if (response.status === 200) {
         let listMovie = [];
@@ -51,7 +49,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -77,7 +74,6 @@ const theaterApi = {
     let status = null;
     const url = `/phim/${theaterSystemId}/he-thong-rap`;
     let send = await axiosClient.get(url).then((response) => {
-      console.log(response);
       status = response.status;
       if (response.status === 200) {
         let listMovie = [];
@@ -104,7 +100,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -113,7 +108,6 @@ const theaterApi = {
     });
   },
   postMovie: async (movie) => {
-    console.log(movie);
     let data_response = null;
     let status = null;
     const url = "/phim";
@@ -129,7 +123,6 @@ const theaterApi = {
       danhGia: 0,
     };
     let send = await axiosClient.post(url, data_request).then((response) => {
-      console.log(response);
       status = response.status;
       if (response.status === 200) {
         data_response = { id: name };
@@ -137,7 +130,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -172,7 +164,6 @@ const theaterApi = {
       danhGia: 0,
     };
     let send = await axiosClient.patch(url, data_request).then((response) => {
-      console.log(response);
       status = response.status;
       if (status === 204) status = 200;
       if (status === 200) {
@@ -181,7 +172,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -205,7 +195,6 @@ const theaterApi = {
     const id = movie;
     const url = `/phim/${id}`;
     let send = await axiosClient.delete(url).then((response) => {
-      console.log(response);
       status = response.status;
       if (status === 204) status = 200;
       if (status === 200) {
@@ -214,7 +203,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,

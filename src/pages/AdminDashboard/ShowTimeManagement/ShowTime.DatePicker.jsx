@@ -27,7 +27,7 @@ export default function ShowTimeDatePicker() {
         selected={startDate}
         onChange={(date) => {
           setStartDate(date);
-          dispatch(setSelectedDate(date.toString()));
+          dispatch(setSelectedDate(date.toISOString()));
           dispatch(fetchListShowTime({}));
         }}
         customInput={<CustomDatePickerInput />}

@@ -8,8 +8,6 @@ const theaterApi = {
     let status = null;
     const url = "/cum-raps";
     let send = await axiosClient.get(url).then((response) => {
-      console.log(response);
-      console.log(response.data);
       status = response.status;
       if (response.status === 200) {
         let listPhongChieu = [];
@@ -36,7 +34,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -57,13 +54,11 @@ const theaterApi = {
     // return response;
   },
   getListPhongChieuInCumRap: async (cumRapId) => {
-    console.log("phong chieu in cum rap ", cumRapId);
     if (cumRapId === null) return theaterApi.getListPhongChieu();
     let data_response = null;
     let status = null;
     const url = `/cum-raps/${cumRapId}/raps`;
     let send = await axiosClient.get(url).then((response) => {
-      console.log(response);
       status = response.status;
       if (response.status === 200) {
         let listPhongChieu = [];
@@ -91,7 +86,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -100,7 +94,6 @@ const theaterApi = {
     });
   },
   postPhongChieu: async (phongChieu) => {
-    console.log(phongChieu);
     let data_response = null;
     let status = null;
     const url = "/raps";
@@ -111,7 +104,6 @@ const theaterApi = {
       soGhe: 120,
     };
     let send = await axiosClient.post(url, data_request).then((response) => {
-      console.log(response);
       status = response.status;
       if (response.status === 200) {
         data_response = { id: name };
@@ -119,7 +111,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -150,7 +141,6 @@ const theaterApi = {
       soGhe: 120,
     };
     let send = await axiosClient.patch(url, data_request).then((response) => {
-      console.log(response);
       status = response.status;
       if (status === 204) status = 200;
       if (status === 200) {
@@ -159,7 +149,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -183,7 +172,6 @@ const theaterApi = {
     const id = phongChieu;
     const url = `/raps/${id}`;
     let send = await axiosClient.delete(url).then((response) => {
-      console.log(response);
       status = response.status;
       if (status === 204) status = 200;
       if (status === 200) {
@@ -192,7 +180,6 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
     return new Promise((resolve, reject) => {
       resolve({
         status: status,

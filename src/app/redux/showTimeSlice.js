@@ -6,7 +6,7 @@ import { startLoading, stopLoading } from "./loadingSlice";
 const initialState = {
   listShowTime: [],
   selectedCumRap: null,
-  selectedDate: new Date().toString(),
+  selectedDate: new Date().toISOString(),
   isActiveCreateShowTime: false,
 };
 
@@ -52,8 +52,9 @@ export const createShowTime = createAsyncThunk(
     let selectedDate = new Date(getState().showTime.selectedDate);
     let selectedCumRap = getState().showTime.selectedCumRap;
     const { hour, minute, phongChieuId, movieId, giaVe, thoiLuong } = payload;
-    console.log(selectedDate, payload);
+    console.log("time :", selectedDate, payload);
     console.log(
+      "time tao moi:  ",
       selectedDate.getFullYear(),
       selectedDate.getMonth(),
       selectedDate.getDate(),
@@ -63,7 +64,7 @@ export const createShowTime = createAsyncThunk(
     let time = new Date(
       selectedDate.getFullYear(),
       selectedDate.getMonth(),
-      selectedDate.getDate(),
+      selectedDate.getDate() + 1,
       hour,
       minute
     ).toISOString();
@@ -174,6 +175,7 @@ export const showTimeSlice = createSlice({
     },
     setSelectedDate: (state, action) => {
       state.selectedDate = action.payload;
+      console.log("set time: ", action.payload);
     },
     setEmtyListShowTime: (state) => {
       state.listShowTime = [];

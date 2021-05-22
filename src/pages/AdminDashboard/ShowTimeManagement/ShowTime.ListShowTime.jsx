@@ -27,7 +27,6 @@ export default function ListShowTime() {
     (state) => state.showTime.isActiveCreateShowTime
   );
   const listMovie = useSelector((state) => state.movie.listMovie);
-  console.log(listShowTime);
 
   function classifyShowTimeByMovie(listShowTime, listMovie) {
     let listShowTimeByMovie = [];
@@ -77,7 +76,6 @@ export default function ListShowTime() {
       <div className="mt-5">
         {listShowTimeByMovie.map((showTimeByMovie, index) => {
           const { movie, showTimes } = showTimeByMovie;
-          console.log(showTimeByMovie);
           if (!movie) return;
           const { name, image } = movie;
           return (

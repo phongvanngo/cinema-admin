@@ -41,10 +41,7 @@ export default function ShowTimeFormModal() {
   const [selectedHour, setSelectedHour] = useState([]);
   const [selectedMinute, setSelectedMinute] = useState([]);
 
-  console.log(defaultData);
-
   function onSaveData(data) {
-    console.log("suat chieu ", data);
     let phongChieuInfo = {
       phongChieuId: selectedPhongChieu?.id,
       phongChieuName: selectedPhongChieu?.name,
@@ -58,7 +55,6 @@ export default function ShowTimeFormModal() {
       movieId: selectedMovie?.id,
     };
     if (!defaultData?.id) {
-      console.log(data);
       dispatch(
         createShowTime({
           ...data,
@@ -85,8 +81,6 @@ export default function ShowTimeFormModal() {
     dispatch(closeShowTimeFormDialog());
   }
 
-  console.log("render");
-
   useEffect(() => {
     clearErrors("name");
     if (defaultData?.id) {
@@ -99,8 +93,6 @@ export default function ShowTimeFormModal() {
     } else {
     }
   }, [setValue, defaultData]);
-
-  console.log(errors);
 
   return (
     <>
