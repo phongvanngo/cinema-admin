@@ -64,13 +64,23 @@ export const createShowTime = createAsyncThunk(
     let time = new Date(
       selectedDate.getFullYear(),
       selectedDate.getMonth(),
-      selectedDate.getDate() + 1,
+      selectedDate.getDate(),
       hour,
       minute
     ).toISOString();
 
+    //gửi thời gian xong get về thì bị -7 vì vậy phải +7
+
+    let timeToSendServer = new Date(
+      selectedDate.getFullYear(),
+      selectedDate.getMonth(),
+      selectedDate.getDate(),
+      hour + 7,
+      minute
+    ).toISOString();
+
     let dataToSend = {
-      time: time,
+      time: timeToSendServer,
       movieId,
       phongChieuId,
       giaVe,
@@ -85,7 +95,10 @@ export const createShowTime = createAsyncThunk(
         case 200:
           // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
           dispatch(stopLoading());
-          return { newShowTime: dataToSend, responseData: response.data };
+          return {
+            newShowTime: { ...dataToSend, time: time },
+            responseData: response.data,
+          };
         case 401:
           throw new Error("Unauthorize");
         case 400:

@@ -3,13 +3,14 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchListCumRapInTheaterSystem } from "app/redux/cumRapSlice";
+import { setEmtyListPhongChieu } from "app/redux/phongChieuSlice";
 
 export default function FilterTheaterSystem() {
   const dispatch = useDispatch();
   let listTheaterSystem = useSelector(
     (state) => state.theater.listTheaterSystem
   );
-  const [selected, setSelected] = useState(listTheaterSystem[0] || []);
+  const [selected, setSelected] = useState({});
 
   return (
     <div className="mt-5 mr-10 flex items-center">
@@ -21,6 +22,7 @@ export default function FilterTheaterSystem() {
         onChange={(e) => {
           setSelected(e);
           dispatch(fetchListCumRapInTheaterSystem({ theaterSystemId: e?.id }));
+          dispatch(setEmtyListPhongChieu());
         }}
       >
         <div className="relative mt-1">

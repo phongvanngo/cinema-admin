@@ -61,6 +61,9 @@ export default function TheaterSystemTable({ listTheaterSystem }) {
                   <strong>#</strong>
                 </th>
                 <th scope="col" className="px-2 py-3 break-words">
+                  <strong>Mã hệ thống rạp</strong>
+                </th>
+                <th scope="col" className="px-2 py-3 break-words">
                   <strong>Tên hệ thống rạp</strong>
                 </th>
                 <th scope="col" className="px-2 py-3 break-words">
@@ -82,6 +85,7 @@ export default function TheaterSystemTable({ listTheaterSystem }) {
                     <td className="px-2 py-4 text-gray-500 text-sm font-extrabold">
                       <strong>{index + 1}</strong>
                     </td>
+                    <td className="px-2 py-4">{id}</td>
                     <td className="px-2 py-4">{name}</td>
                     <td className="px-2 py-4">
                       <img

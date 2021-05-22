@@ -10,7 +10,7 @@ export default function ComboBoxTheaterSystem() {
   let listTheaterSystem = useSelector(
     (state) => state.theater.listTheaterSystem
   );
-  const [selected, setSelected] = useState(listTheaterSystem[0] || []);
+  const [selected, setSelected] = useState({});
 
   return (
     <div className="mt-5 mr-10 flex items-center">
