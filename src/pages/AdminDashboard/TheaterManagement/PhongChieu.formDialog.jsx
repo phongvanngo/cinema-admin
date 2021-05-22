@@ -152,6 +152,28 @@ export default function PhongChieuFormModal() {
                         ""
                       )}
                     </div>
+                    {/* <div className="mb-8">
+                      <span className="mb-2 flex flex-col font-extrabold">
+                        Mã phòng chiếu
+                      </span>
+                      <input
+                        type="text"
+                        {...register("maRap", {})}
+                        className={
+                          "h-full w-full appearance-none rounded-full  w-30 py-4 px-6 leading-tight focus:outline-none border  text-gray-500" +
+                          (errors.maRap
+                            ? " border-red-500"
+                            : " focus:border-indigo-500")
+                        }
+                      />
+                      {errors.name ? (
+                        <span className="ml-2 mt-2 text-red-500">
+                          *Không được để trống
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </div> */}
                     <div className="mb-8">
                       <span className="font-extrabold mb-2 flex flex-col">
                         Hệ thống rạp

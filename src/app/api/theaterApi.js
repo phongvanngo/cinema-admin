@@ -7,6 +7,11 @@ const theaterApi = {
     let data_response = null;
     let status = null;
     const url = "/he-thong-raps";
+    let ka = await axiosClient
+      .get("/cum-raps/bhd-hvt/raps")
+      .then((response) => {
+        console.log(response);
+      });
     let send = await axiosClient.get(url).then((response) => {
       console.log(response);
       status = response.status;

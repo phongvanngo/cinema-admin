@@ -61,13 +61,16 @@ export default function CumRapTable({ listCumRap }) {
                 <th scope="col" className="w-1/12 px-2 py-3 break-words">
                   <strong>#</strong>
                 </th>
-                <th scope="col" className="w-3/12 px-2 py-3 break-words">
+                <th scope="col" className="w-2/12 px-2 py-3 break-words">
+                  <strong>Mã cụm rạp</strong>
+                </th>
+                <th scope="col" className="w-2/12 px-2 py-3 break-words">
                   <strong>Tên cụm rạp</strong>
                 </th>
                 <th scope="col" className="w-3/12 px-2 py-3 break-words">
                   <strong>Tên hệ thống rạp</strong>
                 </th>
-                <th scope="col" className="w-4/12 px-2 py-3 break-words">
+                <th scope="col" className="w-3/12 px-2 py-3 break-words">
                   <strong>Thông tin</strong>
                 </th>
                 <th scope="col" className="w-1/12 px-2 py-3 break-words">
@@ -83,6 +86,7 @@ export default function CumRapTable({ listCumRap }) {
                     <td className="px-2 py-4 text-gray-500 text-sm font-extrabold">
                       <strong>{index + 1}</strong>
                     </td>
+                    <td className="px-2 py-4">{id}</td>
                     <td className="px-2 py-4">{name}</td>
                     <td className="px-2 py-4">{theaterSystemName}</td>
                     <td className="px-2 py-4">{information}</td>

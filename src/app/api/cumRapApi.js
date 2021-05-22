@@ -60,7 +60,7 @@ const theaterApi = {
     if (theaterSystemId === null) return theaterApi.getListCumRap();
     let data_response = null;
     let status = null;
-    const url = `/cum-raps/${theaterSystemId}/he-thong-rap`;
+    const url = `/he-thong-raps/${theaterSystemId}/cum-raps`;
     let send = await axiosClient.get(url).then((response) => {
       console.log(response);
       status = response.status;
