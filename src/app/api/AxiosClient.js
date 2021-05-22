@@ -4,7 +4,8 @@ import queryString from "query-string";
 // import { get, save } from './localStorage';
 
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_API_ENDPOINT,
+  // baseURL: process.env.REACT_APP_API_ENDPOINT,
+  baseURL: localStorage.getItem("api_url"),
   headers: {
     "content-type": "application/json",
   },
