@@ -102,7 +102,7 @@ export const updateCumRap = createAsyncThunk(
     console.log(payload);
     dispatch(startLoading());
     try {
-      const response = await cumRapApi.postCumRap(payload);
+      const response = await cumRapApi.patchCumRap(payload);
       switch (response.status) {
         case 200:
           dispatch(stopLoading());

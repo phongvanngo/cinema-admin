@@ -6,6 +6,7 @@ const theaterApi = {
   getListShowTime: async (data_request) => {
     console.log(data_request);
     const { cumRapId, time } = data_request;
+
     let data_response = null;
     let status = null;
     const url = "/cum-raps";

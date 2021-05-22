@@ -14,7 +14,7 @@ export default function PhongChieuManagement() {
   );
 
   useEffect(() => {
-    dispatch(changeAdminNavbarTitle("Quản lý phòng chiếu"));
+    dispatch(changeAdminNavbarTitle("Quản lý rạp"));
     // dispatch(fetchListPhongChieu({}));
     dispatch(fetchListTheaterSystem({}));
     dispatch(setEmtyListCumRap());

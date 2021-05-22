@@ -49,7 +49,7 @@ export default function PhongChieuTable({ listPhongChieu }) {
         </div>
         <div className="p-6  min-h-20 border-b border-gray-200 rounded-t-3xl bg-white">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-medium">Danh sách phòng chiếu</h1>
+            <h1 className="text-xl font-medium">Danh sách rạp</h1>
             <button
               disabled={!isActiveCreatePhongChieu}
               onClick={() => {
@@ -64,7 +64,7 @@ export default function PhongChieuTable({ listPhongChieu }) {
               `}
             >
               <i className="bx bx-plus mr-2 align-middle block"></i>
-              <span>Thêm phòng chiếu mới</span>
+              <span>Thêm rạp mới</span>
             </button>
           </div>
           <div className="flex items-center">
@@ -80,7 +80,7 @@ export default function PhongChieuTable({ listPhongChieu }) {
                   <strong>#</strong>
                 </th>
                 <th scope="col" className="w-4/12 px-2 py-3 break-words">
-                  <strong>Tên phòng chiếu</strong>
+                  <strong>Tên rạp</strong>
                 </th>
                 <th scope="col" className="w-3/12 px-2 py-3 break-words">
                   <strong>Số lượng ghế</strong>
@@ -121,7 +121,7 @@ export default function PhongChieuTable({ listPhongChieu }) {
           </table>
           {currentListPhongChieu.length === 0 ? (
             <div className="text-center text-xl text-gray-500">
-              <span>Không có phòng chiếu nào</span>
+              <span>Không có rạp nào</span>
             </div>
           ) : null}
         </div>

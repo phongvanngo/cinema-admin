@@ -31,7 +31,7 @@ export default function PhongChieuFormModal() {
   // let listRoomType = useSelector(
   //   (state) => state.theater.listRoomType
   // );
-  let listRoomType = [{ id: null, name: "10 X 15" }];
+  let listRoomType = [{ id: null, name: "12 X 10" }];
 
   const [selectedRoomType, setSelectedTheaterSytem] = useState([]);
 
@@ -118,7 +118,7 @@ export default function PhongChieuFormModal() {
                 >
                   <div className="pr-5 pl-5 pt-4 pb-3 w-full flex justify-between">
                     <h1 className="font-normal">
-                      {defaultData?.id ? "Chỉnh sửa cụm rạp" : "Thêm cụm rạp"}
+                      {defaultData?.id ? "Chỉnh sửa rạp" : "Thêm rạp"}
                     </h1>
                     <button
                       onClick={handleCloseModal}
@@ -132,7 +132,7 @@ export default function PhongChieuFormModal() {
                   <div className="mt-2 p-6">
                     <div className="mb-8">
                       <span className="mb-2 flex flex-col font-extrabold">
-                        Tên phòng chiếu
+                        Tên rạp
                       </span>
                       <input
                         type="text"
@@ -154,7 +154,7 @@ export default function PhongChieuFormModal() {
                     </div>
                     {/* <div className="mb-8">
                       <span className="mb-2 flex flex-col font-extrabold">
-                        Mã phòng chiếu
+                        Mã rạp
                       </span>
                       <input
                         type="text"
@@ -176,7 +176,7 @@ export default function PhongChieuFormModal() {
                     </div> */}
                     <div className="mb-8">
                       <span className="font-extrabold mb-2 flex flex-col">
-                        Hệ thống rạp
+                        Loại rạp
                       </span>
                       <FilterRoomType
                         listRoomType={listRoomType}
