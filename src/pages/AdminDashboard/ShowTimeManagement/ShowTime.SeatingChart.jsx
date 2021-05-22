@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const theaterType = { row: 10, col: 12 };
 
@@ -9,13 +10,37 @@ function checkContains(theArray, value) {
 }
 
 export default function SeatingChart() {
-  let seatsInTheater = [];
-  for (let index = 0; index < 120; index++) {
-    seatsInTheater.push(index);
+  const listBookedSeats = useSelector(
+    (state) => state.showTime.listBookedSeats
+  );
+
+  const listSeatsPhongChieu = useSelector(
+    (state) => state.showTime.listSeatsPhongChieu
+  );
+
+  let seatsStatus = [];
+
+  for (let i = 0; i < listSeatsPhongChieu.length; i++) {
+    let seat = listSeatsPhongChieu[i];
+    let index = listBookedSeats.findIndex((e) => e.maGhe === seat.maGhe);
+    if (index > -1) seatsStatus.push(true);
+    else seatsStatus.push(false);
   }
 
-  let seatsInTheaterIndex = -1;
-  let bookedSeats = [4, 5, 7, 8, 12, 34, 89, 12, 33];
+  let seatsStatusIndex = -1;
+
+  console.log("list booked seats - seating chart ", listBookedSeats);
+  console.log(
+    "list seats in phong chieu - seating chart ",
+    listSeatsPhongChieu
+  );
+  // let seatsInTheater = [];
+  // for (let index = 0; index < 120; index++) {
+  //   seatsInTheater.push(index);
+  // }
+
+  // let seatsInTheaterIndex = -1;
+  // let bookedSeats = [4, 5, 7, 8, 12, 34, 89, 12, 33];
 
   let theaterColNumber = [];
   for (let index = 1; index < theaterType.col + 1; index++) {
@@ -42,16 +67,18 @@ export default function SeatingChart() {
             <tr key={index}>
               <th className="p-3">{e}</th>
               {theaterColNumber.map((e, index) => {
-                seatsInTheaterIndex++;
+                // seatsInTheaterIndex++;
+                seatsStatusIndex++;
                 return (
                   <th key={index}>
                     <div
                       className={
                         "h-10 w-10 border bg-white m-1 shadow-sm " +
-                        (checkContains(
-                          bookedSeats,
-                          seatsInTheater[seatsInTheaterIndex]
-                        )
+                        // (checkContains(
+                        //   bookedSeats,
+                        //   seatsInTheater[seatsInTheaterIndex]
+                        // )
+                        (seatsStatus[seatsStatusIndex]
                           ? " bg-yellow-300"
                           : " bg-white")
                       }

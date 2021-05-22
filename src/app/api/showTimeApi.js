@@ -250,6 +250,70 @@ const theaterApi = {
       });
     });
   },
+
+  getListBookedSeats: async (showTimeId) => {
+    let data_response = null;
+    let status = null;
+    const id = showTimeId;
+    const url = `/ghe-da-dat`;
+
+    let data_request = {
+      where: {
+        maLichChieu: id,
+      },
+      fields: {
+        isbn: true,
+        maGhe: true,
+        maLichChieu: true,
+      },
+    };
+
+    console.log("reqeust booked seatas", data_request);
+
+    let send = await axiosClient
+      .get(url, { params: { filter: JSON.stringify(data_request) } })
+      .then((response) => {
+        status = response.status;
+        if (status === 204) status = 200;
+        if (status === 200) {
+          data_response = {
+            listBookedSeats: response.data,
+          };
+        } else {
+          data_response = null;
+        }
+      });
+    return new Promise((resolve, reject) => {
+      resolve({
+        status: status,
+        data: data_response,
+      });
+    });
+  },
+  getListSeatsPhongChieu: async (phongChieuId) => {
+    let data_response = null;
+    let status = null;
+    const id = phongChieuId;
+    const url = `/lay-ghe-cua-rap/${id}`;
+
+    let send = await axiosClient.get(url).then((response) => {
+      status = response.status;
+      if (status === 204) status = 200;
+      if (status === 200) {
+        data_response = {
+          listSeatsPhongChieu: response.data,
+        };
+      } else {
+        data_response = null;
+      }
+    });
+    return new Promise((resolve, reject) => {
+      resolve({
+        status: status,
+        data: data_response,
+      });
+    });
+  },
 };
 
 export default theaterApi;

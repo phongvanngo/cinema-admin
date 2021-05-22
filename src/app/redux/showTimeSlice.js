@@ -8,6 +8,10 @@ const initialState = {
   selectedCumRap: null,
   selectedDate: new Date().toISOString(),
   isActiveCreateShowTime: false,
+
+  selectedShowTime: null,
+  listSeatsPhongChieu: [],
+  listBookedSeats: [],
 };
 
 export const fetchListShowTime = createAsyncThunk(
@@ -45,6 +49,7 @@ export const fetchListShowTime = createAsyncThunk(
     }
   }
 );
+
 export const createShowTime = createAsyncThunk(
   "showTime/createShowTime",
   async (payload, thunkApi) => {
@@ -179,6 +184,68 @@ export const deleteShowTime = createAsyncThunk(
   }
 );
 
+export const fetchListBookedSeats = createAsyncThunk(
+  "showTime/fetchBookedSeats",
+  async (payload, thunkApi) => {
+    console.log(payload);
+    const { id } = payload;
+    const { dispatch } = thunkApi;
+    let params = id;
+    console.log(params);
+    dispatch(startLoading());
+    try {
+      const response = await showTimeApi.getListBookedSeats(params);
+      console.log(response);
+      switch (response.status) {
+        case 200:
+          dispatch(stopLoading());
+          return response.data;
+        case 401:
+          throw new Error("Unauthorize");
+        case 400:
+          console.log("hi");
+          throw new Error("");
+        default:
+          throw new Error("Error");
+      }
+    } catch (error) {
+      console.log(error);
+      dispatch(stopLoading());
+      return null;
+    }
+  }
+);
+export const fetchListSeatsPhongChieu = createAsyncThunk(
+  "showTime/fetchListSeatsPhongChieu",
+  async (payload, thunkApi) => {
+    console.log(payload);
+    const { phongChieuId } = payload;
+    const { dispatch } = thunkApi;
+    let params = phongChieuId;
+    console.log(params);
+    dispatch(startLoading());
+    try {
+      const response = await showTimeApi.getListSeatsPhongChieu(params);
+      console.log(response);
+      switch (response.status) {
+        case 200:
+          dispatch(stopLoading());
+          return response.data;
+        case 401:
+          throw new Error("Unauthorize");
+        case 400:
+          console.log("hi");
+          throw new Error("");
+        default:
+          throw new Error("Error");
+      }
+    } catch (error) {
+      dispatch(stopLoading());
+      return null;
+    }
+  }
+);
+
 export const showTimeSlice = createSlice({
   name: "showTime",
   initialState,
@@ -206,6 +273,16 @@ export const showTimeSlice = createSlice({
         if (action.payload === null) return;
         const { listShowTime } = action.payload;
         state.listShowTime = listShowTime;
+      })
+      .addCase(fetchListBookedSeats.fulfilled, (state, action) => {
+        if (action.payload === null) return;
+        const { listBookedSeats } = action.payload;
+        state.listBookedSeats = listBookedSeats;
+      })
+      .addCase(fetchListSeatsPhongChieu.fulfilled, (state, action) => {
+        if (action.payload === null) return;
+        const { listSeatsPhongChieu } = action.payload;
+        state.listSeatsPhongChieu = listSeatsPhongChieu;
       })
       .addCase(createShowTime.fulfilled, (state, action) => {
         if (action.payload === null) return;

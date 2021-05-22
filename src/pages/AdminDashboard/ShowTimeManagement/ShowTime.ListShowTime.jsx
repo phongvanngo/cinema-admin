@@ -1,4 +1,8 @@
 import { openShowTimeFormDialog } from "app/redux/dialogSlice";
+import {
+  fetchListBookedSeats,
+  fetchListSeatsPhongChieu,
+} from "app/redux/showTimeSlice";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ShowTimeDatePicker from "./ShowTime.DatePicker";
@@ -27,6 +31,11 @@ export default function ListShowTime() {
     (state) => state.showTime.isActiveCreateShowTime
   );
   const listMovie = useSelector((state) => state.movie.listMovie);
+
+  const handleSelectShowTime = (showTime) => {
+    dispatch(fetchListBookedSeats(showTime));
+    dispatch(fetchListSeatsPhongChieu(showTime));
+  };
 
   function classifyShowTimeByMovie(listShowTime, listMovie) {
     let listShowTimeByMovie = [];
@@ -94,12 +103,15 @@ export default function ListShowTime() {
                   {showTimes.map((showTime, index) => {
                     let time_label = formatTimeInShowTime(showTime.time);
                     return (
-                      <div
+                      <button
+                        onClick={() => {
+                          handleSelectShowTime(showTime);
+                        }}
                         key={index}
-                        className="mr-2 mb-2 px-3 py-1  bg-yellow-50  border flex justify-center cursor-pointer hover:bg-yellow-300 "
+                        className="focus:outline-none mr-2 mb-2 px-3 py-1  bg-yellow-50  border flex justify-center cursor-pointer hover:bg-yellow-300 "
                       >
                         {time_label}
-                      </div>
+                      </button>
                     );
                   })}
                 </div>
