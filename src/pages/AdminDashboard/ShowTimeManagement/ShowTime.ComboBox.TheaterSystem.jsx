@@ -3,7 +3,10 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchListCumRapInTheaterSystem } from "app/redux/cumRapSlice";
-import { setEmtyListShowTime } from "app/redux/showTimeSlice";
+import {
+  setEmtyListShowTime,
+  setSelectedMaHeThongRap,
+} from "app/redux/showTimeSlice";
 
 export default function ComboBoxTheaterSystem() {
   const dispatch = useDispatch();
@@ -21,6 +24,7 @@ export default function ComboBoxTheaterSystem() {
         value={selected}
         onChange={(e) => {
           setSelected(e);
+          dispatch(setSelectedMaHeThongRap(e));
           dispatch(fetchListCumRapInTheaterSystem({ theaterSystemId: e?.id }));
           dispatch(setEmtyListShowTime());
         }}

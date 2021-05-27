@@ -153,11 +153,19 @@ const theaterApi = {
     });
   },
   postShowTime: async (showTime) => {
+    console.log("post show time", showTime);
     let data_response = null;
     let status = null;
     const url = "/lich-chieu";
-    const { time, phongChieuId, movieId, giaVe, thoiLuong, maCumRap } =
-      showTime;
+    const {
+      time,
+      phongChieuId,
+      movieId,
+      giaVe,
+      thoiLuong,
+      maCumRap,
+      maHeThongRap,
+    } = showTime;
     const data_request = {
       ngayChieuGioChieu: time,
       giaVe: giaVe,
@@ -165,6 +173,7 @@ const theaterApi = {
       maRap: phongChieuId,
       thoiLuong: thoiLuong,
       maCumRap: maCumRap,
+      maHeThongRap: maHeThongRap,
     };
     let send = await axiosClient.post(url, data_request).then((response) => {
       status = response.status;

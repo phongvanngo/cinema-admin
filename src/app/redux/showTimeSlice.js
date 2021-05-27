@@ -6,6 +6,7 @@ import { startLoading, stopLoading } from "./loadingSlice";
 const initialState = {
   listShowTime: [],
   selectedCumRap: null,
+  selectedMaHeThongRap: null,
   selectedDate: new Date().toISOString(),
   isActiveCreateShowTime: false,
 
@@ -20,7 +21,8 @@ export const fetchListShowTime = createAsyncThunk(
     if (payload) {
     }
     const { dispatch, getState } = thunkApi;
-    const { selectedCumRap, selectedDate } = getState().showTime;
+    const { selectedCumRap, selectedDate, selectedMaHeThongRap } =
+      getState().showTime;
     console.log(selectedCumRap, selectedDate);
     let params = {
       cumRapId: selectedCumRap.cumRapId,
@@ -56,6 +58,7 @@ export const createShowTime = createAsyncThunk(
     const { dispatch, getState } = thunkApi;
     let selectedDate = new Date(getState().showTime.selectedDate);
     let selectedCumRap = getState().showTime.selectedCumRap;
+    let selectedMaHeThongRap = getState().showTime.selectedMaHeThongRap;
     const { hour, minute, phongChieuId, movieId, giaVe, thoiLuong } = payload;
     console.log("time :", selectedDate, payload);
     console.log(
@@ -91,6 +94,7 @@ export const createShowTime = createAsyncThunk(
       giaVe,
       thoiLuong,
       maCumRap: selectedCumRap.cumRapId,
+      maHeThongRap: selectedMaHeThongRap.id,
     };
 
     dispatch(startLoading());
@@ -253,6 +257,9 @@ export const showTimeSlice = createSlice({
     setSelectedCumRap: (state, action) => {
       state.selectedCumRap = action.payload;
     },
+    setSelectedMaHeThongRap: (state, action) => {
+      state.selectedMaHeThongRap = action.payload;
+    },
     setSelectedDate: (state, action) => {
       state.selectedDate = action.payload;
       console.log("set time: ", action.payload);
@@ -326,6 +333,7 @@ export const {
   setEmtyListShowTime,
   setSelectedDate,
   setSelectedCumRap,
+  setSelectedMaHeThongRap,
 } = showTimeSlice.actions;
 
 export default showTimeSlice.reducer;
