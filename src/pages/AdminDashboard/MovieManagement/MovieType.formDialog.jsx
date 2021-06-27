@@ -46,7 +46,6 @@ export default function MovieTypeFormModal() {
 
   function onSaveData(data) {
     if (defaultData?.id === null) {
-      console.log(data);
       dispatch(
         createMovieType({ ...data, premiereDay: startDate.toDateString() })
       );
@@ -66,8 +65,6 @@ export default function MovieTypeFormModal() {
     dispatch(closeMovieTypeFormDialog());
   }
 
-  console.log("render");
-
   useEffect(() => {
     clearErrors("name");
     if (defaultData?.id) {
@@ -77,8 +74,6 @@ export default function MovieTypeFormModal() {
       setValue("name", "");
     }
   }, [setValue, defaultData]);
-
-  console.log(errors);
 
   return (
     <>

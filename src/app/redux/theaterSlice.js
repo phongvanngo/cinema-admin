@@ -23,7 +23,6 @@ export const fetchListTheaterSystem = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
@@ -38,7 +37,7 @@ export const createTheaterSystem = createAsyncThunk(
   "theater/createTheaterSystem",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await theaterApi.postTheaterSystem(payload);
@@ -69,7 +68,7 @@ export const updateTheaterSystem = createAsyncThunk(
   "theater/updateTheaterSystem",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await theaterApi.patchTheaterSystem(payload);
@@ -99,7 +98,7 @@ export const deleteTheaterSystem = createAsyncThunk(
   "theater/deleteTheaterSystem",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await theaterApi.deleteTheaterSystem(payload);
@@ -159,7 +158,6 @@ export const theaterSlice = createSlice({
           (theaterSystem) => theaterSystem.id === newTheaterSystem.id
         );
         newListTheaterSystem[index] = newTheaterSystem;
-        console.log(newListTheaterSystem);
 
         state.listTheaterSystem = newListTheaterSystem;
       })

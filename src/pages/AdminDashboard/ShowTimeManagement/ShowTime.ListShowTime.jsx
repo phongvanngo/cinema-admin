@@ -2,6 +2,7 @@ import { openShowTimeFormDialog } from "app/redux/dialogSlice";
 import {
   fetchListBookedSeats,
   fetchListSeatsPhongChieu,
+  setSelectedShowtime,
 } from "app/redux/showTimeSlice";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -33,6 +34,7 @@ export default function ListShowTime() {
   const listMovie = useSelector((state) => state.movie.listMovie);
 
   const handleSelectShowTime = (showTime) => {
+    dispatch(setSelectedShowtime(showTime));
     dispatch(fetchListBookedSeats(showTime));
     dispatch(fetchListSeatsPhongChieu(showTime));
   };
@@ -79,7 +81,7 @@ export default function ListShowTime() {
               `}
         >
           <i className="bx bx-plus mr-2 align-middle block"></i>
-          <span>Thêm suất chiếu</span>
+          <span>Thêm</span>
         </button>
       </div>
       <div className="mt-5">

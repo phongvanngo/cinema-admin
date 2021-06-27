@@ -34,15 +34,12 @@ export default function CumRapFormModal() {
 
   const [selectedTheaterSystem, setSelectedTheaterSytem] = useState([]);
 
-  console.log(defaultData);
-
   function onSaveData(data) {
     let theaterSystemInfo = {
       theaterSystemId: selectedTheaterSystem?.id,
       theaterSystemName: selectedTheaterSystem?.name,
     };
     if (defaultData?.id === null) {
-      console.log(data);
       dispatch(createCumRap({ ...data, ...theaterSystemInfo }));
       dispatch(closeCumRapFormDialog());
     } else {
@@ -55,8 +52,6 @@ export default function CumRapFormModal() {
   function handleCloseModal() {
     dispatch(closeCumRapFormDialog());
   }
-
-  console.log("render");
 
   useEffect(() => {
     clearErrors("name");
@@ -73,8 +68,6 @@ export default function CumRapFormModal() {
       setValue("information", "");
     }
   }, [setValue, defaultData]);
-
-  console.log(errors);
 
   return (
     <>

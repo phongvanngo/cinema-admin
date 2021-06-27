@@ -15,7 +15,7 @@ export default function LandingPage() {
 
   useEffect(() => {
     const linkColor = document.querySelectorAll(".menu-item__title");
-    console.log(linkColor);
+
     function colorLink() {
       if (linkColor) {
         this.parentElement.classList.toggle("active");

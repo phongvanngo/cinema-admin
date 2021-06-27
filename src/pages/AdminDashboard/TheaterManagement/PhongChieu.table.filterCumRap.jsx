@@ -30,7 +30,6 @@ export default function FilterTheaterSystem() {
       <Listbox
         value={selected}
         onChange={(cumRap) => {
-          console.log("change selected");
           setSelected(cumRap);
           dispatch(
             setSelectedCumRap({ cumRapId: cumRap.id, cumRapName: cumRap.name })

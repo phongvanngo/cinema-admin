@@ -16,7 +16,7 @@ export const fetchListMovie = createAsyncThunk(
     dispatch(startLoading());
     try {
       const response = await movieApi.getListMovie();
-      console.log(response);
+
       switch (response.status) {
         case 200:
           dispatch(stopLoading());
@@ -24,7 +24,6 @@ export const fetchListMovie = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
@@ -39,7 +38,7 @@ export const createMovie = createAsyncThunk(
   "movie/createMovie",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await movieApi.postMovie(payload);
@@ -70,7 +69,7 @@ export const updateMovie = createAsyncThunk(
   "movie/updateMovie",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await movieApi.patchMovie(payload);
@@ -100,7 +99,7 @@ export const deleteMovie = createAsyncThunk(
   "movie/deleteMovie",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await movieApi.deleteMovie(payload);
@@ -160,7 +159,6 @@ export const movieSlice = createSlice({
           (movieSystem) => movieSystem.id === newMovie.id
         );
         newListMovie[index] = newMovie;
-        console.log(newListMovie);
 
         state.listMovie = newListMovie;
       })

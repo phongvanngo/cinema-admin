@@ -89,7 +89,7 @@ export const dialogSlice = createSlice({
     },
     closeErrorNotificationDialog: (state) => {
       state.errorNotificationDialog.isOpen = false;
-      state.errorNotificationDialog.defaultData = { title: "" };
+      // state.errorNotificationDialog.defaultData = { title: "" };
     },
   },
 });

@@ -7,9 +7,6 @@ import { listShowTime } from "./fakeData";
 const theaterApi = {
   getListShowTime: async (data_request) => {
     const { cumRapId, time } = data_request;
-
-    console.log("get show time ", time);
-
     let data_response = null;
     let status = null;
     const url = "/lich-chieu";
@@ -43,10 +40,15 @@ const theaterApi = {
         maHeThongRap: true,
         maCumRap: true,
         maPhim: true,
+        tenRap: true,
+        tenPhim: true,
+        tenHeThongRap: true,
+        tenCumRap: true,
       },
     };
 
     let send = await axiosClient.get(url).then((response) => {
+      console.log("getListShowTimeAPI ,response: ", response);
       status = response.status;
       if (response.status === 200) {
         let listShowTime = [];
@@ -79,8 +81,6 @@ const theaterApi = {
           };
           listShowTime.push(showTime);
         });
-
-        console.log(listShowTime);
 
         let showTimes = listShowTime.filter((e) => e.cumRapId === cumRapId);
         showTimes = showTimes.filter((e) =>
@@ -153,7 +153,6 @@ const theaterApi = {
     });
   },
   postShowTime: async (showTime) => {
-    console.log("post show time", showTime);
     let data_response = null;
     let status = null;
     const url = "/lich-chieu";
@@ -175,6 +174,9 @@ const theaterApi = {
       maCumRap: maCumRap,
       maHeThongRap: maHeThongRap,
     };
+
+    console.log("postShowTime, data request:", data_request);
+
     let send = await axiosClient.post(url, data_request).then((response) => {
       status = response.status;
       if (response.status === 200) {
@@ -276,8 +278,6 @@ const theaterApi = {
         maLichChieu: true,
       },
     };
-
-    console.log("reqeust booked seatas", data_request);
 
     let send = await axiosClient
       .get(url, { params: { filter: JSON.stringify(data_request) } })

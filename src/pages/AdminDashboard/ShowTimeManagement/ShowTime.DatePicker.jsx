@@ -32,6 +32,17 @@ export default function ShowTimeDatePicker() {
         }}
         customInput={<CustomDatePickerInput />}
       />
+      {/* <input
+        className="h-full w-28 appearance-none rounded-full border py-2 px-3 leading-tight focus:outline-none focus:border-indigo-500 text-gray-500"
+        // onClick={onClick}
+        // ref={ref}
+        // value={value}
+        // type="date"
+        // onChange={(e) => {
+        //   console.log(e.target.value);
+        //   dispatch(setSelectedDate(new Date(e.target.value).toISOString()));
+        //   dispatch(fetchListShowTime({}));
+        // }} */}
     </>
   );
 }

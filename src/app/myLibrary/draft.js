@@ -9,10 +9,3 @@ function isEqual(a, b) {
 
   return true;
 }
-
-console.log(
-  isEqual(
-    "Mon May 24 2021 21:56:23 GMT+0000 (UTC)",
-    "Mon May 25 2021 08:56:26 GMT+0000 (UTC)"
-  )
-);

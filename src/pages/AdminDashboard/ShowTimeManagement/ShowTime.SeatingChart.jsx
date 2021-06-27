@@ -1,3 +1,4 @@
+import { convertDateTime2 } from "app/myLibrary/utilities";
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -10,14 +11,21 @@ function checkContains(theArray, value) {
 }
 
 export default function SeatingChart() {
-  const listBookedSeats = useSelector(
-    (state) => state.showTime.listBookedSeats
+  const { listSeatsPhongChieu, listBookedSeats, selectedShowTime } =
+    useSelector((state) => state.showTime);
+
+  const listPhongChieu = useSelector(
+    (state) => state.phongChieu.listPhongChieu
   );
 
-  const listSeatsPhongChieu = useSelector(
-    (state) => state.showTime.listSeatsPhongChieu
-  );
+  const listMovie = useSelector((state) => state.movie.listMovie);
 
+  const seletedCumRap = useSelector((state) => state.showTime.seletedCumRap);
+
+  console.log("SeatingChart, listPhongChieu", listPhongChieu);
+  console.log("SeatingChart, listMovie", listMovie);
+
+  console.log("SeatingChart, selectedShowTime: ", selectedShowTime);
   let seatsStatus = [];
 
   for (let i = 0; i < listSeatsPhongChieu.length; i++) {
@@ -29,11 +37,11 @@ export default function SeatingChart() {
 
   let seatsStatusIndex = -1;
 
-  console.log("list booked seats - seating chart ", listBookedSeats);
   console.log(
     "list seats in phong chieu - seating chart ",
     listSeatsPhongChieu
   );
+
   // let seatsInTheater = [];
   // for (let index = 0; index < 120; index++) {
   //   seatsInTheater.push(index);
@@ -51,8 +59,24 @@ export default function SeatingChart() {
     seatRow.push(String.fromCharCode(65 + index));
   }
 
+  //find show time info
+  let { phongChieuId, movieId, time } = selectedShowTime || {};
+  let phongChieu = listPhongChieu.find((e) => e.id == phongChieuId);
+  let movie = listMovie.find((e) => e.id == movieId);
+
   return (
     <div className="p-2 border mt-5">
+      <span>Cụm Rạp</span>&nbsp;{" "}
+      <span className="font-bold">{seletedCumRap?.name || "chưa chọn"}</span>
+      <br />
+      <span>Phòng chiếu</span>&nbsp;{" "}
+      <span className="font-bold">{phongChieu?.name || "chưa chọn"}</span>
+      <br />
+      <span>Tên phim</span>&nbsp;{" "}
+      <span className="font-bold">{movie?.name || "chưa chọn"}</span>
+      <br />
+      <span>Giờ chiếu</span>&nbsp;{" "}
+      <span className="font-bold">{convertDateTime2(time) || "chưa chọn"}</span>
       <table className="table-auto">
         <thead>
           <tr className="">

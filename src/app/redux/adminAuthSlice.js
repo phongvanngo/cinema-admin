@@ -14,7 +14,7 @@ export const adminLoginRequest = createAsyncThunk(
     dispatch(startLoading());
     try {
       const response = await adminAuthApi.sendLoginInfo(loginInfo);
-      console.log(response);
+
       switch (response.status) {
         case 200:
           // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
@@ -40,7 +40,6 @@ export const adminLoginRequest = createAsyncThunk(
           throw new Error("Failed");
       }
     } catch (error) {
-      console.log(error);
       dispatch(stopLoading());
       return null;
     }

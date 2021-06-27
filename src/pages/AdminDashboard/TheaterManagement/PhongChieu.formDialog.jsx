@@ -35,15 +35,12 @@ export default function PhongChieuFormModal() {
 
   const [selectedRoomType, setSelectedTheaterSytem] = useState([]);
 
-  console.log(defaultData);
-
   function onSaveData(data) {
     let roomTypeInfo = {
       roomTypeId: selectedRoomType?.id,
       roomTypeName: selectedRoomType?.name,
     };
     if (defaultData?.id === null) {
-      console.log(data);
       dispatch(createPhongChieu({ ...data, ...roomTypeInfo }));
       dispatch(closePhongChieuFormDialog());
     } else {
@@ -57,8 +54,6 @@ export default function PhongChieuFormModal() {
     dispatch(closePhongChieuFormDialog());
   }
 
-  console.log("render");
-
   useEffect(() => {
     clearErrors("name");
     if (defaultData?.id) {
@@ -71,8 +66,6 @@ export default function PhongChieuFormModal() {
       setValue("name", "");
     }
   }, [setValue, defaultData]);
-
-  console.log(errors);
 
   return (
     <>

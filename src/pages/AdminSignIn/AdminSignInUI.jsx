@@ -21,7 +21,7 @@ export default function AdminSignInUI({ handleLogin }) {
 
   function onSaveData(data) {
     // if (defaultData?.id === null) {
-    //   console.log(data);
+    //
     //   dispatch(createTheaterSystem(data));
     //   dispatch(closeTheaterSystemFormDialog());
     // } else {
@@ -32,10 +32,19 @@ export default function AdminSignInUI({ handleLogin }) {
   }
 
   return (
-    <div className="bg-gray-200 h-screen w-screen pt-20">
-      <div className="bg-white m-auto w-4/12  shadow-md">
+    <div
+      style={{
+        // backgroundImage: "url(/image/bg2.jpg)",
+        backgroundSize: "100% 100%",
+      }}
+      className="bg-red-500 h-screen w-screen pt-20"
+    >
+      <div className="bg-white m-auto max-w-md rounded-3xl">
         <div className="p-10">
-          <h1 className="text-xl text-center">Đăng nhập</h1>
+          <h1 className="text-2xl font-bold mb-5 text-center">
+            QUẢN LÝ RẠP CHIẾU PHIM
+          </h1>
+          <h1 className="text-xl text-center">Trang quản trị</h1>
           <form onSubmit={handleSubmit(onSaveData)}>
             <div className="mt-2 p-6">
               <div className="mb-8">

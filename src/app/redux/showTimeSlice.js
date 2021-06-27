@@ -23,16 +23,16 @@ export const fetchListShowTime = createAsyncThunk(
     const { dispatch, getState } = thunkApi;
     const { selectedCumRap, selectedDate, selectedMaHeThongRap } =
       getState().showTime;
-    console.log(selectedCumRap, selectedDate);
+
     let params = {
       cumRapId: selectedCumRap.cumRapId,
       time: selectedDate,
     };
-    console.log(params);
+
     dispatch(startLoading());
     try {
       const response = await showTimeApi.getListShowTime(params);
-      console.log(response);
+
       switch (response.status) {
         case 200:
           dispatch(stopLoading());
@@ -40,13 +40,13 @@ export const fetchListShowTime = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
       }
     } catch (error) {
       dispatch(stopLoading());
+      console.log("fechtListShowTime, error", error);
       return null;
     }
   }
@@ -60,7 +60,7 @@ export const createShowTime = createAsyncThunk(
     let selectedCumRap = getState().showTime.selectedCumRap;
     let selectedMaHeThongRap = getState().showTime.selectedMaHeThongRap;
     const { hour, minute, phongChieuId, movieId, giaVe, thoiLuong } = payload;
-    console.log("time :", selectedDate, payload);
+
     console.log(
       "time tao moi:  ",
       selectedDate.getFullYear(),
@@ -130,7 +130,7 @@ export const updateShowTime = createAsyncThunk(
   "showTime/updateShowTime",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await showTimeApi.postShowTime(payload);
@@ -160,7 +160,7 @@ export const deleteShowTime = createAsyncThunk(
   "showTime/deleteShowTime",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await showTimeApi.deleteShowTime(payload);
@@ -191,15 +191,14 @@ export const deleteShowTime = createAsyncThunk(
 export const fetchListBookedSeats = createAsyncThunk(
   "showTime/fetchBookedSeats",
   async (payload, thunkApi) => {
-    console.log(payload);
     const { id } = payload;
     const { dispatch } = thunkApi;
     let params = id;
-    console.log(params);
+
     dispatch(startLoading());
     try {
       const response = await showTimeApi.getListBookedSeats(params);
-      console.log(response);
+
       switch (response.status) {
         case 200:
           dispatch(stopLoading());
@@ -207,13 +206,11 @@ export const fetchListBookedSeats = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
       }
     } catch (error) {
-      console.log(error);
       dispatch(stopLoading());
       return null;
     }
@@ -222,15 +219,14 @@ export const fetchListBookedSeats = createAsyncThunk(
 export const fetchListSeatsPhongChieu = createAsyncThunk(
   "showTime/fetchListSeatsPhongChieu",
   async (payload, thunkApi) => {
-    console.log(payload);
     const { phongChieuId } = payload;
     const { dispatch } = thunkApi;
     let params = phongChieuId;
-    console.log(params);
+
     dispatch(startLoading());
     try {
       const response = await showTimeApi.getListSeatsPhongChieu(params);
-      console.log(response);
+
       switch (response.status) {
         case 200:
           dispatch(stopLoading());
@@ -238,7 +234,6 @@ export const fetchListSeatsPhongChieu = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
@@ -262,7 +257,6 @@ export const showTimeSlice = createSlice({
     },
     setSelectedDate: (state, action) => {
       state.selectedDate = action.payload;
-      console.log("set time: ", action.payload);
     },
     setEmtyListShowTime: (state) => {
       state.listShowTime = [];
@@ -272,6 +266,9 @@ export const showTimeSlice = createSlice({
     },
     deactiveCreateShowTime: (state) => {
       state.isActiveCreateShowTime = false;
+    },
+    setSelectedShowtime: (state, action) => {
+      state.selectedShowTime = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -312,7 +309,6 @@ export const showTimeSlice = createSlice({
           (showTimeSystem) => showTimeSystem.id === newShowTime.id
         );
         newListShowTime[index] = newShowTime;
-        console.log(newListShowTime);
 
         state.listShowTime = newListShowTime;
       })
@@ -334,6 +330,7 @@ export const {
   setSelectedDate,
   setSelectedCumRap,
   setSelectedMaHeThongRap,
+  setSelectedShowtime,
 } = showTimeSlice.actions;
 
 export default showTimeSlice.reducer;

@@ -26,14 +26,13 @@ export const fetchListPhongChieu = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
       }
     } catch (error) {
       dispatch(stopLoading());
-      console.log(error);
+
       return null;
     }
   }
@@ -54,14 +53,13 @@ export const fetchListPhongChieuInCumRap = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
       }
     } catch (error) {
       dispatch(stopLoading());
-      console.log(error);
+
       return null;
     }
   }
@@ -102,7 +100,7 @@ export const updatePhongChieu = createAsyncThunk(
   "phongChieu/updatePhongChieu",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await phongChieuApi.postPhongChieu(payload);
@@ -132,7 +130,7 @@ export const deletePhongChieu = createAsyncThunk(
   "phongChieu/deletePhongChieu",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await phongChieuApi.deletePhongChieu(payload);
@@ -210,7 +208,6 @@ export const phongChieuSlice = createSlice({
           (phongChieu) => phongChieu.id === newPhongChieu.id
         );
         newListPhongChieu[index] = newPhongChieu;
-        console.log(newListPhongChieu);
 
         state.listPhongChieu = newListPhongChieu;
       })

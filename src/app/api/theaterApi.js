@@ -9,11 +9,8 @@ const theaterApi = {
     const url = "/he-thong-raps";
     let ka = await axiosClient
       .get("/cum-raps/bhd-hvt/raps")
-      .then((response) => {
-        console.log(response);
-      });
+      .then((response) => {});
     let send = await axiosClient.get(url).then((response) => {
-      console.log(response);
       status = response.status;
       if (response.status === 200) {
         let listTheaterSystem = [];
@@ -35,7 +32,7 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
+
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -56,7 +53,6 @@ const theaterApi = {
     // return response;
   },
   postTheaterSystem: async (theaterSystem) => {
-    console.log(theaterSystem);
     let data_response = null;
     let status = null;
     const url = "/he-thong-raps";
@@ -68,7 +64,6 @@ const theaterApi = {
       logo: logo,
     };
     let send = await axiosClient.post(url, data_request).then((response) => {
-      console.log(response);
       status = response.status;
       if (response.status === 200) {
         data_response = { id: name };
@@ -76,7 +71,7 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
+
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -107,7 +102,6 @@ const theaterApi = {
       logo: logo,
     };
     let send = await axiosClient.patch(url, data_request).then((response) => {
-      console.log(response);
       status = response.status;
       if (status === 204) status = 200;
       if (status === 200) {
@@ -116,7 +110,7 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
+
     return new Promise((resolve, reject) => {
       resolve({
         status: status,
@@ -140,7 +134,6 @@ const theaterApi = {
     const id = theaterSystem;
     const url = `/he-thong-raps/${id}`;
     let send = await axiosClient.delete(url).then((response) => {
-      console.log(response);
       status = response.status;
       if (status === 204) status = 200;
       if (status === 200) {
@@ -149,7 +142,7 @@ const theaterApi = {
         data_response = null;
       }
     });
-    console.log(data_response, status);
+
     return new Promise((resolve, reject) => {
       resolve({
         status: status,

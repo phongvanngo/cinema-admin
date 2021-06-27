@@ -16,7 +16,7 @@ export const fetchListMovieType = createAsyncThunk(
     dispatch(startLoading());
     try {
       const response = await movieTypeApi.getListMovieType();
-      console.log(response);
+
       switch (response.status) {
         case 200:
           dispatch(stopLoading());
@@ -24,7 +24,6 @@ export const fetchListMovieType = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
@@ -39,7 +38,7 @@ export const createMovieType = createAsyncThunk(
   "movieType/createMovieType",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await movieTypeApi.postMovieType(payload);
@@ -70,7 +69,7 @@ export const updateMovieType = createAsyncThunk(
   "movieType/updateMovieType",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await movieTypeApi.postMovieType(payload);
@@ -100,7 +99,7 @@ export const deleteMovieType = createAsyncThunk(
   "movieType/deleteMovieType",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await movieTypeApi.deleteMovieType(payload);
@@ -160,7 +159,6 @@ export const movieTypeSlice = createSlice({
           (movieTypeSystem) => movieTypeSystem.id === newMovieType.id
         );
         newListMovieType[index] = newMovieType;
-        console.log(newListMovieType);
 
         state.listMovieType = newListMovieType;
       })

@@ -23,13 +23,11 @@ export const fetchListCumRap = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
       }
     } catch (error) {
-      console.log(error);
       dispatch(stopLoading());
       return null;
     }
@@ -45,7 +43,7 @@ export const fetchListCumRapInTheaterSystem = createAsyncThunk(
       const response = await cumRapApi.getListCumRapInTheaterSytem(
         theaterSystemId
       );
-      console.log(response);
+
       switch (response.status) {
         case 200:
           dispatch(stopLoading());
@@ -53,7 +51,6 @@ export const fetchListCumRapInTheaterSystem = createAsyncThunk(
         case 401:
           throw new Error("Unauthorize");
         case 400:
-          console.log("hi");
           throw new Error("");
         default:
           throw new Error("Error");
@@ -68,7 +65,7 @@ export const createCumRap = createAsyncThunk(
   "cumRap/createCumRap",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await cumRapApi.postCumRap(payload);
@@ -99,7 +96,7 @@ export const updateCumRap = createAsyncThunk(
   "cumRap/updateCumRap",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await cumRapApi.patchCumRap(payload);
@@ -129,7 +126,7 @@ export const deleteCumRap = createAsyncThunk(
   "cumRap/deleteCumRap",
   async (payload, thunkApi) => {
     const { dispatch } = thunkApi;
-    console.log(payload);
+
     dispatch(startLoading());
     try {
       const response = await cumRapApi.deleteCumRap(payload);
@@ -198,7 +195,6 @@ export const cumRapSlice = createSlice({
           (cumRap) => cumRap.id === newCumRap.id
         );
         newListCumRap[index] = newCumRap;
-        console.log(newListCumRap);
 
         state.listCumRap = newListCumRap;
       })

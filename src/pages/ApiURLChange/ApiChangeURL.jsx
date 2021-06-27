@@ -20,7 +20,7 @@ export default function AdminSignInUI() {
 
   function onSaveData(data) {
     // if (defaultData?.id === null) {
-    //   console.log(data);
+    //
     //   dispatch(createTheaterSystem(data));
     //   dispatch(closeTheaterSystemFormDialog());
     // } else {
@@ -28,7 +28,7 @@ export default function AdminSignInUI() {
     //   dispatch(closeTheaterSystemFormDialog());
     // }
     let api_url = data.api_url;
-    console.log(api_url);
+
     localStorage.setItem("api_url", api_url);
   }
 
