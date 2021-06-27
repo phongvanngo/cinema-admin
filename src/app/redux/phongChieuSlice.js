@@ -2,7 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { adminLogOut } from "./adminAuthSlice";
 import { toast } from "react-toastify";
 import phongChieuApi from "app/api/phongChieuApi";
-import { openErrorNofificationDialog } from "./dialogSlice";
+import {
+  closePhongChieuFormDialog,
+  openErrorNofificationDialog,
+} from "./dialogSlice";
 import { startLoading, stopLoading } from "./loadingSlice";
 
 const initialState = {
@@ -25,6 +28,7 @@ export const fetchListPhongChieu = createAsyncThunk(
         case 200:
           dispatch(stopLoading());
           return response.data;
+
         case 442:
           throw { mess: "Dữ liệu đầu vào không hợp lệ" };
         case 401:
@@ -81,7 +85,8 @@ export const createPhongChieu = createAsyncThunk(
       const response = await phongChieuApi.postPhongChieu(newPhongChieu);
       switch (response.status) {
         case 200:
-          // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
+          toast.success("Tạo phòng chiếu thành công");
+          dispatch(closePhongChieuFormDialog());
           dispatch(stopLoading());
           return { newPhongChieu: newPhongChieu, responseData: response.data };
         case 442:
@@ -119,6 +124,8 @@ export const updatePhongChieu = createAsyncThunk(
       const response = await phongChieuApi.postPhongChieu(payload);
       switch (response.status) {
         case 200:
+          toast.success("Cập nhật phòng chiếu thành công");
+          dispatch(closePhongChieuFormDialog());
           dispatch(stopLoading());
           return { newPhongChieu: payload, responseData: response.data };
         case 442:

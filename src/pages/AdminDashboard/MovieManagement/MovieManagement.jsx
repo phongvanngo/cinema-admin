@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import MovieTable from "./Movie.table";
 import MovieFormModal from "./Movie.formDialog";
 import { fetchListMovieType } from "app/redux/movieTypeSlice";
+import AddMovieTypeForm from "./Movie.AddMovieTypeForm";
 
 export default function MovieManagement() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ export default function MovieManagement() {
 
   return (
     <div>
+      <AddMovieTypeForm />
       <MovieFormModal />
       <div className="pt-20">
         <MovieTable listMovie={listMovie} />

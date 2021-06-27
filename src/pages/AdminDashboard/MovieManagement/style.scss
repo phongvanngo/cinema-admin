@@ -1,0 +1,8 @@
+.btn-add-type {
+  display: none;
+}
+.movie-type-item:hover {
+  .btn-add-type {
+    display: block;
+  }
+}

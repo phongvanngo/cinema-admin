@@ -25,6 +25,10 @@ const initialState = {
     isOpen: false,
     defaultData: null,
   },
+  addMovieTypeFormDialog: {
+    isOpen: true,
+    defaultData: null,
+  },
   errorNotificationDialog: {
     isOpen: false,
     defaultData: { title: "" },
@@ -66,6 +70,14 @@ export const dialogSlice = createSlice({
     closeMovieTypeFormDialog: (state) => {
       state.movieTypeFormDialog.isOpen = false;
       state.movieTypeFormDialog.defaultData = null;
+    },
+    openAddMovieTypeFormDialog: (state, action) => {
+      state.addMovieTypeFormDialog.defaultData = action.payload;
+      state.addMovieTypeFormDialog.isOpen = true;
+    },
+    closeAddMovieTypeFormDialog: (state) => {
+      state.addMovieTypeFormDialog.isOpen = false;
+      state.addMovieTypeFormDialog.defaultData = null;
     },
     openShowTimeFormDialog: (state, action) => {
       state.showTimeFormDialog.defaultData = action.payload;
@@ -109,6 +121,8 @@ export const {
   closeMovieTypeFormDialog,
   openShowTimeFormDialog,
   closeShowTimeFormDialog,
+  openAddMovieTypeFormDialog,
+  closeAddMovieTypeFormDialog,
 } = dialogSlice.actions;
 
 export default dialogSlice.reducer;

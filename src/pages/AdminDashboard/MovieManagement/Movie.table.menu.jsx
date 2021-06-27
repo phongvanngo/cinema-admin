@@ -1,7 +1,11 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
-export default function MenuTheaterSytemTable({ handleEdit, handleDelete }) {
+export default function MenuTheaterSytemTable({
+  handleEdit,
+  handleDelete,
+  handleAddType,
+}) {
   return (
     <div>
       <Menu as="div" className="relative inline-block text-left">
@@ -93,7 +97,7 @@ export default function MenuTheaterSytemTable({ handleEdit, handleDelete }) {
                   {({ active }) => (
                     <button
                       onClick={() => {
-                        handleDelete();
+                        handleAddType();
                       }}
                       className={`${
                         active
@@ -102,12 +106,12 @@ export default function MenuTheaterSytemTable({ handleEdit, handleDelete }) {
                       } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                     >
                       {active ? (
-                        <AddMovieTypeIcon
+                        <AddMovieTypeIconActive
                           className="w-5 h-5 mr-2 text-violet-400"
                           aria-hidden="true"
                         />
                       ) : (
-                        <AddMovieTypeIcon
+                        <AddMovieTypeIconInActive
                           className="w-5 h-5 mr-2 text-violet-400"
                           aria-hidden="true"
                         />
@@ -207,21 +211,44 @@ function DeleteActiveIcon(props) {
   );
 }
 
-function AddMovieTypeIcon(props) {
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="66"
-    height="66"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="#000000"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="10"></circle>
-    <line x1="12" y1="8" x2="12" y2="16"></line>
-    <line x1="8" y1="12" x2="16" y2="12"></line>
-  </svg>;
+function AddMovieTypeIconInActive(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="66"
+      height="66"
+      viewBox="0 0 24 24"
+      fill="#EDE9FE"
+      stroke="#A78BFA"
+      strokeWidth="2"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="16"></line>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+    </svg>
+  );
+}
+function AddMovieTypeIconActive(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="66"
+      height="66"
+      viewBox="0 0 24 24"
+      fill="#8B5CF6"
+      stroke="#C4B5FD"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="16"></line>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+    </svg>
+  );
 }

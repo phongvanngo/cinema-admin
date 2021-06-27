@@ -2,7 +2,10 @@ import {
   convertDateTime,
   filterArrayBySearchTerm,
 } from "app/myLibrary/utilities";
-import { openMovieFormDialog } from "app/redux/dialogSlice";
+import {
+  openAddMovieTypeFormDialog,
+  openMovieFormDialog,
+} from "app/redux/dialogSlice";
 import { deleteMovie } from "app/redux/movieSlice";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -22,6 +25,10 @@ export default function MovieTable({ listMovie }) {
     if (window.confirm("Bạn có chắc chắn xóa")) {
       dispatch(deleteMovie(id));
     }
+  };
+
+  const handleAddTypeToMovie = (movieData) => {
+    dispatch(openAddMovieTypeFormDialog(movieData));
   };
 
   return (
@@ -124,6 +131,9 @@ export default function MovieTable({ listMovie }) {
                         handleEdit={() => {
                           handleEditMovie(movie);
                         }}
+                        handleAddType={() => {
+                          handleAddTypeToMovie(movie);
+                        }}
                       />
                     </td>
                   </tr>
@@ -133,7 +143,7 @@ export default function MovieTable({ listMovie }) {
           </table>
           {currentListMovie.length === 0 ? (
             <div className="text-center text-xl text-gray-500">
-              <span>Không có rạp chiếu nào</span>
+              <span>Không có phim nào</span>
             </div>
           ) : null}
         </div>

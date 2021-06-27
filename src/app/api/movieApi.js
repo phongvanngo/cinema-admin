@@ -1,10 +1,10 @@
 import axiosClient from "./AxiosClient";
 import { fakeApi } from "./fakeApi";
-import { listMovies } from "./fakeData";
+import { listMovies, listMovieTypes } from "./fakeData";
 
-const theaterApi = {
+const movieApi = {
   getListMovie: async (data_request) => {
-    // /*
+    /*
     let data_response = null;
     let status = null;
     const url = "/phim";
@@ -56,8 +56,8 @@ const theaterApi = {
         data: data_response,
       });
     });
-    // */
-    /*
+    */
+    // /*
     let response = await fakeApi({
       // request: loginInfo,
       response: {
@@ -69,10 +69,10 @@ const theaterApi = {
       timeOut: 1000,
     });
     return response;
-  */
+    // */
   },
   getListMovieInTheaterSytem: async (theaterSystemId) => {
-    if (theaterSystemId === null) return theaterApi.getListMovie();
+    if (theaterSystemId === null) return movieApi.getListMovie();
     let data_response = null;
     let status = null;
     const url = `/phim/${theaterSystemId}/he-thong-rap`;
@@ -213,6 +213,22 @@ const theaterApi = {
       });
     });
   },
+
+  getTypeOfMovie: async (movieId) => {
+    const url = `/phims/${movieId}/the-loais`;
+    console.log("getTypeOfMovieApi, movieId", movieId);
+    let response = await fakeApi({
+      request: "",
+      response: {
+        status: 200,
+        data: {
+          listTypes: listMovieTypes.slice(0, 5),
+        },
+      },
+      timeOut: 1000,
+    });
+    return response;
+  },
 };
 
-export default theaterApi;
+export default movieApi;
