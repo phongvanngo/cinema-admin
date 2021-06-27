@@ -8,7 +8,6 @@ const adminAuthApi = {
     let payload = { email: name, password: password };
 
     let response = await axiosClient.post(url, payload).then((res) => {
-      console.log("sendLoginInfo response", res);
       if (res.status === 200 && res.data?.maLoaiNguoiDung == 1) {
         //admin
         return { status: 200, data: { token: res.data.token } };

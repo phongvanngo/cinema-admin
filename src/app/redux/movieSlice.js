@@ -1,4 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { adminLogOut } from "./adminAuthSlice";
+import { toast } from "react-toastify";
 import movieApi from "app/api/movieApi";
 import { openErrorNofificationDialog } from "./dialogSlice";
 import { startLoading, stopLoading } from "./loadingSlice";
@@ -21,14 +23,27 @@ export const fetchListMovie = createAsyncThunk(
         case 200:
           dispatch(stopLoading());
           return response.data;
+        case 442:
+          throw { mess: "Dữ liệu đầu vào không hợp lệ" };
         case 401:
-          throw new Error("Unauthorize");
-        case 400:
-          throw new Error("");
+          throw { mess: "Bạn không có quyền thực hiện thao tác này" };
+        case 403:
+          dispatch(adminLogOut());
+
         default:
-          throw new Error("Error");
+          throw { mess: "Thất bại, hãy thử lại" };
       }
     } catch (error) {
+      console.log("reduxSlice-error", error);
+      if (error?.mess) {
+        toast.error(error?.mess, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      } else {
+        toast.error("Có lỗi xảy ra", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      }
       dispatch(stopLoading());
       return null;
     }
@@ -47,19 +62,26 @@ export const createMovie = createAsyncThunk(
           // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
           dispatch(stopLoading());
           return { newMovie: payload, responseData: response.data };
+        case 442:
+          throw { mess: "Dữ liệu đầu vào không hợp lệ" };
         case 401:
-          throw new Error("Unauthorize");
-        case 400:
-          throw new Error("");
+          throw { mess: "Bạn không có quyền thực hiện thao tác này" };
+        case 403:
+          dispatch(adminLogOut());
         default:
-          throw new Error("Error");
+          throw { mess: "Thất bại, hãy thử lại" };
       }
     } catch (error) {
-      dispatch(
-        openErrorNofificationDialog({
-          title: "Thêm hệ thống rạp mới thất bại",
-        })
-      );
+      console.log("reduxSlice-error", error);
+      if (error?.mess) {
+        toast.error(error?.mess, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      } else {
+        toast.error("Có lỗi xảy ra", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      }
       dispatch(stopLoading());
       return null;
     }
@@ -77,19 +99,26 @@ export const updateMovie = createAsyncThunk(
         case 200:
           dispatch(stopLoading());
           return { newMovie: payload, responseData: response.data };
+        case 442:
+          throw { mess: "Dữ liệu đầu vào không hợp lệ" };
         case 401:
-          throw new Error("Unauthorize");
-        case 400:
-          throw new Error("");
+          throw { mess: "Bạn không có quyền thực hiện thao tác này" };
+        case 403:
+          dispatch(adminLogOut());
         default:
-          throw new Error("Error");
+          throw { mess: "Thất bại, hãy thử lại" };
       }
     } catch (error) {
-      dispatch(
-        openErrorNofificationDialog({
-          title: "Cập nhập hệ thống rạp thất bại",
-        })
-      );
+      console.log("reduxSlice-error", error);
+      if (error?.mess) {
+        toast.error(error?.mess, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      } else {
+        toast.error("Có lỗi xảy ra", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      }
       dispatch(stopLoading());
       return null;
     }
@@ -108,19 +137,26 @@ export const deleteMovie = createAsyncThunk(
           // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
           dispatch(stopLoading());
           return { id: payload, responseData: response.data };
+        case 442:
+          throw { mess: "Dữ liệu đầu vào không hợp lệ" };
         case 401:
-          throw new Error("Unauthorize");
-        case 400:
-          throw new Error("");
+          throw { mess: "Bạn không có quyền thực hiện thao tác này" };
+        case 403:
+          dispatch(adminLogOut());
         default:
-          throw new Error("Error");
+          throw { mess: "Thất bại, hãy thử lại" };
       }
     } catch (error) {
-      dispatch(
-        openErrorNofificationDialog({
-          title: "Xóa rạp thất bại",
-        })
-      );
+      console.log("reduxSlice-error", error);
+      if (error?.mess) {
+        toast.error(error?.mess, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      } else {
+        toast.error("Có lỗi xảy ra", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      }
       dispatch(stopLoading());
       return null;
     }

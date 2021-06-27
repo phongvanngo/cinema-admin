@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 import adminAuthApi from "app/api/adminAuthApi";
 import { openErrorNofificationDialog } from "./dialogSlice";
 import { startLoading, stopLoading } from "./loadingSlice";
@@ -17,27 +18,14 @@ export const adminLoginRequest = createAsyncThunk(
 
       switch (response.status) {
         case 200:
-          // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
           dispatch(stopLoading());
+          toast.success("Đăng nhập thành công");
           return response.data;
         case 401:
-          dispatch(
-            openErrorNofificationDialog({
-              title: "Đăng nhập thất bại",
-              content: "Tên đăng nhập hoặc mật khẩu không đúng",
-            })
-          );
           throw new Error("Sai tên đăng nhập hoặc mật khẩu");
         case 402:
           throw new Error("Chưa nhập tên đăng nhập và mật khẩu");
         default:
-          dispatch(
-            openErrorNofificationDialog({
-              title: "Đăng nhập thất bại",
-              content: "Kiểm tra lại tên đăng nhập hoặc mật khẩu",
-            })
-          );
-          throw new Error("Failed");
       }
     } catch (error) {
       dispatch(stopLoading());
