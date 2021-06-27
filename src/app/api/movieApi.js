@@ -1,9 +1,10 @@
 import axiosClient from "./AxiosClient";
 import { fakeApi } from "./fakeApi";
-import { listMovie } from "./fakeData";
+import { listMovies } from "./fakeData";
 
 const theaterApi = {
   getListMovie: async (data_request) => {
+    // /*
     let data_response = null;
     let status = null;
     const url = "/phim";
@@ -55,18 +56,20 @@ const theaterApi = {
         data: data_response,
       });
     });
-
-    // let response = await fakeApi({
-    //   // request: loginInfo,
-    //   response: {
-    //     status: 200,
-    //     data: {
-    //       listMovie: listMovie,
-    //     },
-    //   },
-    //   timeOut: 1000,
-    // });
-    // return response;
+    // */
+    /*
+    let response = await fakeApi({
+      // request: loginInfo,
+      response: {
+        status: 200,
+        data: {
+          listMovie: listMovies,
+        },
+      },
+      timeOut: 1000,
+    });
+    return response;
+  */
   },
   getListMovieInTheaterSytem: async (theaterSystemId) => {
     if (theaterSystemId === null) return theaterApi.getListMovie();

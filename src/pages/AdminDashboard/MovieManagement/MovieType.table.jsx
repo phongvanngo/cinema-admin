@@ -64,7 +64,7 @@ export default function MovieTypeTable({ listMovieType }) {
                   <strong>Tên thể loại phim</strong>
                 </th>
                 <th scope="col" className="w-1/12 px-2 py-3 break-words">
-                  <strong>Action</strong>
+                  <strong></strong>
                 </th>
               </tr>
             </thead>

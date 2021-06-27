@@ -37,7 +37,7 @@ export default function AdminSignInUI({ handleLogin }) {
         // backgroundImage: "url(/image/bg2.jpg)",
         backgroundSize: "100% 100%",
       }}
-      className="bg-red-500 h-screen w-screen pt-20"
+      className="bg-yellow-300 h-screen w-screen pt-20"
     >
       <div className="bg-white m-auto max-w-md rounded-3xl">
         <div className="p-10">

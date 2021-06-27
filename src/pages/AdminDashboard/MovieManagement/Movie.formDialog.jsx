@@ -66,7 +66,7 @@ export default function MovieFormModal() {
           ...movieTypeInfo,
         })
       );
-      dispatch(closeMovieFormDialog());
+      // dispatch(closeMovieFormDialog());
     } else {
       dispatch(
         updateMovie({
@@ -76,7 +76,7 @@ export default function MovieFormModal() {
           ...movieTypeInfo,
         })
       );
-      dispatch(closeMovieFormDialog());
+      // dispatch(closeMovieFormDialog());
     }
   }
   function handleCloseModal() {

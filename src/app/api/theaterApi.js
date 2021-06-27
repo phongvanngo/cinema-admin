@@ -58,26 +58,24 @@ const theaterApi = {
     const url = "/he-thong-raps";
     const { name, logo, alias } = theaterSystem;
     const data_request = {
-      maHeThongRap: name,
+      maHeThongRap: name.replace(" ", ""),
       tenHeThongRap: name,
       biDanh: alias,
       logo: logo,
     };
-    let send = await axiosClient.post(url, data_request).then((response) => {
-      status = response.status;
-      if (response.status === 200) {
-        data_response = { id: name };
-      } else {
-        data_response = null;
-      }
+    let response = await axiosClient.post(url, data_request).then((res) => {
+      console.log("postTheaterApi, response", res);
+      return res;
     });
 
-    return new Promise((resolve, reject) => {
-      resolve({
-        status: status,
-        data: data_response,
-      });
-    });
+    return { status: response?.status, data: { id: name } };
+
+    // return new Promise((resolve, reject) => {
+    //   resolve({
+    //     status: status,
+    //     data: data_response,
+    //   });
+    // });
 
     // let response = await fakeApi({
     //   // request: loginInfo,

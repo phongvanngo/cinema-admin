@@ -8,10 +8,22 @@ const adminAuthApi = {
     let payload = { email: name, password: password };
 
     let response = await axiosClient.post(url, payload).then((res) => {
-      if (res.status === 200 && res.data?.maLoaiNguoiDung == 1) {
-        //admin
-        return { status: 200, data: { token: res.data.token } };
-      } else return { status: 1000, data: null };
+      switch (res?.status) {
+        case 200:
+          if (res.data?.maLoaiNguoiDung === 1) {
+            return { status: 200, data: { token: res.data.token } };
+          } else {
+            return { status: 1001, data: null };
+          }
+          break;
+        default:
+          return { status: res?.status };
+          break;
+      }
+      // if (res.status === 200 && res.data?.maLoaiNguoiDung == 1) {
+      //   //admin
+      //   return { status: 200, data: { token: res.data.token } };
+      // } else return { status: 1000, data: null };
     });
 
     return response;

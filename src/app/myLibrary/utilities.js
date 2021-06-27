@@ -31,6 +31,7 @@ export function filterArrayBySearchTerm(myArray, searchTerm) {
   for (let index = 0; index < myArray.length; index++) {
     let element = myArray[index];
     for (var key in element) {
+      if (!element[key]) continue;
       let value = removeAccents(element[key].toString().toUpperCase());
       if (value.includes(searchTerm)) {
         res.push(element);

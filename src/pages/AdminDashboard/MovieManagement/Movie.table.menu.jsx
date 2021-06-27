@@ -86,6 +86,38 @@ export default function MenuTheaterSytemTable({ handleEdit, handleDelete }) {
                 </Menu.Item>
               </div>
             </div>
+
+            <div className="px-1 py-1">
+              <div className="rounded-md hover:bg-purple-800">
+                <Menu.Item>
+                  {({ active }) => (
+                    <button
+                      onClick={() => {
+                        handleDelete();
+                      }}
+                      className={`${
+                        active
+                          ? "bg-violet-500 text-white focus-within:outline-none"
+                          : "text-gray-900"
+                      } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    >
+                      {active ? (
+                        <AddMovieTypeIcon
+                          className="w-5 h-5 mr-2 text-violet-400"
+                          aria-hidden="true"
+                        />
+                      ) : (
+                        <AddMovieTypeIcon
+                          className="w-5 h-5 mr-2 text-violet-400"
+                          aria-hidden="true"
+                        />
+                      )}
+                      Thêm thể loại
+                    </button>
+                  )}
+                </Menu.Item>
+              </div>
+            </div>
           </Menu.Items>
         </Transition>
       </Menu>
@@ -173,4 +205,23 @@ function DeleteActiveIcon(props) {
       <path d="M8 6V4H12V6" stroke="#C4B5FD" strokeWidth="2" />
     </svg>
   );
+}
+
+function AddMovieTypeIcon(props) {
+  <svg
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    width="66"
+    height="66"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#000000"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" y1="8" x2="12" y2="16"></line>
+    <line x1="8" y1="12" x2="16" y2="12"></line>
+  </svg>;
 }

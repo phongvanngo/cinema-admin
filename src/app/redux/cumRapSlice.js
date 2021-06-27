@@ -2,7 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { adminLogOut } from "./adminAuthSlice";
 import { toast } from "react-toastify";
 import cumRapApi from "app/api/cumRapApi";
-import { openErrorNofificationDialog } from "./dialogSlice";
+import {
+  closeCumRapFormDialog,
+  openErrorNofificationDialog,
+} from "./dialogSlice";
 import { startLoading, stopLoading } from "./loadingSlice";
 
 const initialState = {
@@ -96,8 +99,9 @@ export const createCumRap = createAsyncThunk(
       const response = await cumRapApi.postCumRap(payload);
       switch (response.status) {
         case 200:
-          // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
           dispatch(stopLoading());
+          toast.success("Tạo mới cụm rạp thành công");
+          dispatch(closeCumRapFormDialog());
           return { newCumRap: payload, responseData: response.data };
         case 442:
           throw { mess: "Dữ liệu đầu vào không hợp lệ" };
@@ -135,6 +139,8 @@ export const updateCumRap = createAsyncThunk(
       switch (response.status) {
         case 200:
           dispatch(stopLoading());
+          toast.success("Cập nhật cụm rạp thành công");
+          dispatch(closeCumRapFormDialog());
           return { newCumRap: payload, responseData: response.data };
         case 442:
           throw { mess: "Dữ liệu đầu vào không hợp lệ" };
@@ -226,8 +232,8 @@ export const cumRapSlice = createSlice({
 
         newCumRap = { ...newCumRap, id: responseData.id };
 
-        let newListCumRap = state.listCumRap;
-        newListCumRap.push(newCumRap);
+        let newListCumRap = [newCumRap, ...state.listCumRap];
+        // newListCumRap.push(newCumRap);
 
         state.listCumRap = newListCumRap;
       })

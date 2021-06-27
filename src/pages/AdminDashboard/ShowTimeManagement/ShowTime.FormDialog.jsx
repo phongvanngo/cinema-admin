@@ -63,7 +63,7 @@ export default function ShowTimeFormModal() {
           ...movieInfo,
         })
       );
-      dispatch(closeShowTimeFormDialog());
+      // dispatch(closeShowTimeFormDialog());
     } else {
       dispatch(
         updateShowTime({
@@ -74,7 +74,7 @@ export default function ShowTimeFormModal() {
           ...movieInfo,
         })
       );
-      dispatch(closeShowTimeFormDialog());
+      // dispatch(closeShowTimeFormDialog());
     }
   }
   function handleCloseModal() {

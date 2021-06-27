@@ -22,13 +22,28 @@ export const adminLoginRequest = createAsyncThunk(
           toast.success("Đăng nhập thành công");
           return response.data;
         case 401:
-          throw new Error("Sai tên đăng nhập hoặc mật khẩu");
+          throw { mess: "Sai tên đăng nhập hoặc mật khẩu" };
+        case 422:
+          throw { mess: "Sai tên đăng nhập hoặc mật khẩu" };
         case 402:
-          throw new Error("Chưa nhập tên đăng nhập và mật khẩu");
+          throw { mess: "Chưa nhập tên đăng nhập và mật khẩu" };
+        case 1001:
+          throw { mess: "Tài khoản không hợp lệ" };
         default:
+          throw { mess: "Đăng nhập thất bại" };
       }
     } catch (error) {
       dispatch(stopLoading());
+      console.log("reduxSlice-error", error);
+      if (error?.mess) {
+        toast.error(error?.mess, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      } else {
+        toast.error("Có lỗi xảy ra", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      }
       return null;
     }
   }

@@ -2,7 +2,7 @@ import { filterArrayBySearchTerm } from "app/myLibrary/utilities";
 import { openCumRapFormDialog } from "app/redux/dialogSlice";
 import { deleteCumRap } from "app/redux/cumRapSlice";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import MenuDropdown from "./CumRap.table.menu";
 import FilterTheaterSystem from "./CumRap.table.filterTheaterSystem";
 
@@ -11,7 +11,9 @@ export default function CumRapTable({ listCumRap }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   let currentListCumRap = filterArrayBySearchTerm(listCumRap, searchTerm);
-
+  const listTheaterSystem = useSelector(
+    (state) => state.theater.listTheaterSystem
+  );
   const handleEditCumRap = (cumRapData) => {
     dispatch(openCumRapFormDialog(cumRapData));
   };
@@ -74,13 +76,16 @@ export default function CumRapTable({ listCumRap }) {
                   <strong>Thông tin</strong>
                 </th>
                 <th scope="col" className="w-1/12 px-2 py-3 break-words">
-                  <strong>Action</strong>
+                  <strong></strong>
                 </th>
               </tr>
             </thead>
             <tbody className="text-gray-500 font-normal">
               {currentListCumRap.map((cumRap, index) => {
-                const { id, name, information, theaterSystemName } = cumRap;
+                const { id, name, information, theaterSystemId } = cumRap;
+                let theaterSystemName = listTheaterSystem.find(
+                  (e) => e.id === theaterSystemId
+                )?.name;
                 return (
                   <tr key={index} className="border-b border-gray-200">
                     <td className="px-2 py-4 text-gray-500 text-sm font-extrabold">
@@ -107,7 +112,7 @@ export default function CumRapTable({ listCumRap }) {
           </table>
           {currentListCumRap.length === 0 ? (
             <div className="text-center text-xl text-gray-500">
-              <span>Không có rạp chiếu nào</span>
+              <span>Không có cụm rạp nào</span>
             </div>
           ) : null}
         </div>

@@ -2,6 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
 
 const schema = yup.object().shape({
   api_url: yup.string().required(),
@@ -17,6 +19,7 @@ export default function AdminSignInUI() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const history = useHistory();
 
   function onSaveData(data) {
     // if (defaultData?.id === null) {
@@ -27,9 +30,12 @@ export default function AdminSignInUI() {
     //   dispatch(updateTheaterSystem({ ...data, id: defaultData.id }));
     //   dispatch(closeTheaterSystemFormDialog());
     // }
+
     let api_url = data.api_url;
 
     localStorage.setItem("api_url", api_url);
+    toast.success("Đã lưu");
+    // history.goBack();
   }
 
   return (

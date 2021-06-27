@@ -13,6 +13,7 @@ import {
 const schema = yup.object().shape({
   name: yup.string().required(),
   alias: yup.string().required(),
+  logo: yup.string().required(),
 });
 
 export default function TheaterSystemFormModal() {
@@ -34,10 +35,10 @@ export default function TheaterSystemFormModal() {
   function onSaveData(data) {
     if (defaultData?.id === null) {
       dispatch(createTheaterSystem(data));
-      dispatch(closeTheaterSystemFormDialog());
+      // dispatch(closeTheaterSystemFormDialog());
     } else {
       dispatch(updateTheaterSystem({ ...data, id: defaultData.id }));
-      dispatch(closeTheaterSystemFormDialog());
+      // dispatch(closeTheaterSystemFormDialog());
     }
   }
   function handleCloseModal() {
@@ -47,6 +48,7 @@ export default function TheaterSystemFormModal() {
   useEffect(() => {
     clearErrors("name");
     clearErrors("alias");
+    clearErrors("logo");
     if (defaultData?.id) {
       const { name, alias, logo } = defaultData;
       setValue("name", name);
@@ -168,8 +170,20 @@ export default function TheaterSystemFormModal() {
                       <input
                         type="text"
                         {...register("logo", {})}
-                        className="h-full w-full appearance-none rounded-full border w-30 py-4 px-6 leading-tight focus:outline-none focus:border-indigo-500 text-gray-500"
+                        className={
+                          "h-full w-full appearance-none rounded-full  w-30 py-4 px-6 leading-tight focus:outline-none border  text-gray-500" +
+                          (errors.logo
+                            ? " border-red-500"
+                            : " focus:border-indigo-500")
+                        }
                       />
+                      {errors.logo ? (
+                        <span className="ml-2 mt-2 text-red-500">
+                          *Không được để trống
+                        </span>
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
 

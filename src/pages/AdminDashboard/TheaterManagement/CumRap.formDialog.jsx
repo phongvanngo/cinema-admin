@@ -39,14 +39,34 @@ export default function CumRapFormModal() {
       theaterSystemId: selectedTheaterSystem?.id,
       theaterSystemName: selectedTheaterSystem?.name,
     };
+
     if (defaultData?.id === null) {
-      dispatch(createCumRap({ ...data, ...theaterSystemInfo }));
-      dispatch(closeCumRapFormDialog());
+      dispatch(
+        createCumRap({
+          ...data,
+          name:
+            theaterSystemInfo.theaterSystemId +
+            " " +
+            data.name.replace(theaterSystemInfo.theaterSystemId, ""),
+
+          ...theaterSystemInfo,
+        })
+      );
+      // dispatch(closeCumRapFormDialog());
     } else {
       dispatch(
-        updateCumRap({ ...data, ...theaterSystemInfo, id: defaultData.id })
+        updateCumRap({
+          ...data,
+          name:
+            theaterSystemInfo.theaterSystemId +
+            " " +
+            data.name.replace(theaterSystemInfo.theaterSystemId, ""),
+
+          ...theaterSystemInfo,
+          id: defaultData.id,
+        })
       );
-      dispatch(closeCumRapFormDialog());
+      // dispatch(closeCumRapFormDialog());
     }
   }
   function handleCloseModal() {
@@ -126,6 +146,16 @@ export default function CumRapFormModal() {
                 <form onSubmit={handleSubmit(onSaveData)}>
                   <div className="mt-2 p-6">
                     <div className="mb-8">
+                      <span className="font-extrabold mb-2 flex flex-col">
+                        Hệ thống rạp
+                      </span>
+                      <FilterTheaterSystem
+                        listTheaterSystem={listTheaterSystem}
+                        selected={selectedTheaterSystem}
+                        setSelected={setSelectedTheaterSytem}
+                      />
+                    </div>
+                    <div className="mb-8">
                       <span className="mb-2 flex flex-col font-extrabold">
                         Tên cụm rạp
                       </span>
@@ -147,17 +177,6 @@ export default function CumRapFormModal() {
                         ""
                       )}
                     </div>
-                    <div className="mb-8">
-                      <span className="font-extrabold mb-2 flex flex-col">
-                        Hệ thống rạp
-                      </span>
-                      <FilterTheaterSystem
-                        listTheaterSystem={listTheaterSystem}
-                        selected={selectedTheaterSystem}
-                        setSelected={setSelectedTheaterSytem}
-                      />
-                    </div>
-
                     <div className="mb-8">
                       <span className="font-extrabold mb-2 flex flex-col">
                         Thông tin

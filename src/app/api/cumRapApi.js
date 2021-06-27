@@ -22,7 +22,6 @@ const theaterApi = {
             name: tenCumRap,
             information: thongTin,
             theaterSystemId: maHeThongRap,
-            theaterSystemName: null,
           };
           listCumRap.push(cumRap);
         });
@@ -73,7 +72,6 @@ const theaterApi = {
             name: tenCumRap,
             information: thongTin,
             theaterSystemId: maHeThongRap,
-            theaterSystemName: null,
           };
           listCumRap.push(cumRap);
         });
@@ -93,31 +91,20 @@ const theaterApi = {
     });
   },
   postCumRap: async (cumRap) => {
-    let data_response = null;
-    let status = null;
     const url = "/cum-raps";
     const { name, information, theaterSystemId } = cumRap;
     const data_request = {
-      maCumRap: name,
+      maCumRap: theaterSystemId + Math.floor(Math.random() * 100000000),
       tenCumRap: name,
       maHeThongRap: theaterSystemId,
       thongTin: information,
     };
-    let send = await axiosClient.post(url, data_request).then((response) => {
-      status = response.status;
-      if (response.status === 200) {
-        data_response = { id: name };
-      } else {
-        data_response = null;
-      }
-    });
-    return new Promise((resolve, reject) => {
-      resolve({
-        status: status,
-        data: data_response,
-      });
+    let response = await axiosClient.post(url, data_request).then((res) => {
+      console.log("postCumRapApi, response", res);
+      return res;
     });
 
+    return { status: response?.status, data: { id: data_request.maCumRap } };
     // let response = await fakeApi({
     //   // request: loginInfo,
     //   response: {

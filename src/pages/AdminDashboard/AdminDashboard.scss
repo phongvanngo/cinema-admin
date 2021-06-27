@@ -10,7 +10,7 @@ $primary-color: var(--admin-color-1);
     background: var(--admin-color-1);
     width: $width-collapse-sidebar;
     transition: 0.3s;
-    z-index: 5000;
+    z-index: 0;
     min-height: 100vh;
     height: 100%;
 

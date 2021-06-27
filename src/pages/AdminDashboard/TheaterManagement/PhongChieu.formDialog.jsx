@@ -42,12 +42,12 @@ export default function PhongChieuFormModal() {
     };
     if (defaultData?.id === null) {
       dispatch(createPhongChieu({ ...data, ...roomTypeInfo }));
-      dispatch(closePhongChieuFormDialog());
+      // dispatch(closePhongChieuFormDialog());
     } else {
       dispatch(
         updatePhongChieu({ ...data, ...roomTypeInfo, id: defaultData.id })
       );
-      dispatch(closePhongChieuFormDialog());
+      // dispatch(closePhongChieuFormDialog());
     }
   }
   function handleCloseModal() {

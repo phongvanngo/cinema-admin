@@ -49,7 +49,7 @@ export default function MovieTypeFormModal() {
       dispatch(
         createMovieType({ ...data, premiereDay: startDate.toDateString() })
       );
-      dispatch(closeMovieTypeFormDialog());
+      // dispatch(closeMovieTypeFormDialog());
     } else {
       dispatch(
         updateMovieType({
@@ -58,7 +58,7 @@ export default function MovieTypeFormModal() {
           id: defaultData.id,
         })
       );
-      dispatch(closeMovieTypeFormDialog());
+      // dispatch(closeMovieTypeFormDialog());
     }
   }
   function handleCloseModal() {
@@ -80,7 +80,7 @@ export default function MovieTypeFormModal() {
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 z-10 overflow-y-auto bg-black bg-opacity-60"
+          className="fixed inset-0 z-10000 overflow-y-auto bg-black bg-opacity-60"
           onClose={() => {}}
         >
           <div className="min-h-screen px-4 text-center">

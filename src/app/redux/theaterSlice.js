@@ -2,7 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { adminLogOut } from "./adminAuthSlice";
 import { toast } from "react-toastify";
 import theaterApi from "app/api/theaterApi";
-import { openErrorNofificationDialog } from "./dialogSlice";
+import {
+  closeTheaterSystemFormDialog,
+  openErrorNofificationDialog,
+} from "./dialogSlice";
 import { startLoading, stopLoading } from "./loadingSlice";
 
 const initialState = {
@@ -58,8 +61,9 @@ export const createTheaterSystem = createAsyncThunk(
       const response = await theaterApi.postTheaterSystem(payload);
       switch (response.status) {
         case 200:
-          // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
           dispatch(stopLoading());
+          toast.success("Tạo mới hê thống rạp thành công");
+          dispatch(closeTheaterSystemFormDialog());
           return { newTheaterSystem: payload, responseData: response.data };
         case 442:
           throw { mess: "Dữ liệu đầu vào không hợp lệ" };
@@ -96,6 +100,8 @@ export const updateTheaterSystem = createAsyncThunk(
       const response = await theaterApi.patchTheaterSystem(payload);
       switch (response.status) {
         case 200:
+          toast.success("Cập nhật thành công");
+          dispatch(closeTheaterSystemFormDialog());
           dispatch(stopLoading());
           return { newTheaterSystem: payload, responseData: response.data };
         case 442:

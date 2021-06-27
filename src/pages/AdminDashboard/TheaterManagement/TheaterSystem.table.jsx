@@ -73,7 +73,7 @@ export default function TheaterSystemTable({ listTheaterSystem }) {
                   <strong>Bí danh</strong>
                 </th>
                 <th scope="col" className="px-2 py-3 break-words">
-                  <strong>Action</strong>
+                  <strong></strong>
                 </th>
               </tr>
             </thead>
@@ -113,7 +113,7 @@ export default function TheaterSystemTable({ listTheaterSystem }) {
           </table>
           {currentListTheaterSystem.length === 0 ? (
             <div className="text-center text-xl text-gray-500">
-              <span>Không có rạp chiếu nào</span>
+              <span>Không có hệ thống rạp chiếu nào</span>
             </div>
           ) : null}
         </div>
