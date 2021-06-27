@@ -39,6 +39,10 @@ export default function AddMovieTypeForm() {
     newTypesOfMovie.push(type);
     setTypesOfMovie(newTypesOfMovie);
   }
+  function handleDeleteMovieType(typeId) {
+    let newTypesOfMovie = typesOfMovie.filter((e) => e.id !== typeId);
+    setTypesOfMovie(newTypesOfMovie);
+  }
 
   const currentMovie = defaultData;
 
@@ -139,7 +143,12 @@ export default function AddMovieTypeForm() {
                           return (
                             <div className="flex justify-between rounded-xl bg-gray-200 py-1 pl-3 pr-1 text-black m-1 items-center">
                               <span>{type.name}</span>
-                              <i className="bx bx-x text-xl hover:text-white"></i>
+                              <i
+                                onClick={() => {
+                                  handleDeleteMovieType(type.id);
+                                }}
+                                className="bx bx-x text-xl hover:text-white"
+                              ></i>
                             </div>
                           );
                         })}
