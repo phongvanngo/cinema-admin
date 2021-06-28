@@ -9,35 +9,31 @@ import { useDispatch } from "react-redux";
 
 export default function UserBoard({ listUsers }) {
   console.log(listUsers);
+  const [searchTerm, setSearchTerm] = useState("");
+  let currentListUsers = filterArrayBySearchTerm(listUsers, searchTerm);
 
   let diamond = [];
   let gold = [];
   let sliver = [];
   let loyal = [];
   let ordinary = [];
-
-  const [searchTerm, setSearchTerm] = useState("");
-
-  let currentListUsers = filterArrayBySearchTerm(listUsers, searchTerm);
-
   for (let user of currentListUsers) {
     switch (user.maLoaiNguoiDung) {
-      case 1:
+      case 2:
         diamond.push(user);
         break;
-      case 2:
+      case 3:
         gold.push(user);
         break;
-      case 3:
+      case 4:
         sliver.push(user);
         break;
-      case 4:
+      case 5:
         loyal.push(user);
         break;
-      case 5:
+      case 6:
         ordinary.push(user);
         break;
-
       default:
         break;
     }
@@ -53,62 +49,7 @@ export default function UserBoard({ listUsers }) {
 
   return (
     <div className="">
-      <div className="flex gap-5 mb-5">
-        <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-green-400 rounded-md text-white">
-          <p>
-            <i className="bx bx-user"></i>
-            &nbsp; Tổng người dùng
-          </p>
-          <h1 className=" font-bold text-4xl text-center">
-            {numberWithSpaces(12411)}
-          </h1>
-        </div>
-        <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-yellow-400 rounded-md text-white">
-          <p>
-            <i className="bx bxs-diamond"></i>
-            &nbsp; Hạng kim cương
-          </p>
-          <h1 className="font-bold text-4xl text-center">
-            {numberWithSpaces(12411)}
-          </h1>
-        </div>
-        <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-blue-300 rounded-md text-white">
-          <p>
-            <i className="bx bx-user"></i>
-            &nbsp; Hạng vàng
-          </p>
-          <h1 className="font-bold text-4xl text-center">
-            {numberWithSpaces(12411)}
-          </h1>
-        </div>
-        <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-blue-500 rounded-md text-white">
-          <p>
-            <i className="bx bx-user"></i>
-            &nbsp; Hạng bạc
-          </p>
-          <h1 className="font-bold text-4xl text-center">
-            {numberWithSpaces(12411)}
-          </h1>
-        </div>
-        <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-pink-400 rounded-md text-white">
-          <p>
-            <i className="bx bx-user"></i>
-            &nbsp; Thân thiết
-          </p>
-          <h1 className="font-bold text-4xl text-center">
-            {numberWithSpaces(12411)}
-          </h1>
-        </div>
-        <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-purple-500 rounded-md text-white">
-          <p>
-            <i className="bx bx-user"></i>
-            &nbsp; Bình thường
-          </p>
-          <h1 className="font-bold text-4xl text-center">
-            {numberWithSpaces(12411)}
-          </h1>
-        </div>
-      </div>
+      <OverviewStatistical listUsers={listUsers} />
       <div className="flex items-center h-10 mb-4">
         <input
           className="h-full appearance-none rounded-l-full border w-30 py-2 px-3 text-gray-700 leading-tight focus:outline-none"
@@ -165,6 +106,93 @@ function UserColumn({ dataInfo }) {
             </div>
           );
         })}
+      </div>
+    </div>
+  );
+}
+
+function OverviewStatistical({ listUsers }) {
+  let diamond = 0;
+  let gold = 0;
+  let sliver = 0;
+  let loyal = 0;
+  let ordinary = 0;
+  for (let user of listUsers) {
+    switch (user.maLoaiNguoiDung) {
+      case 2:
+        diamond++;
+        break;
+      case 3:
+        gold++;
+        break;
+      case 4:
+        sliver++;
+        break;
+      case 5:
+        loyal++;
+        break;
+      case 6:
+        ordinary++;
+        break;
+      default:
+        break;
+    }
+  }
+  return (
+    <div className="flex gap-5 mb-5">
+      <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-green-400 rounded-md text-white">
+        <p>
+          <i className="bx bx-user"></i>
+          &nbsp; Tổng người dùng
+        </p>
+        <h1 className=" font-bold text-4xl text-center">
+          {numberWithSpaces(listUsers.length)}
+        </h1>
+      </div>
+      <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-yellow-400 rounded-md text-white">
+        <p>
+          <i className="bx bxs-diamond"></i>
+          &nbsp; Hạng kim cương
+        </p>
+        <h1 className="font-bold text-4xl text-center">
+          {numberWithSpaces(diamond)}
+        </h1>
+      </div>
+      <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-blue-300 rounded-md text-white">
+        <p>
+          <i className="bx bx-user"></i>
+          &nbsp; Hạng vàng
+        </p>
+        <h1 className="font-bold text-4xl text-center">
+          {numberWithSpaces(gold)}
+        </h1>
+      </div>
+      <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-blue-500 rounded-md text-white">
+        <p>
+          <i className="bx bx-user"></i>
+          &nbsp; Hạng bạc
+        </p>
+        <h1 className="font-bold text-4xl text-center">
+          {numberWithSpaces(sliver)}
+        </h1>
+      </div>
+      <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-pink-400 rounded-md text-white">
+        <p>
+          <i className="bx bx-user"></i>
+          &nbsp; Thân thiết
+        </p>
+        <h1 className="font-bold text-4xl text-center">
+          {numberWithSpaces(loyal)}
+        </h1>
+      </div>
+      <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-purple-500 rounded-md text-white">
+        <p>
+          <i className="bx bx-user"></i>
+          &nbsp; Bình thường
+        </p>
+        <h1 className="font-bold text-4xl text-center">
+          {numberWithSpaces(ordinary)}
+        </h1>
       </div>
     </div>
   );

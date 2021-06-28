@@ -1,21 +1,31 @@
-// import axiosClient from './AxiosClient';
+import axiosClient from "./AxiosClient";
 import { fakeApi } from "./fakeApi";
 import { listUsers } from "./fakeData";
 
 const userApi = {
   getListUser: async () => {
-    console.log("getListUser");
-    let response = await fakeApi({
-      // request: loginInfo,
-      response: {
-        status: 200,
-        data: {
-          listUser: listUsers,
-        },
-      },
-      timeOut: 1000,
+    const url = "/users";
+    let res = await axiosClient.get(url).then((res) => {
+      console.log("getListUser response; ", res.data);
+      return res;
     });
-    return response;
+
+    return {
+      status: res?.status,
+      data: { listUser: [...res?.data] },
+    };
+
+    // let response = await fakeApi({
+    //   // request: loginInfo,
+    //   response: {
+    //     status: 200,
+    //     data: {
+    //       listUser: listUsers,
+    //     },
+    //   },
+    //   timeOut: 1000,
+    // });
+    // return response;
   },
   postUser: async (user) => {
     let response = await fakeApi({
