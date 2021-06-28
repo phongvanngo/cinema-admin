@@ -78,3 +78,10 @@ export function isDateEqual(a, b) {
 
   return true;
 }
+
+export function numberWithSpaces(x) {
+  if (x === 0) return "0";
+  if (!x) return "";
+  x = x.toString().replace(/(\d+)\.(\d+)/, "$1,$2");
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}

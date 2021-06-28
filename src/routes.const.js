@@ -18,6 +18,7 @@ export const AdminRoutes = {
   PHONGCHIEU_MANAGEMENT: `${PublicRoutes.ADMIN_DASHBOARD}/phongChieu`,
   THEATER_SYSTEM_MANAGEMENT: `${PublicRoutes.ADMIN_DASHBOARD}/theater-system-management`,
   SHOWTIME_MANAGEMENT: `${PublicRoutes.ADMIN_DASHBOARD}/showtime-management`,
+  USER_MANAGEMENT: `${PublicRoutes.ADMIN_DASHBOARD}/user-management`,
 };
 
 export const UserRoutes = {

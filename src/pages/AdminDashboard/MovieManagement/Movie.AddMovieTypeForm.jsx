@@ -36,6 +36,12 @@ export default function AddMovieTypeForm() {
 
   function handleAddMovieType(type) {
     let newTypesOfMovie = [...typesOfMovie];
+    if (typesOfMovie.findIndex((e) => e.id == type.id) > -1) {
+      toast.warning("Bạn đã thêm thể loại phim này", {
+        position: "bottom-center",
+      });
+      return;
+    }
     newTypesOfMovie.push(type);
     setTypesOfMovie(newTypesOfMovie);
   }
@@ -46,7 +52,37 @@ export default function AddMovieTypeForm() {
 
   const currentMovie = defaultData;
 
-  function onSaveData(data) {}
+  function onSaveData() {
+    if (typesOfMovie.length === 0) {
+      handleCloseModal();
+      return;
+    }
+    (async () => {
+      try {
+        dispatch(startLoading());
+        let response = await movieApi.patchTypeOfMovie({
+          movieId: currentMovie.id,
+          listTypes: typesOfMovie,
+        });
+        // console.log("updateMovieType response",re);
+        switch (response.status) {
+          case 200:
+            toast.success("Cập nhật thể loại phim thành công");
+            handleCloseModal();
+            break;
+
+          default:
+            throw {
+              mess: "Không thể kết nối đến hệ thống",
+            };
+        }
+      } catch (error) {
+        toast.error(error?.mess);
+      } finally {
+        dispatch(stopLoading());
+      }
+    })();
+  }
   function handleCloseModal() {
     dispatch(closeAddMovieTypeFormDialog());
   }

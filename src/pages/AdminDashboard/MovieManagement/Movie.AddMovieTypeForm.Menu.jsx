@@ -26,7 +26,8 @@ export default function Example({ listMovieTypes, handleAddType }) {
                       <div className="rounded-md movie-type-item my-2 px-2 py-1 hover:bg-indigo-100 flex items-center justify-between">
                         <span className="my-2">{type.name}</span>
                         <button
-                          onClick={() => {
+                          onClick={(e) => {
+                            e.preventDefault();
                             handleAddType(type);
                           }}
                           className="btn-add-type inline-flex justify-center px-4 py-1 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"

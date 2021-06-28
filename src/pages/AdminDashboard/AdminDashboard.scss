@@ -230,14 +230,15 @@ $primary-color: var(--admin-color-1);
       }
     }
     #admin-main {
-      width: calc(100% - 300px);
+      min-width: calc(100% - 300px);
+      // width: max-content;
       margin-left: $width-full-sidebar;
     }
   }
   #admin-main {
     transition: 0.3s;
-
-    width: calc(100% - 80px);
+    min-width: calc(100% - 80px);
+    //width: max-content;
     margin-left: $width-collapse-sidebar;
 
     min-height: 100vh;
@@ -256,13 +257,21 @@ $primary-color: var(--admin-color-1);
     }
     .main-admin-page {
       // min-height: calc(100vh - $height-navbar);
-      width: 100%;
-      padding: 20px;
+      min-width: 100%;
+      // overflow-x: scroll;
+      // padding: 20px;
       z-index: 0;
       min-height: 100vh;
 
       padding-top: $height-navbar;
-      background-color: #f9f9f9;
     }
   }
+}
+
+#main-background {
+  background-color: #f9f9f9;
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
 }

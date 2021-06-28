@@ -51,10 +51,12 @@ export default function LandingPage() {
     THEATER_SYSTEM_MANAGEMENT,
     PHONGCHIEU_MANAGEMENT,
     MOVIE_TYPE_MANAGEMENT,
+    USER_MANAGEMENT,
   } = AdminRoutes;
 
   return (
     <Router>
+      <div id="main-background" />
       <div id="admin-dashboard-container" className="show-sidebar">
         <aside id="admin-sidebar">
           <header
@@ -121,6 +123,20 @@ export default function LandingPage() {
                   </Link>
                 </ul>
               </li>
+              <li className="menu-item">
+                <div className="menu-item__title">
+                  <i className="bx bxs-user menu-item__title__icon"></i>
+                  <span className="menu-item__title__name">
+                    Quản lý người dùng
+                  </span>
+                  <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
+                </div>
+                <ul className="submenu-list">
+                  <Link to={USER_MANAGEMENT}>
+                    <li>Tất cả người dùng</li>
+                  </Link>
+                </ul>
+              </li>
               <Link to={SHOWTIME_MANAGEMENT}>
                 <li className="menu-item">
                   <div className="menu-item__title">
@@ -131,21 +147,6 @@ export default function LandingPage() {
                   </div>
                 </li>
               </Link>
-              {/* <li className="menu-item">
-                <div className="menu-item__title">
-                  <i className="bx bx-store-alt menu-item__title__icon"></i>
-                  <span className="menu-item__title__name">Quản lý rạp</span>
-                  <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
-                </div>
-                <ul className="submenu-list">
-                  <li>Hệ thống rạp</li>
-                  <li>Cụm rạp</li>
-                  <li>Cụm rạp</li>
-                  <li>Cụm rạp</li>
-                  <li>Cụm rạp</li>
-                  <li>Cụm rạp</li>
-                </ul>
-              </li> */}
             </ul>
             <div className="btn-logout-wrapper">
               <div

@@ -229,6 +229,22 @@ const movieApi = {
     });
     return response;
   },
+  patchTypeOfMovie: async ({ listTypes, movieId }) => {
+    const url = `/phims/${movieId}/the-loais`;
+    console.log("pathTypeOfMovie: listTypes", listTypes);
+    let theLoai = listTypes.map((type) => {
+      return { maTheLoai: type.id };
+    });
+    let response = await axiosClient.post(url, { theLoai }).then((res) => res);
+    // let response = await fakeApi({
+    //   request: "",
+    //   response: {
+    //     status: 200,
+    //   },
+    //   timeOut: 500,
+    // });
+    return { status: response?.status };
+  },
 };
 
 export default movieApi;
