@@ -121,7 +121,7 @@ export const updatePhongChieu = createAsyncThunk(
 
     dispatch(startLoading());
     try {
-      const response = await phongChieuApi.postPhongChieu(payload);
+      const response = await phongChieuApi.patchPhongChieu(payload);
       switch (response.status) {
         case 200:
           toast.success("Cập nhật phòng chiếu thành công");
@@ -217,7 +217,10 @@ export const phongChieuSlice = createSlice({
         state.listPhongChieu = listPhongChieu;
       })
       .addCase(fetchListPhongChieuInCumRap.fulfilled, (state, action) => {
-        if (action.payload === null) return;
+        if (action.payload === null) {
+          state.listPhongChieu = [];
+          return;
+        }
         const { listPhongChieu } = action.payload;
         state.listPhongChieu = listPhongChieu;
       })

@@ -111,7 +111,9 @@ export default function PhongChieuFormModal() {
                 >
                   <div className="pr-5 pl-5 pt-4 pb-3 w-full flex justify-between">
                     <h1 className="font-normal">
-                      {defaultData?.id ? "Chỉnh sửa rạp" : "Thêm rạp"}
+                      {defaultData?.id
+                        ? "Chỉnh sửa phòng chiếu"
+                        : "Thêm phòng chiếu"}
                     </h1>
                     <button
                       onClick={handleCloseModal}
@@ -125,7 +127,7 @@ export default function PhongChieuFormModal() {
                   <div className="mt-2 p-6">
                     <div className="mb-8">
                       <span className="mb-2 flex flex-col font-extrabold">
-                        Tên rạp
+                        Tên phòng chiếu
                       </span>
                       <input
                         type="text"
@@ -169,7 +171,7 @@ export default function PhongChieuFormModal() {
                     </div> */}
                     <div className="mb-8">
                       <span className="font-extrabold mb-2 flex flex-col">
-                        Loại rạp
+                        Loại phòng chiếu
                       </span>
                       <FilterRoomType
                         listRoomType={listRoomType}

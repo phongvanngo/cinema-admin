@@ -12,7 +12,7 @@ const userApi = {
 
     return {
       status: res?.status,
-      data: { listUser: [...res?.data] },
+      data: { listUser: [...(res?.data || []), ...listUsers] },
     };
 
     // let response = await fakeApi({

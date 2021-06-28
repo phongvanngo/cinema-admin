@@ -58,17 +58,14 @@ const theaterApi = {
     let data_response = null;
     let status = null;
     const url = `/cum-raps/${cumRapId}/raps`;
-    let send = await axiosClient.get(url).then((response) => {
-      status = response.status;
-      if (response.status === 200) {
-        let listPhongChieu = [];
-        response.data.forEach((element) => {
-          // "maPhongChieu": "cgv-3/2",
-          // "tenPhongChieu": "CGV 3 thang 2",
-          // "thongTin": "blabla",
-          // "maHeThongRap": "CGV"
+    let res = await axiosClient.get(url).then((res) => res);
+    console.log("getListPhongChieu, response", res);
+    return {
+      status: res?.status,
+      data: {
+        listPhongChieu: res?.data.map((element) => {
           const { maRap, tenRap, soGhe, maCumRap } = element;
-          let phongChieu = {
+          return {
             id: maRap,
             name: tenRap,
             amountSeats: soGhe,
@@ -76,22 +73,43 @@ const theaterApi = {
             theaterSystemId: maCumRap,
             theaterSystemName: maCumRap,
           };
-          listPhongChieu.push(phongChieu);
-        });
+        }),
+      },
+    };
+    // let send = await axiosClient.get(url).then((response) => {
+    //   status = response.status;
+    //   if (response.status === 200) {
+    //     let listPhongChieu = [];
+    //     response.data.forEach((element) => {
+    //       // "maPhongChieu": "cgv-3/2",
+    //       // "tenPhongChieu": "CGV 3 thang 2",
+    //       // "thongTin": "blabla",
+    //       // "maHeThongRap": "CGV"
+    //       const { maRap, tenRap, soGhe, maCumRap } = element;
+    //       let phongChieu = {
+    //         id: maRap,
+    //         name: tenRap,
+    //         amountSeats: soGhe,
+    //         maRap: maRap,
+    //         theaterSystemId: maCumRap,
+    //         theaterSystemName: maCumRap,
+    //       };
+    //       listPhongChieu.push(phongChieu);
+    //     });
 
-        data_response = {
-          listPhongChieu,
-        };
-      } else {
-        data_response = null;
-      }
-    });
-    return new Promise((resolve, reject) => {
-      resolve({
-        status: status,
-        data: data_response,
-      });
-    });
+    //     data_response = {
+    //       listPhongChieu,
+    //     };
+    //   } else {
+    //     data_response = null;
+    //   }
+    // });
+    // return new Promise((resolve, reject) => {
+    //   resolve({
+    //     status: status,
+    //     data: data_response,
+    //   });
+    // });
   },
   postPhongChieu: async (phongChieu) => {
     const url = "/raps";
