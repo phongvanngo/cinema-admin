@@ -21,9 +21,12 @@ export default function Example({ listMovieTypes, handleAddType }) {
               </Disclosure.Button>
               <Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
                 <div className="max-h-52 overflow-y-scroll w-full">
-                  {listMovieTypes.map((type) => {
+                  {listMovieTypes.map((type, index) => {
                     return (
-                      <div className="rounded-md movie-type-item my-2 px-2 py-1 hover:bg-indigo-100 flex items-center justify-between">
+                      <div
+                        key={index}
+                        className="rounded-md movie-type-item my-2 px-2 py-1 hover:bg-indigo-100 flex items-center justify-between"
+                      >
                         <span className="my-2">{type.name}</span>
                         <button
                           onClick={(e) => {

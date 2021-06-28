@@ -217,25 +217,38 @@ const movieApi = {
   getTypeOfMovie: async (movieId) => {
     const url = `/phims/${movieId}/the-loais`;
     console.log("getTypeOfMovieApi, movieId", movieId);
-    let response = await fakeApi({
-      request: "",
-      response: {
-        status: 200,
-        data: {
-          listTypes: listMovieTypes.slice(0, 5),
-        },
+    let res = await axiosClient.get(url).then((res) => res);
+    console.log("getTypeOfMovie, ", res);
+    let status = res?.status === 200 || res?.status === 204 ? 200 : res?.status;
+    return {
+      status: status,
+      data: {
+        listTypes: res?.data.map((e) => {
+          return { id: e.maTheLoai, name: e.tenTheLoai };
+        }),
       },
-      timeOut: 1000,
-    });
-    return response;
+    };
+    // let response = await fakeApi({
+    //   request: "",
+    //   response: {
+    //     status: 200,
+    //     data: {
+    //       listTypes: listMovieTypes.slice(0, 5),
+    //     },
+    //   },
+    //   timeOut: 1000,
+    // });
+    // return response;
   },
   patchTypeOfMovie: async ({ listTypes, movieId }) => {
     const url = `/phims/${movieId}/the-loais`;
-    console.log("pathTypeOfMovie: listTypes", listTypes);
     let theLoai = listTypes.map((type) => {
       return { maTheLoai: type.id };
     });
-    let response = await axiosClient.post(url, { theLoai }).then((res) => res);
+    let res = await axiosClient.patch(url, { theLoai }).then((res) => res);
+    console.log("pacthTypeOfMovie: res", res);
+    let status = res?.status === 200 || res?.status === 204 ? 200 : res?.status;
+    return { status: status, data: {} };
     // let response = await fakeApi({
     //   request: "",
     //   response: {
@@ -243,7 +256,6 @@ const movieApi = {
     //   },
     //   timeOut: 500,
     // });
-    return { status: response?.status };
   },
 };
 

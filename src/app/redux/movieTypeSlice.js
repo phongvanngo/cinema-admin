@@ -2,7 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { adminLogOut } from "./adminAuthSlice";
 import { toast } from "react-toastify";
 import movieTypeApi from "app/api/movieTypeApi";
-import { openErrorNofificationDialog } from "./dialogSlice";
+import {
+  closeMovieTypeFormDialog,
+  openErrorNofificationDialog,
+} from "./dialogSlice";
 import { startLoading, stopLoading } from "./loadingSlice";
 
 const initialState = {
@@ -59,7 +62,8 @@ export const createMovieType = createAsyncThunk(
       const response = await movieTypeApi.postMovieType(payload);
       switch (response.status) {
         case 200:
-          // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
+          toast.success("Tạo mới thành công");
+          dispatch(closeMovieTypeFormDialog());
           dispatch(stopLoading());
           return { newMovieType: payload, responseData: response.data };
         case 442:
@@ -94,9 +98,11 @@ export const updateMovieType = createAsyncThunk(
 
     dispatch(startLoading());
     try {
-      const response = await movieTypeApi.postMovieType(payload);
+      const response = await movieTypeApi.patchMovieType(payload);
       switch (response.status) {
         case 200:
+          toast.success("Cập nhật thành công");
+          dispatch(closeMovieTypeFormDialog());
           dispatch(stopLoading());
           return { newMovieType: payload, responseData: response.data };
         case 442:

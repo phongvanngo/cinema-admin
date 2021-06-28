@@ -124,6 +124,10 @@ export default function UserDetailModal() {
                       <span className="font-bold">{soDT}</span>
                     </p>
                     <p>
+                      Điểm tích lũy: &nbsp;
+                      <span className="font-bold">{diemTichLuy}</span>
+                    </p>
+                    <p>
                       Tổng điểm tích lũy: &nbsp;
                       <span className="font-bold">{tongDiemTichLuy}</span>
                     </p>

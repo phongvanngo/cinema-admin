@@ -53,10 +53,10 @@ export default function AddMovieTypeForm() {
   const currentMovie = defaultData;
 
   function onSaveData() {
-    if (typesOfMovie.length === 0) {
-      handleCloseModal();
-      return;
-    }
+    // if (typesOfMovie.length === 0) {
+    //   handleCloseModal();
+    //   return;
+    // }
     (async () => {
       try {
         dispatch(startLoading());
@@ -111,6 +111,8 @@ export default function AddMovieTypeForm() {
       })();
     }
   }, [isOpen]);
+
+  if (!isOpen) return null;
 
   return (
     <>
@@ -175,9 +177,12 @@ export default function AddMovieTypeForm() {
                         Thể loại phim
                       </span>
                       <div className="w-full flex flex-wrap border rounded-xl border-gray-300">
-                        {typesOfMovie.map((type) => {
+                        {typesOfMovie.map((type, index) => {
                           return (
-                            <div className="flex justify-between rounded-xl bg-gray-200 py-1 pl-3 pr-1 text-black m-1 items-center">
+                            <div
+                              key={index}
+                              className="flex justify-between rounded-xl bg-gray-200 py-1 pl-3 pr-1 text-black m-1 items-center"
+                            >
                               <span>{type.name}</span>
                               <i
                                 onClick={() => {

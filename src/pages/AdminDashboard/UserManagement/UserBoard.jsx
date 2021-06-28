@@ -19,19 +19,19 @@ export default function UserBoard({ listUsers }) {
   let ordinary = [];
   for (let user of currentListUsers) {
     switch (user.maLoaiNguoiDung) {
-      case 2:
+      case 6:
         diamond.push(user);
         break;
-      case 3:
+      case 5:
         gold.push(user);
         break;
       case 4:
         sliver.push(user);
         break;
-      case 5:
+      case 3:
         loyal.push(user);
         break;
-      case 6:
+      case 2:
         ordinary.push(user);
         break;
       default:
@@ -79,7 +79,7 @@ function UserColumn({ dataInfo }) {
     <div className="w-80 flex-none bg-white rounded-md shadow-md mr-5">
       <div className="h-14 flex items-center justify-between mb-3 py-2 px-3">
         <h1 className=" text-xl">{title}</h1>
-        <img className="h-full" src={logo} alt="diamond" />
+        <img className="h-full " src={logo} alt="diamond" />
       </div>
       <div className="">
         {(users || []).map((user, index) => {
@@ -89,7 +89,7 @@ function UserColumn({ dataInfo }) {
               onClick={() => {
                 dispatch(openUserDetailDialog(user));
               }}
-              className="p-2 flex items-center border-t border-gray-100 cursor-pointer hover:bg-gray-100"
+              className="p-2 gap-2 flex items-center border-t border-gray-100 cursor-pointer hover:bg-gray-100"
             >
               <div className="flex-none w-10 text-center">
                 <h1 className=" text-2xl font-bold text-gray-300">
@@ -97,11 +97,16 @@ function UserColumn({ dataInfo }) {
                 </h1>
               </div>
               <div className="w-14 h-14 p-1 rounded-md">
-                <img src={user.avatar} className="w-full h-full flex-none" />
+                <img
+                  src={user.avatar}
+                  className="w-full h-full flex-none rounded-md "
+                />
               </div>
               <div className="flex-grow">
                 <p className="font-bold text-blue-700">{user.username}</p>
-                <p className="text-gray-500">{user.diemTichLuy}</p>
+                <p className="text-gray-500">
+                  Tổng điểm: &nbsp;{user.tongDiemTichLuy}
+                </p>
               </div>
             </div>
           );
@@ -119,19 +124,19 @@ function OverviewStatistical({ listUsers }) {
   let ordinary = 0;
   for (let user of listUsers) {
     switch (user.maLoaiNguoiDung) {
-      case 2:
+      case 6:
         diamond++;
         break;
-      case 3:
+      case 5:
         gold++;
         break;
       case 4:
         sliver++;
         break;
-      case 5:
+      case 3:
         loyal++;
         break;
-      case 6:
+      case 2:
         ordinary++;
         break;
       default:

@@ -94,7 +94,7 @@ export default function MovieTypeTable({ listMovieType }) {
           </table>
           {currentListMovieType.length === 0 ? (
             <div className="text-center text-xl text-gray-500">
-              <span>Không có rạp chiếu nào</span>
+              <span>Không có thể loại phim nào</span>
             </div>
           ) : null}
         </div>
