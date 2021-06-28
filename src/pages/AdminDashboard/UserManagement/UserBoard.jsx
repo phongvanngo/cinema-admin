@@ -2,8 +2,10 @@ import {
   filterArrayBySearchTerm,
   numberWithSpaces,
 } from "app/myLibrary/utilities";
+import { openUserDetailDialog } from "app/redux/dialogSlice";
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 export default function UserBoard({ listUsers }) {
   console.log(listUsers);
@@ -66,7 +68,7 @@ export default function UserBoard({ listUsers }) {
       <div className="flex gap-5 mb-5">
         <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-green-400 rounded-md text-white">
           <p>
-            <i class="bx bx-user"></i>
+            <i className="bx bx-user"></i>
             &nbsp; Tổng người dùng
           </p>
           <h1 className=" font-bold text-4xl text-center">
@@ -75,7 +77,7 @@ export default function UserBoard({ listUsers }) {
         </div>
         <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-yellow-400 rounded-md text-white">
           <p>
-            <i class="bx bxs-diamond"></i>
+            <i className="bx bxs-diamond"></i>
             &nbsp; Hạng kim cương
           </p>
           <h1 className="font-bold text-4xl text-center">
@@ -84,7 +86,7 @@ export default function UserBoard({ listUsers }) {
         </div>
         <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-blue-300 rounded-md text-white">
           <p>
-            <i class="bx bx-user"></i>
+            <i className="bx bx-user"></i>
             &nbsp; Hạng vàng
           </p>
           <h1 className="font-bold text-4xl text-center">
@@ -93,7 +95,7 @@ export default function UserBoard({ listUsers }) {
         </div>
         <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-blue-500 rounded-md text-white">
           <p>
-            <i class="bx bx-user"></i>
+            <i className="bx bx-user"></i>
             &nbsp; Hạng bạc
           </p>
           <h1 className="font-bold text-4xl text-center">
@@ -102,7 +104,7 @@ export default function UserBoard({ listUsers }) {
         </div>
         <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-pink-400 rounded-md text-white">
           <p>
-            <i class="bx bx-user"></i>
+            <i className="bx bx-user"></i>
             &nbsp; Thân thiết
           </p>
           <h1 className="font-bold text-4xl text-center">
@@ -111,7 +113,7 @@ export default function UserBoard({ listUsers }) {
         </div>
         <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-purple-500 rounded-md text-white">
           <p>
-            <i class="bx bx-user"></i>
+            <i className="bx bx-user"></i>
             &nbsp; Bình thường
           </p>
           <h1 className="font-bold text-4xl text-center">
@@ -120,8 +122,8 @@ export default function UserBoard({ listUsers }) {
         </div>
       </div>
       <div style={{ width: "max-content" }} className="flex items-start">
-        {dataToRender.map((data) => (
-          <UserColumn dataInfo={{ ...data }} />
+        {dataToRender.map((data, index) => (
+          <UserColumn key={index} dataInfo={{ ...data }} />
         ))}
       </div>
     </div>
@@ -129,6 +131,7 @@ export default function UserBoard({ listUsers }) {
 }
 
 function UserColumn({ dataInfo }) {
+  const dispatch = useDispatch();
   const { logo, title, users } = dataInfo;
   if (users.length === 0) return null;
   return (
@@ -140,7 +143,13 @@ function UserColumn({ dataInfo }) {
       <div className="">
         {(users || []).map((user, index) => {
           return (
-            <div className="p-2 flex items-center border-t border-gray-100 cursor-pointer hover:bg-gray-100">
+            <div
+              key={index}
+              onClick={() => {
+                dispatch(openUserDetailDialog(user));
+              }}
+              className="p-2 flex items-center border-t border-gray-100 cursor-pointer hover:bg-gray-100"
+            >
               <div className="flex-none w-10 text-center">
                 <h1 className=" text-2xl font-bold text-gray-300">
                   {index + 1}

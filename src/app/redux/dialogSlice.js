@@ -26,7 +26,11 @@ const initialState = {
     defaultData: null,
   },
   addMovieTypeFormDialog: {
-    isOpen: true,
+    isOpen: false,
+    defaultData: null,
+  },
+  userDetailDialog: {
+    isOpen: false,
     defaultData: null,
   },
   errorNotificationDialog: {
@@ -95,6 +99,14 @@ export const dialogSlice = createSlice({
       state.phongChieuFormDialog.isOpen = false;
       state.phongChieuFormDialog.defaultData = null;
     },
+    openUserDetailDialog: (state, action) => {
+      state.userDetailDialog.defaultData = action.payload;
+      state.userDetailDialog.isOpen = true;
+    },
+    closeUserDetailDialog: (state) => {
+      state.userDetailDialog.isOpen = false;
+      state.userDetailDialog.defaultData = null;
+    },
     openErrorNofificationDialog: (state, action) => {
       state.errorNotificationDialog.defaultData = action.payload;
       state.errorNotificationDialog.isOpen = true;
@@ -123,6 +135,8 @@ export const {
   closeShowTimeFormDialog,
   openAddMovieTypeFormDialog,
   closeAddMovieTypeFormDialog,
+  openUserDetailDialog,
+  closeUserDetailDialog,
 } = dialogSlice.actions;
 
 export default dialogSlice.reducer;
