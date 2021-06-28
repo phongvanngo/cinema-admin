@@ -53,18 +53,6 @@ export default function UserBoard({ listUsers }) {
 
   return (
     <div className="">
-      <div className="flex items-center h-10 mb-4">
-        <input
-          className="h-full appearance-none rounded-l-full border w-30 py-2 px-3 text-gray-700 leading-tight focus:outline-none"
-          placeholder="Tìm kiếm"
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-          }}
-        />
-        <div className="bg-admin_color_1 rounded-r-full h-full w-12 p-1 flex justify-center hover:bg-indigo-900">
-          <i className="bx bx-search-alt text-2xl text-white m-auto "></i>
-        </div>
-      </div>
       <div className="flex gap-5 mb-5">
         <div className="flex-none w-52 pb-5 pt-2 px-2 leading-8 bg-green-400 rounded-md text-white">
           <p>
@@ -119,6 +107,18 @@ export default function UserBoard({ listUsers }) {
           <h1 className="font-bold text-4xl text-center">
             {numberWithSpaces(12411)}
           </h1>
+        </div>
+      </div>
+      <div className="flex items-center h-10 mb-4">
+        <input
+          className="h-full appearance-none rounded-l-full border w-30 py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+          placeholder="Tìm kiếm"
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
+        />
+        <div className="bg-admin_color_1 rounded-r-full h-full w-12 p-1 flex justify-center hover:bg-indigo-900">
+          <i className="bx bx-search-alt text-2xl text-white m-auto "></i>
         </div>
       </div>
       <div style={{ width: "max-content" }} className="flex items-start">
