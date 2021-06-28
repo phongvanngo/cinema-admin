@@ -4,6 +4,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
+import { adminLoginAgain } from "app/redux/adminAuthSlice";
+import { useDispatch } from "react-redux";
 
 const schema = yup.object().shape({
   api_url: yup.string().required(),
@@ -21,6 +23,8 @@ export default function AdminSignInUI() {
   });
   const history = useHistory();
 
+  const dispatch = useDispatch();
+
   function onSaveData(data) {
     // if (defaultData?.id === null) {
     //
@@ -32,7 +36,6 @@ export default function AdminSignInUI() {
     // }
 
     let api_url = data.api_url;
-
     localStorage.setItem("api_url", api_url);
     toast.success("Đã lưu");
     // history.goBack();
@@ -78,6 +81,17 @@ export default function AdminSignInUI() {
                   }}
                 />
               </div>
+              <button
+                type="submit"
+                value="Save"
+                className="px-20  w-full  py-2 text-lg  font-medium text-blue-900 bg-blue-100 border border-transparent rounded-3xl hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                onClick={() => {
+                  dispatch(adminLoginAgain());
+                  history.push("/admin");
+                }}
+              >
+                Login vô thẳng
+              </button>
             </div>
           </form>
         </div>
