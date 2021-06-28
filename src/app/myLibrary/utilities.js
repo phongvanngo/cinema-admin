@@ -54,6 +54,24 @@ export function convertDateTime(myDate) {
   return output;
 }
 
+function formatTime(time) {
+  //hh:yy
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+  time = new Date(time);
+  let h = time.getHours();
+  let m = time.getMinutes();
+  h = checkTime(h);
+  m = checkTime(m);
+
+  let res = `${h}:${m}`;
+  return res;
+}
+
 export function convertDateTime2(myDate) {
   // date to hh:mm dd/mm/yyyy
   if (!myDate) return "";
@@ -63,7 +81,7 @@ export function convertDateTime2(myDate) {
   const month = date.getMonth() + 1;
   const day = date.getDate();
   const year = date.getFullYear();
-  const output = hour + ":" + min + " " + day + "/" + month + "/" + year;
+  const output = formatTime(myDate) + " " + day + "/" + month + "/" + year;
   return output;
 }
 

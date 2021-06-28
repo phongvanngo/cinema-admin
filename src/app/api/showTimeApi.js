@@ -153,8 +153,6 @@ const theaterApi = {
     });
   },
   postShowTime: async (showTime) => {
-    let data_response = null;
-    let status = null;
     const url = "/lich-chieu";
     const {
       time,
@@ -175,22 +173,29 @@ const theaterApi = {
       maHeThongRap: maHeThongRap,
     };
 
-    console.log("postShowTime, data request:", data_request);
+    let res = await axiosClient.post(url, data_request).then((res) => res);
+    console.log("postShowTime, response:", res);
+    let status = res?.status === 200 || res?.status === 204 ? 200 : res?.status;
+    if (status === 200) {
+      return { status: res.status, data: { id: res?.data.maLichChieu } };
+    } else {
+      return { status: res.status, data: { mess: res?.data.message } };
+    }
 
-    let send = await axiosClient.post(url, data_request).then((response) => {
-      status = response.status;
-      if (response.status === 200) {
-        data_response = { id: null };
-      } else {
-        data_response = null;
-      }
-    });
-    return new Promise((resolve, reject) => {
-      resolve({
-        status: status,
-        data: data_response,
-      });
-    });
+    // let send = await axiosClient.post(url, data_request).then((response) => {
+    //   status = response.status;
+    //   if (response.status === 200) {
+    //     data_response = { id: null };
+    //   } else {
+    //     data_response = {mess:data?.message}
+    //   }
+    // });
+    // return new Promise((resolve, reject) => {
+    //   resolve({
+    //     status: status,
+    //     data: data_response,
+    //   });
+    // });
 
     // let response = await fakeApi({
     //   // request: loginInfo,
@@ -244,7 +249,7 @@ const theaterApi = {
     let data_response = null;
     let status = null;
     const id = showTime;
-    const url = `/cum-raps/${id}`;
+    const url = `/lich-chieu/${id}`;
     let send = await axiosClient.delete(url).then((response) => {
       status = response.status;
       if (status === 204) status = 200;

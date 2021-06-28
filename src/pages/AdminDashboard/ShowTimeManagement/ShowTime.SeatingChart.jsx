@@ -66,8 +66,8 @@ export default function SeatingChart() {
 
   return (
     <div className="p-2 border mt-5">
-      <span>Cụm Rạp</span>&nbsp;{" "}
-      <span className="font-bold">{seletedCumRap?.name || "chưa chọn"}</span>
+      <span>Mã lịch chiếu: </span>&nbsp;{" "}
+      <span className="font-bold">{selectedShowTime?.id || "chưa chọn"}</span>
       <br />
       <span>Phòng chiếu</span>&nbsp;{" "}
       <span className="font-bold">{phongChieu?.name || "chưa chọn"}</span>
@@ -77,6 +77,11 @@ export default function SeatingChart() {
       <br />
       <span>Giờ chiếu</span>&nbsp;{" "}
       <span className="font-bold">{convertDateTime2(time) || "chưa chọn"}</span>
+      <br />
+      <span>Thời lượng</span>&nbsp;{" "}
+      <span className="font-bold">
+        {(selectedShowTime?.thoiLuong || 0) + " phút"}
+      </span>
       <table className="table-auto">
         <thead>
           <tr className="">

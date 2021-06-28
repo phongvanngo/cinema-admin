@@ -94,6 +94,8 @@ export default function ShowTimeFormModal() {
     }
   }, [setValue, defaultData]);
 
+  if (!isOpen) return null;
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -213,7 +215,7 @@ export default function ShowTimeFormModal() {
                     </div>
                     <div className="mb-8">
                       <span className="mb-2 flex flex-col font-extrabold">
-                        Thời lượng
+                        Thời lượng (phút)
                       </span>
                       <input
                         type="text"

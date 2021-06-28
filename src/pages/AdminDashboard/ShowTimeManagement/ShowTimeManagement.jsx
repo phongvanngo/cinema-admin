@@ -15,7 +15,7 @@ export default function ShowTimeManagement() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="pl-5">
       <ShowTimeFormModal />
       <ShowTimeFilter />
       <div className="w-full flex mt-10 ">

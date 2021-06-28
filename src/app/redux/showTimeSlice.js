@@ -2,7 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { adminLogOut } from "./adminAuthSlice";
 import { toast } from "react-toastify";
 import showTimeApi from "app/api/showTimeApi";
-import { openErrorNofificationDialog } from "./dialogSlice";
+import {
+  closeMovieFormDialog,
+  closeShowTimeFormDialog,
+  openErrorNofificationDialog,
+} from "./dialogSlice";
 import { startLoading, stopLoading } from "./loadingSlice";
 
 const initialState = {
@@ -106,7 +110,16 @@ export const createShowTime = createAsyncThunk(
       const response = await showTimeApi.postShowTime(dataToSend);
       switch (response.status) {
         case 200:
-          // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
+          toast.success("Tạo mới thành công");
+          dispatch(closeShowTimeFormDialog());
+          dispatch(stopLoading());
+          return {
+            newShowTime: { ...dataToSend, time: time },
+            responseData: response.data,
+          };
+        case 204:
+          toast.success("Tạo mới thành công");
+          dispatch(closeShowTimeFormDialog());
           dispatch(stopLoading());
           return {
             newShowTime: { ...dataToSend, time: time },
@@ -114,6 +127,8 @@ export const createShowTime = createAsyncThunk(
           };
         case 442:
           throw { mess: "Dữ liệu đầu vào không hợp lệ" };
+        case 400:
+          throw { mess: response?.data?.mess };
         case 401:
           throw { mess: "Bạn không có quyền thực hiện thao tác này" };
         case 403:
@@ -184,7 +199,7 @@ export const deleteShowTime = createAsyncThunk(
       const response = await showTimeApi.deleteShowTime(payload);
       switch (response.status) {
         case 200:
-          // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
+          toast.success("Xóa thành công");
           dispatch(stopLoading());
           return { id: payload, responseData: response.data };
         case 442:
