@@ -53,6 +53,10 @@ export default function LandingPage() {
     MOVIE_TYPE_MANAGEMENT,
     USER_TYPE_MANAGEMENT,
     USER_MANAGEMENT,
+
+    REVENUE_BY_DATETIME,
+    REVENUE_BY_THEATER,
+    REVENUE_BY_MOVIE,
   } = AdminRoutes;
 
   return (
@@ -93,6 +97,24 @@ export default function LandingPage() {
               </li>
               <li className="menu-item">
                 <div className="menu-item__title">
+                  <i className="bx bx-line-chart menu-item__title__icon"></i>
+                  <span className="menu-item__title__name">Thống kê</span>
+                  <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
+                </div>
+                <ul className="submenu-list">
+                  <Link to={REVENUE_BY_THEATER}>
+                    <li>Doanh thu theo rạp</li>
+                  </Link>
+                  <Link to={REVENUE_BY_MOVIE}>
+                    <li>Doanh thu theo phim</li>
+                  </Link>
+                  <Link to={REVENUE_BY_DATETIME}>
+                    <li>Doanh thu theo tháng</li>
+                  </Link>
+                </ul>
+              </li>
+              <li className="menu-item">
+                <div className="menu-item__title">
                   <i className="bx bx-store-alt menu-item__title__icon"></i>
                   <span className="menu-item__title__name">Quản lý rạp</span>
                   <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
@@ -124,6 +146,7 @@ export default function LandingPage() {
                   </Link>
                 </ul>
               </li>
+
               <li className="menu-item">
                 <div className="menu-item__title">
                   <i className="bx bxs-user menu-item__title__icon"></i>

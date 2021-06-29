@@ -46,6 +46,7 @@ export default function AppRoutes() {
     <Suspense fallback={<PageLoaderRouter />}>
       <Router>
         <Switch>
+          <Redirect exact from={LandingPage} to={ADMIN_DASHBOARD} />
           <PrivateAdminRoute path={ADMIN_DASHBOARD}>
             <AdminDashboard />
           </PrivateAdminRoute>

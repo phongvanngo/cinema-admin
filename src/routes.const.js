@@ -20,6 +20,9 @@ export const AdminRoutes = {
   SHOWTIME_MANAGEMENT: `${PublicRoutes.ADMIN_DASHBOARD}/showtime-management`,
   USER_TYPE_MANAGEMENT: `${PublicRoutes.ADMIN_DASHBOARD}/user-type-management`,
   USER_MANAGEMENT: `${PublicRoutes.ADMIN_DASHBOARD}/user-management`,
+  REVENUE_BY_THEATER: `${PublicRoutes.ADMIN_DASHBOARD}/doanh-thu-theo-rap`,
+  REVENUE_BY_DATETIME: `${PublicRoutes.ADMIN_DASHBOARD}/doanh-thu-theo-thang`,
+  REVENUE_BY_MOVIE: `${PublicRoutes.ADMIN_DASHBOARD}/doanh-thu-theo-phim`,
 };
 
 export const UserRoutes = {

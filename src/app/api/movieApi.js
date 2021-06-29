@@ -4,7 +4,7 @@ import { listMovies, listMovieTypes } from "./fakeData";
 
 const movieApi = {
   getListMovie: async (data_request) => {
-    /*
+    // /*
     let data_response = null;
     let status = null;
     const url = "/phim";
@@ -56,8 +56,8 @@ const movieApi = {
         data: data_response,
       });
     });
-    */
-    // /*
+    // */
+    /*
     let response = await fakeApi({
       // request: loginInfo,
       response: {
@@ -69,7 +69,7 @@ const movieApi = {
       timeOut: 1000,
     });
     return response;
-    // */
+    */
   },
   getListMovieInTheaterSytem: async (theaterSystemId) => {
     if (theaterSystemId === null) return movieApi.getListMovie();
@@ -126,9 +126,10 @@ const movieApi = {
       danhGia: 0,
     };
     let send = await axiosClient.post(url, data_request).then((response) => {
+      console.log("postMovie, respónse", response);
       status = response.status;
       if (response.status === 200) {
-        data_response = { id: name };
+        data_response = { id: response?.data?.maPhim };
       } else {
         data_response = null;
       }
@@ -199,6 +200,7 @@ const movieApi = {
     const url = `/phim/${id}`;
     let send = await axiosClient.delete(url).then((response) => {
       status = response.status;
+      console.log("deleteMovieApi, response", response);
       if (status === 204) status = 200;
       if (status === 200) {
         data_response = {};

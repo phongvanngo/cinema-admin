@@ -29,6 +29,16 @@ const UserTypeManagement = lazy(() =>
   import("./UserManagement/Statistical/index")
 );
 
+const RevenueByDateTime = lazy(() =>
+  import("./Statisctical/RevenueByDateTime/index")
+);
+const RevenueByMovie = lazy(() =>
+  import("./Statisctical/RevenueByMovie/index")
+);
+const RevenueByTheater = lazy(() =>
+  import("./Statisctical/RevenueByTheater/index")
+);
+
 const {
   MOVIE_MANAGEMENT,
   THEATER_MANAGEMENT,
@@ -39,6 +49,9 @@ const {
   MOVIE_TYPE_MANAGEMENT,
   USER_TYPE_MANAGEMENT,
   USER_MANAGEMENT,
+  REVENUE_BY_DATETIME,
+  REVENUE_BY_THEATER,
+  REVENUE_BY_MOVIE,
 } = AdminRoutes;
 
 export default function AdminDashboardRoutes() {
@@ -52,6 +65,9 @@ export default function AdminDashboardRoutes() {
       <Route path={MOVIE_TYPE_MANAGEMENT} component={MovieTypeManagement} />
       <Route path={USER_TYPE_MANAGEMENT} component={UserTypeManagement} />
       <Route path={USER_MANAGEMENT} component={UserManagement} />
+      <Route path={REVENUE_BY_DATETIME} component={RevenueByDateTime} />
+      <Route path={REVENUE_BY_MOVIE} component={RevenueByMovie} />
+      <Route path={REVENUE_BY_THEATER} component={RevenueByTheater} />
       <Route
         path={THEATER_SYSTEM_MANAGEMENT}
         component={TheaterSystemManagement}

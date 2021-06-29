@@ -10,14 +10,14 @@ const userApi = {
       return res;
     });
 
-    return {
-      status: 200,
-      data: { listUser: listUsers },
-    };
     // return {
-    //   status: res?.status,
-    //   data: { listUser: [...(res?.data || []), ...listUsers] },
+    //   status: 200,
+    //   data: { listUser: listUsers },
     // };
+    return {
+      status: res?.status,
+      data: { listUser: [...(res?.data || []), ...listUsers] },
+    };
 
     // let response = await fakeApi({
     //   // request: loginInfo,

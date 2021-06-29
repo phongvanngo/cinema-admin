@@ -140,7 +140,7 @@ export const deleteMovie = createAsyncThunk(
       const response = await movieApi.deleteMovie(payload);
       switch (response.status) {
         case 200:
-          // dispatch(notify({ message: "Đăng nhập thành công", options: { variant: 'success' } }));
+          toast.success("Đã xóa");
           dispatch(stopLoading());
           return { id: payload, responseData: response.data };
         case 442:
