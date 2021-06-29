@@ -288,6 +288,7 @@ const theaterApi = {
       .get(url, { params: { filter: JSON.stringify(data_request) } })
       .then((response) => {
         status = response.status;
+        console.log("getListBookedSeats, response: ", response);
         if (status === 204) status = 200;
         if (status === 200) {
           data_response = {
