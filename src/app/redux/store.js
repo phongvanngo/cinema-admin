@@ -12,9 +12,11 @@ import phongChieuReducer from "./phongChieuSlice";
 import movieTypeReducer from "./movieTypeSlice";
 import showTimeReducer from "./showTimeSlice";
 import userReducer from "./userSlice";
+import statisticalReducer from "./statisticalSlice";
 
 export const store = configureStore({
   reducer: {
+    statistical: statisticalReducer,
     counter: counterReducer,
     loading: loadingReducer,
     adminAuth: adminAuthReducer,
