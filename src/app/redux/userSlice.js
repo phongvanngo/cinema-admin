@@ -17,7 +17,7 @@ export const fetchListUser = createAsyncThunk(
     dispatch(startLoading());
     try {
       const response = await userApi.getListUser();
-
+      console.log("fetchListUSer, response", response);
       switch (response.status) {
         case 200:
           dispatch(stopLoading());

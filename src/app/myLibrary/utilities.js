@@ -24,7 +24,7 @@ export function removeAccents(str) {
 }
 
 export function filterArrayBySearchTerm(myArray, searchTerm) {
-  // if (!myArray) return [];
+  if (!myArray) return [];
   // if (!searchTerm) return [];
   searchTerm = removeAccents(searchTerm).toUpperCase().trim();
   let res = [];

@@ -51,6 +51,7 @@ export default function LandingPage() {
     THEATER_SYSTEM_MANAGEMENT,
     PHONGCHIEU_MANAGEMENT,
     MOVIE_TYPE_MANAGEMENT,
+    USER_TYPE_MANAGEMENT,
     USER_MANAGEMENT,
   } = AdminRoutes;
 
@@ -132,6 +133,9 @@ export default function LandingPage() {
                   <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
                 </div>
                 <ul className="submenu-list">
+                  <Link to={USER_TYPE_MANAGEMENT}>
+                    <li>Phân loại người dùng</li>
+                  </Link>
                   <Link to={USER_MANAGEMENT}>
                     <li>Tất cả người dùng</li>
                   </Link>

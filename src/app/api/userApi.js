@@ -6,14 +6,18 @@ const userApi = {
   getListUser: async () => {
     const url = "/users";
     let res = await axiosClient.get(url).then((res) => {
-      console.log("getListUser response; ", res.data);
+      console.log("getListUser response; ", res);
       return res;
     });
 
     return {
-      status: res?.status,
-      data: { listUser: [...(res?.data || []), ...listUsers] },
+      status: 200,
+      data: { listUser: listUsers },
     };
+    // return {
+    //   status: res?.status,
+    //   data: { listUser: [...(res?.data || []), ...listUsers] },
+    // };
 
     // let response = await fakeApi({
     //   // request: loginInfo,
