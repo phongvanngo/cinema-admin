@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import RevenueBarChar from "./RevenueBarChar";
+import RevenueDoughnutChar from "./RevenueDoughnutChar";
 import { toast } from "react-toastify";
 
 export default function RevenueByTheater() {
@@ -34,6 +35,7 @@ export default function RevenueByTheater() {
   return (
     <div className="p-2">
       <RevenueBarChar data={{ revenues }} />
+      <RevenueDoughnutChar data={{ revenues }} />
     </div>
   );
 }
