@@ -31,7 +31,7 @@ export default function RevenueBarChar() {
       <div className="p-6  min-h-20 border-b border-gray-200 rounded-t-3xl bg-white">
         <div className="flex justify-between items-center">
           <h1 className="text-xl font-medium">
-            Biểu đồ thể hiện doanh thu theo phim
+            Biểu đồ thể hiện các phim có doanh thu cao nhất
           </h1>
         </div>
       </div>

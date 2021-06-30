@@ -5,101 +5,101 @@ import { isDateEqual } from "app/myLibrary/utilities";
 import { listShowTime } from "./fakeData";
 
 const theaterApi = {
-  getListShowTime: async (data_request) => {
-    const { cumRapId, time } = data_request;
-    let data_response = null;
-    let status = null;
-    const url = "/lich-chieu";
+  getListShowTime: async (params) => {
+    // const { cumRapId, time } = data_request;
+    // let data_response = null;
+    // let status = null;
+    // const url = "/lich-chieu";
 
-    // {
-    //   "where": {
-    //     "maCumRap":"bhd-hvt"
+    // // {
+    // //   "where": {
+    // //     "maCumRap":"bhd-hvt"
+    // //   },
+    // //   "fields": {
+    // //     "maLichChieu": true,
+    // //     "ngayChieuGioChieu": true,
+    // //     "giaVe": true,
+    // //     "thoiLuong": true,
+    // //     "maRap": true,
+    // //     "maHeThongRap": true,
+    // //     "maCumRap": true,
+    // //     "maPhim": true
+    // //   }
+    // // }
+
+    // let dataRequest = {
+    //   where: {
+    //     maCumRap: cumRapId,
     //   },
-    //   "fields": {
-    //     "maLichChieu": true,
-    //     "ngayChieuGioChieu": true,
-    //     "giaVe": true,
-    //     "thoiLuong": true,
-    //     "maRap": true,
-    //     "maHeThongRap": true,
-    //     "maCumRap": true,
-    //     "maPhim": true
+    //   field: {
+    //     maLichChieu: true,
+    //     ngayChieuGioChieu: true,
+    //     giaVe: true,
+    //     thoiLuong: true,
+    //     maRap: true,
+    //     maHeThongRap: true,
+    //     maCumRap: true,
+    //     maPhim: true,
+    //     tenRap: true,
+    //     tenPhim: true,
+    //     tenHeThongRap: true,
+    //     tenCumRap: true,
+    //   },
+    // };
+
+    // let send = await axiosClient.get(url).then((response) => {
+    //   console.log("getListShowTimeAPI ,response: ", response);
+    //   status = response.status;
+    //   if (response.status === 200) {
+    //     let listShowTime = [];
+    //     response.data.forEach((element) => {
+    //       // "maLichChieu": true,
+    //       // "ngayChieuGioChieu": true,
+    //       // "giaVe": true,
+    //       // "thoiLuong": true,
+    //       // "maRap": true,
+    //       // "maHeThongRap": true,
+    //       // "maCumRap": true,
+    //       // "maPhim": true
+    //       const {
+    //         maPhim,
+    //         thoiLuong,
+    //         maLichChieu,
+    //         ngayChieuGioChieu,
+    //         giaVe,
+    //         maRap,
+    //         maCumRap,
+    //       } = element;
+    //       let showTime = {
+    //         id: maLichChieu,
+    //         time: ngayChieuGioChieu,
+    //         giaVe: giaVe,
+    //         phongChieuId: maRap,
+    //         movieId: maPhim,
+    //         thoiLuong: thoiLuong,
+    //         cumRapId: maCumRap,
+    //       };
+    //       listShowTime.push(showTime);
+    //     });
+
+    //     let showTimes = listShowTime.filter((e) => e.cumRapId === cumRapId);
+    //     showTimes = showTimes.filter((e) =>
+    //       isDateEqual(e.time, time.toString())
+    //     );
+
+    //     data_response = {
+    //       listShowTime: showTimes,
+    //     };
+    //   } else {
+    //     data_response = null;
     //   }
-    // }
-
-    let dataRequest = {
-      where: {
-        maCumRap: cumRapId,
-      },
-      field: {
-        maLichChieu: true,
-        ngayChieuGioChieu: true,
-        giaVe: true,
-        thoiLuong: true,
-        maRap: true,
-        maHeThongRap: true,
-        maCumRap: true,
-        maPhim: true,
-        tenRap: true,
-        tenPhim: true,
-        tenHeThongRap: true,
-        tenCumRap: true,
-      },
-    };
-
-    let send = await axiosClient.get(url).then((response) => {
-      console.log("getListShowTimeAPI ,response: ", response);
-      status = response.status;
-      if (response.status === 200) {
-        let listShowTime = [];
-        response.data.forEach((element) => {
-          // "maLichChieu": true,
-          // "ngayChieuGioChieu": true,
-          // "giaVe": true,
-          // "thoiLuong": true,
-          // "maRap": true,
-          // "maHeThongRap": true,
-          // "maCumRap": true,
-          // "maPhim": true
-          const {
-            maPhim,
-            thoiLuong,
-            maLichChieu,
-            ngayChieuGioChieu,
-            giaVe,
-            maRap,
-            maCumRap,
-          } = element;
-          let showTime = {
-            id: maLichChieu,
-            time: ngayChieuGioChieu,
-            giaVe: giaVe,
-            phongChieuId: maRap,
-            movieId: maPhim,
-            thoiLuong: thoiLuong,
-            cumRapId: maCumRap,
-          };
-          listShowTime.push(showTime);
-        });
-
-        let showTimes = listShowTime.filter((e) => e.cumRapId === cumRapId);
-        showTimes = showTimes.filter((e) =>
-          isDateEqual(e.time, time.toString())
-        );
-
-        data_response = {
-          listShowTime: showTimes,
-        };
-      } else {
-        data_response = null;
-      }
-    });
-    return new Promise((resolve, reject) => {
-      resolve({
-        status: status,
-        data: data_response,
-      });
-    });
+    // });
+    // return new Promise((resolve, reject) => {
+    //   resolve({
+    //     status: status,
+    //     data: data_response,
+    //   });
+    // });
 
     // let response = await fakeApi({
     //   // request: loginInfo,
@@ -112,45 +112,62 @@ const theaterApi = {
     //   timeOut: 1000,
     // });
     // return response;
+
+    console.log(params);
+    const { cumRapId, time } = params;
+    console.log(time);
+    let showTimes = listShowTime.filter((e) => e.cumRapId == cumRapId);
+    showTimes = showTimes.filter((e) => isDateEqual(e.time, time.toString()));
+    let response = await fakeApi({
+      // request: loginInfo,
+      response: {
+        status: 200,
+        data: {
+          listShowTime: showTimes,
+        },
+      },
+      timeOut: 1000,
+    });
+
+    return response;
   },
   getListShowTimeInTheaterSytem: async (theaterSystemId) => {
-    if (theaterSystemId === null) return theaterApi.getListShowTime();
-    let data_response = null;
-    let status = null;
-    const url = `/he-thong-raps/${theaterSystemId}/cum-raps`;
-    let send = await axiosClient.get(url).then((response) => {
-      status = response.status;
-      if (response.status === 200) {
-        let listShowTime = [];
-        response.data.forEach((element) => {
-          // "maShowTime": "cgv-3/2",
-          // "tenShowTime": "CGV 3 thang 2",
-          // "thongTin": "blabla",
-          // "maHeThongRap": "CGV"
-          const { maShowTime, tenShowTime, thongTin, maHeThongRap } = element;
-          let showTime = {
-            id: maShowTime,
-            name: tenShowTime,
-            information: thongTin,
-            theaterSystemId: maHeThongRap,
-            theaterSystemName: null,
-          };
-          listShowTime.push(showTime);
-        });
-
-        data_response = {
-          listShowTime,
-        };
-      } else {
-        data_response = null;
-      }
-    });
-    return new Promise((resolve, reject) => {
-      resolve({
-        status: status,
-        data: data_response,
-      });
-    });
+    // if (theaterSystemId === null) return theaterApi.getListShowTime();
+    // let data_response = null;
+    // let status = null;
+    // const url = `/he-thong-raps/${theaterSystemId}/cum-raps`;
+    // let send = await axiosClient.get(url).then((response) => {
+    //   status = response.status;
+    //   if (response.status === 200) {
+    //     let listShowTime = [];
+    //     response.data.forEach((element) => {
+    //       // "maShowTime": "cgv-3/2",
+    //       // "tenShowTime": "CGV 3 thang 2",
+    //       // "thongTin": "blabla",
+    //       // "maHeThongRap": "CGV"
+    //       const { maShowTime, tenShowTime, thongTin, maHeThongRap } = element;
+    //       let showTime = {
+    //         id: maShowTime,
+    //         name: tenShowTime,
+    //         information: thongTin,
+    //         theaterSystemId: maHeThongRap,
+    //         theaterSystemName: null,
+    //       };
+    //       listShowTime.push(showTime);
+    //     });
+    //     data_response = {
+    //       listShowTime,
+    //     };
+    //   } else {
+    //     data_response = null;
+    //   }
+    // });
+    // return new Promise((resolve, reject) => {
+    //   resolve({
+    //     status: status,
+    //     data: data_response,
+    //   });
+    // });
   },
   postShowTime: async (showTime) => {
     const url = "/lich-chieu";

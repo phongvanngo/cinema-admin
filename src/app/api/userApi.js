@@ -4,32 +4,32 @@ import { listUsers } from "./fakeData";
 
 const userApi = {
   getListUser: async () => {
-    const url = "/users";
-    let res = await axiosClient.get(url).then((res) => {
-      console.log("getListUser response; ", res);
-      return res;
-    });
+    // const url = "/users";
+    // let res = await axiosClient.get(url).then((res) => {
+    //   console.log("getListUser response; ", res);
+    //   return res;
+    // });
+    // return {
+    //   status: res?.status,
+    //   data: { listUser: [...(res?.data || []), ...listUsers] },
+    // };
 
     // return {
     //   status: 200,
     //   data: { listUser: listUsers },
     // };
-    return {
-      status: res?.status,
-      data: { listUser: [...(res?.data || []), ...listUsers] },
-    };
 
-    // let response = await fakeApi({
-    //   // request: loginInfo,
-    //   response: {
-    //     status: 200,
-    //     data: {
-    //       listUser: listUsers,
-    //     },
-    //   },
-    //   timeOut: 1000,
-    // });
-    // return response;
+    let response = await fakeApi({
+      // request: loginInfo,
+      response: {
+        status: 200,
+        data: {
+          listUser: listUsers,
+        },
+      },
+      timeOut: 1000,
+    });
+    return response;
   },
   postUser: async (user) => {
     let response = await fakeApi({

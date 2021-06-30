@@ -1304,27 +1304,27 @@ export const listUsers = JSON.parse(`
 export const listTheaterSystem = JSON.parse(`
 [{
     "id": 1,
-    "name": "Rhyzio",
+    "name": "CGV",
     "alias": "JOD",
     "logo": "https://picsum.photos/200/300"
   }, {
     "id": 2,
-    "name": "Centimia",
+    "name": "CINESTAR",
     "alias": "CNY",
     "logo": "https://picsum.photos/200/400"
   }, {
     "id": 3,
-    "name": "Rhynoodle",
+    "name": "BHDSTAR CINEPLEX",
     "alias": "PEN",
     "logo": "https://picsum.photos/200/200"
   }, {
     "id": 4,
-    "name": "Abatz",
+    "name": "LOTTE CINEMA",
     "alias": "RUB",
     "logo": "https://picsum.photos/300/300"
   }, {
     "id": 5,
-    "name": "Quatz",
+    "name": "GALAXY CINEMA",
     "alias": "KHR",
     "logo": "https://picsum.photos/300/200"
   }]  
@@ -1758,4206 +1758,2434 @@ export const listMovieTypes = JSON.parse(
 );
 
 export const listShowTime = JSON.parse(`
-[
-  {
-    "id": 200,
-    "time": "Sunday, May 23, 2021 3:06 AM",
-    "cumRapId": 1,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 201,
-    "time": "Friday, May 21, 2021 9:04 AM",
-    "cumRapId": 2,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 202,
-    "time": "Tuesday, May 25, 2021 1:12 PM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 203,
-    "time": "Wednesday, May 26, 2021 12:26 PM",
-    "cumRapId": 8,
-    "phongChieuId": 9,
-    "movieId": 7
-  },
-  {
-    "id": 204,
-    "time": "Monday, May 24, 2021 8:39 AM",
-    "cumRapId": 7,
-    "phongChieuId": 10,
-    "movieId": 8
-  },
-  {
-    "id": 205,
-    "time": "Monday, May 24, 2021 10:23 PM",
-    "cumRapId": 4,
-    "phongChieuId": 3,
-    "movieId": 3
-  },
-  {
-    "id": 206,
-    "time": "Friday, May 21, 2021 4:43 PM",
-    "cumRapId": 9,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 207,
-    "time": "Saturday, May 22, 2021 12:35 AM",
-    "cumRapId": 5,
-    "phongChieuId": 1,
-    "movieId": 3
-  },
-  {
-    "id": 208,
-    "time": "Monday, May 24, 2021 3:04 PM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 209,
-    "time": "Sunday, May 23, 2021 6:21 PM",
-    "cumRapId": 2,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 210,
-    "time": "Friday, May 21, 2021 8:14 AM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 6
-  },
-  {
-    "id": 211,
-    "time": "Friday, May 21, 2021 1:25 PM",
-    "cumRapId": 2,
-    "phongChieuId": 6,
-    "movieId": 9
-  },
-  {
-    "id": 212,
-    "time": "Friday, May 21, 2021 7:10 AM",
-    "cumRapId": 7,
-    "phongChieuId": 2,
-    "movieId": 8
-  },
-  {
-    "id": 213,
-    "time": "Friday, May 21, 2021 4:15 AM",
-    "cumRapId": 9,
-    "phongChieuId": 9,
-    "movieId": 1
-  },
-  {
-    "id": 214,
-    "time": "Monday, May 24, 2021 1:52 AM",
-    "cumRapId": 9,
-    "phongChieuId": 3,
-    "movieId": 1
-  },
-  {
-    "id": 215,
-    "time": "Saturday, May 22, 2021 3:39 AM",
-    "cumRapId": 5,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 216,
-    "time": "Saturday, May 22, 2021 4:56 PM",
-    "cumRapId": 7,
-    "phongChieuId": 8,
-    "movieId": 10
-  },
-  {
-    "id": 217,
-    "time": "Wednesday, May 26, 2021 5:11 PM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 3
-  },
-  {
-    "id": 218,
-    "time": "Sunday, May 23, 2021 7:21 PM",
-    "cumRapId": 8,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 219,
-    "time": "Tuesday, May 25, 2021 8:22 PM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 220,
-    "time": "Wednesday, May 26, 2021 10:25 AM",
-    "cumRapId": 3,
-    "phongChieuId": 3,
-    "movieId": 4
-  },
-  {
-    "id": 221,
-    "time": "Saturday, May 22, 2021 11:39 AM",
-    "cumRapId": 2,
-    "phongChieuId": 5,
-    "movieId": 3
-  },
-  {
-    "id": 222,
-    "time": "Tuesday, May 25, 2021 10:21 PM",
-    "cumRapId": 1,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 223,
-    "time": "Saturday, May 22, 2021 11:22 AM",
-    "cumRapId": 8,
-    "phongChieuId": 8,
-    "movieId": 5
-  },
-  {
-    "id": 224,
-    "time": "Saturday, May 22, 2021 11:09 PM",
-    "cumRapId": 5,
-    "phongChieuId": 7,
-    "movieId": 9
-  },
-  {
-    "id": 225,
-    "time": "Friday, May 21, 2021 6:20 PM",
-    "cumRapId": 9,
-    "phongChieuId": 3,
-    "movieId": 8
-  },
-  {
-    "id": 226,
-    "time": "Monday, May 24, 2021 8:12 PM",
-    "cumRapId": 9,
-    "phongChieuId": 10,
-    "movieId": 5
-  },
-  {
-    "id": 227,
-    "time": "Friday, May 21, 2021 2:49 AM",
-    "cumRapId": 8,
-    "phongChieuId": 10,
-    "movieId": 2
-  },
-  {
-    "id": 228,
-    "time": "Wednesday, May 26, 2021 6:11 PM",
-    "cumRapId": 2,
-    "phongChieuId": 10,
-    "movieId": 2
-  },
-  {
-    "id": 229,
-    "time": "Monday, May 24, 2021 4:58 AM",
-    "cumRapId": 1,
-    "phongChieuId": 3,
-    "movieId": 10
-  },
-  {
-    "id": 230,
-    "time": "Wednesday, May 26, 2021 5:20 PM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 231,
-    "time": "Friday, May 21, 2021 2:56 PM",
-    "cumRapId": 6,
-    "phongChieuId": 3,
-    "movieId": 10
-  },
-  {
-    "id": 232,
-    "time": "Wednesday, May 26, 2021 7:34 PM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 8
-  },
-  {
-    "id": 233,
-    "time": "Friday, May 21, 2021 11:22 AM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 234,
-    "time": "Wednesday, May 26, 2021 9:09 PM",
-    "cumRapId": 5,
-    "phongChieuId": 4,
-    "movieId": 6
-  },
-  {
-    "id": 235,
-    "time": "Monday, May 24, 2021 11:59 PM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 236,
-    "time": "Sunday, May 23, 2021 2:09 PM",
-    "cumRapId": 5,
-    "phongChieuId": 4,
-    "movieId": 6
-  },
-  {
-    "id": 237,
-    "time": "Friday, May 21, 2021 11:48 PM",
-    "cumRapId": 5,
-    "phongChieuId": 3,
-    "movieId": 4
-  },
-  {
-    "id": 238,
-    "time": "Sunday, May 23, 2021 1:21 AM",
-    "cumRapId": 3,
-    "phongChieuId": 6,
-    "movieId": 1
-  },
-  {
-    "id": 239,
-    "time": "Monday, May 24, 2021 3:24 PM",
-    "cumRapId": 4,
-    "phongChieuId": 6,
-    "movieId": 2
-  },
-  {
-    "id": 240,
-    "time": "Friday, May 21, 2021 2:54 PM",
-    "cumRapId": 5,
-    "phongChieuId": 3,
-    "movieId": 4
-  },
-  {
-    "id": 241,
-    "time": "Friday, May 21, 2021 5:28 AM",
-    "cumRapId": 10,
-    "phongChieuId": 1,
-    "movieId": 9
-  },
-  {
-    "id": 242,
-    "time": "Saturday, May 22, 2021 11:59 AM",
-    "cumRapId": 10,
-    "phongChieuId": 2,
-    "movieId": 2
-  },
-  {
-    "id": 243,
-    "time": "Wednesday, May 26, 2021 8:22 PM",
-    "cumRapId": 5,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 244,
-    "time": "Wednesday, May 26, 2021 1:39 AM",
-    "cumRapId": 8,
-    "phongChieuId": 1,
-    "movieId": 5
-  },
-  {
-    "id": 245,
-    "time": "Saturday, May 22, 2021 2:09 PM",
-    "cumRapId": 2,
-    "phongChieuId": 5,
-    "movieId": 7
-  },
-  {
-    "id": 246,
-    "time": "Friday, May 21, 2021 6:27 PM",
-    "cumRapId": 8,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 247,
-    "time": "Sunday, May 23, 2021 6:11 PM",
-    "cumRapId": 3,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 248,
-    "time": "Saturday, May 22, 2021 6:43 AM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 249,
-    "time": "Wednesday, May 26, 2021 7:41 PM",
-    "cumRapId": 7,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 250,
-    "time": "Friday, May 21, 2021 10:39 PM",
-    "cumRapId": 8,
-    "phongChieuId": 5,
-    "movieId": 8
-  },
-  {
-    "id": 251,
-    "time": "Sunday, May 23, 2021 3:23 PM",
-    "cumRapId": 7,
-    "phongChieuId": 3,
-    "movieId": 8
-  },
-  {
-    "id": 252,
-    "time": "Tuesday, May 25, 2021 12:35 AM",
-    "cumRapId": 8,
-    "phongChieuId": 6,
-    "movieId": 2
-  },
-  {
-    "id": 253,
-    "time": "Monday, May 24, 2021 2:54 AM",
-    "cumRapId": 8,
-    "phongChieuId": 2,
-    "movieId": 2
-  },
-  {
-    "id": 254,
-    "time": "Friday, May 21, 2021 6:31 PM",
-    "cumRapId": 9,
-    "phongChieuId": 6,
-    "movieId": 5
-  },
-  {
-    "id": 255,
-    "time": "Friday, May 21, 2021 5:40 AM",
-    "cumRapId": 3,
-    "phongChieuId": 9,
-    "movieId": 9
-  },
-  {
-    "id": 256,
-    "time": "Friday, May 21, 2021 7:31 AM",
-    "cumRapId": 2,
-    "phongChieuId": 9,
-    "movieId": 9
-  },
-  {
-    "id": 257,
-    "time": "Friday, May 21, 2021 2:29 PM",
-    "cumRapId": 4,
-    "phongChieuId": 6,
-    "movieId": 3
-  },
-  {
-    "id": 258,
-    "time": "Saturday, May 22, 2021 2:36 PM",
-    "cumRapId": 3,
-    "phongChieuId": 5,
-    "movieId": 6
-  },
-  {
-    "id": 259,
-    "time": "Tuesday, May 25, 2021 9:37 AM",
-    "cumRapId": 7,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 260,
-    "time": "Monday, May 24, 2021 12:45 AM",
-    "cumRapId": 2,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 261,
-    "time": "Friday, May 21, 2021 3:28 PM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 9
-  },
-  {
-    "id": 262,
-    "time": "Sunday, May 23, 2021 1:37 PM",
-    "cumRapId": 2,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 263,
-    "time": "Monday, May 24, 2021 9:48 PM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 9
-  },
-  {
-    "id": 264,
-    "time": "Sunday, May 23, 2021 6:59 AM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 2
-  },
-  {
-    "id": 265,
-    "time": "Tuesday, May 25, 2021 7:22 AM",
-    "cumRapId": 3,
-    "phongChieuId": 6,
-    "movieId": 4
-  },
-  {
-    "id": 266,
-    "time": "Tuesday, May 25, 2021 9:29 AM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 267,
-    "time": "Friday, May 21, 2021 4:04 PM",
-    "cumRapId": 8,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 268,
-    "time": "Wednesday, May 26, 2021 6:16 AM",
-    "cumRapId": 2,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 269,
-    "time": "Tuesday, May 25, 2021 7:40 PM",
-    "cumRapId": 8,
-    "phongChieuId": 2,
-    "movieId": 7
-  },
-  {
-    "id": 270,
-    "time": "Friday, May 21, 2021 1:59 AM",
-    "cumRapId": 9,
-    "phongChieuId": 4,
-    "movieId": 8
-  },
-  {
-    "id": 271,
-    "time": "Tuesday, May 25, 2021 7:36 PM",
-    "cumRapId": 8,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 272,
-    "time": "Tuesday, May 25, 2021 9:05 PM",
-    "cumRapId": 2,
-    "phongChieuId": 9,
-    "movieId": 9
-  },
-  {
-    "id": 273,
-    "time": "Friday, May 21, 2021 6:32 PM",
-    "cumRapId": 3,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 274,
-    "time": "Saturday, May 22, 2021 12:51 PM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 5
-  },
-  {
-    "id": 275,
-    "time": "Friday, May 21, 2021 10:41 PM",
-    "cumRapId": 6,
-    "phongChieuId": 5,
-    "movieId": 6
-  },
-  {
-    "id": 276,
-    "time": "Wednesday, May 26, 2021 6:48 AM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 277,
-    "time": "Friday, May 21, 2021 7:10 AM",
-    "cumRapId": 6,
-    "phongChieuId": 3,
-    "movieId": 1
-  },
-  {
-    "id": 278,
-    "time": "Tuesday, May 25, 2021 6:43 AM",
-    "cumRapId": 7,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 279,
-    "time": "Tuesday, May 25, 2021 7:54 PM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 5
-  },
-  {
-    "id": 280,
-    "time": "Monday, May 24, 2021 10:45 PM",
-    "cumRapId": 4,
-    "phongChieuId": 4,
-    "movieId": 7
-  },
-  {
-    "id": 281,
-    "time": "Sunday, May 23, 2021 1:55 PM",
-    "cumRapId": 5,
-    "phongChieuId": 4,
-    "movieId": 5
-  },
-  {
-    "id": 282,
-    "time": "Wednesday, May 26, 2021 4:45 PM",
-    "cumRapId": 10,
-    "phongChieuId": 7,
-    "movieId": 10
-  },
-  {
-    "id": 283,
-    "time": "Monday, May 24, 2021 3:47 PM",
-    "cumRapId": 3,
-    "phongChieuId": 2,
-    "movieId": 3
-  },
-  {
-    "id": 284,
-    "time": "Saturday, May 22, 2021 7:37 AM",
-    "cumRapId": 8,
-    "phongChieuId": 7,
-    "movieId": 1
-  },
-  {
-    "id": 285,
-    "time": "Wednesday, May 26, 2021 7:27 AM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 5
-  },
-  {
-    "id": 286,
-    "time": "Wednesday, May 26, 2021 2:14 PM",
-    "cumRapId": 8,
-    "phongChieuId": 2,
-    "movieId": 4
-  },
-  {
-    "id": 287,
-    "time": "Friday, May 21, 2021 8:01 AM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 5
-  },
-  {
-    "id": 288,
-    "time": "Tuesday, May 25, 2021 10:54 AM",
-    "cumRapId": 1,
-    "phongChieuId": 6,
-    "movieId": 2
-  },
-  {
-    "id": 289,
-    "time": "Wednesday, May 26, 2021 9:24 AM",
-    "cumRapId": 5,
-    "phongChieuId": 9,
-    "movieId": 9
-  },
-  {
-    "id": 290,
-    "time": "Tuesday, May 25, 2021 8:40 PM",
-    "cumRapId": 9,
-    "phongChieuId": 8,
-    "movieId": 6
-  },
-  {
-    "id": 291,
-    "time": "Tuesday, May 25, 2021 2:27 PM",
-    "cumRapId": 4,
-    "phongChieuId": 8,
-    "movieId": 5
-  },
-  {
-    "id": 292,
-    "time": "Friday, May 21, 2021 2:56 AM",
-    "cumRapId": 3,
-    "phongChieuId": 2,
-    "movieId": 3
-  },
-  {
-    "id": 293,
-    "time": "Sunday, May 23, 2021 8:11 AM",
-    "cumRapId": 6,
-    "phongChieuId": 5,
-    "movieId": 5
-  },
-  {
-    "id": 294,
-    "time": "Wednesday, May 26, 2021 10:35 PM",
-    "cumRapId": 7,
-    "phongChieuId": 3,
-    "movieId": 9
-  },
-  {
-    "id": 295,
-    "time": "Sunday, May 23, 2021 7:17 PM",
-    "cumRapId": 1,
-    "phongChieuId": 9,
-    "movieId": 9
-  },
-  {
-    "id": 296,
-    "time": "Saturday, May 22, 2021 6:40 AM",
-    "cumRapId": 8,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 297,
-    "time": "Saturday, May 22, 2021 4:40 AM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 5
-  },
-  {
-    "id": 298,
-    "time": "Monday, May 24, 2021 10:12 AM",
-    "cumRapId": 2,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 299,
-    "time": "Sunday, May 23, 2021 4:26 AM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 9
-  },
-  {
-    "id": 0,
-    "time": "Monday, May 24, 2021 7:40 PM",
-    "cumRapId": 7,
-    "phongChieuId": 3,
-    "movieId": 5
-  },
-  {
-    "id": 1,
-    "time": "Friday, May 21, 2021 12:31 AM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 2
-  },
-  {
-    "id": 2,
-    "time": "Sunday, May 23, 2021 6:14 PM",
-    "cumRapId": 4,
-    "phongChieuId": 6,
-    "movieId": 10
-  },
-  {
-    "id": 3,
-    "time": "Wednesday, May 26, 2021 11:50 AM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 6
-  },
-  {
-    "id": 4,
-    "time": "Wednesday, May 26, 2021 4:56 AM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 8
-  },
-  {
-    "id": 5,
-    "time": "Sunday, May 23, 2021 4:29 AM",
-    "cumRapId": 4,
-    "phongChieuId": 9,
-    "movieId": 4
-  },
-  {
-    "id": 6,
-    "time": "Friday, May 21, 2021 10:37 PM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 7,
-    "time": "Saturday, May 22, 2021 9:23 AM",
-    "cumRapId": 9,
-    "phongChieuId": 9,
-    "movieId": 3
-  },
-  {
-    "id": 8,
-    "time": "Saturday, May 22, 2021 7:18 AM",
-    "cumRapId": 2,
-    "phongChieuId": 6,
-    "movieId": 2
-  },
-  {
-    "id": 9,
-    "time": "Friday, May 21, 2021 8:30 AM",
-    "cumRapId": 3,
-    "phongChieuId": 7,
-    "movieId": 9
-  },
-  {
-    "id": 10,
-    "time": "Saturday, May 22, 2021 3:39 PM",
-    "cumRapId": 9,
-    "phongChieuId": 3,
-    "movieId": 9
-  },
-  {
-    "id": 11,
-    "time": "Saturday, May 22, 2021 2:12 PM",
-    "cumRapId": 6,
-    "phongChieuId": 3,
-    "movieId": 9
-  },
-  {
-    "id": 12,
-    "time": "Friday, May 21, 2021 10:23 AM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 3
-  },
-  {
-    "id": 13,
-    "time": "Monday, May 24, 2021 1:00 AM",
-    "cumRapId": 2,
-    "phongChieuId": 5,
-    "movieId": 9
-  },
-  {
-    "id": 14,
-    "time": "Tuesday, May 25, 2021 11:46 PM",
-    "cumRapId": 6,
-    "phongChieuId": 4,
-    "movieId": 1
-  },
-  {
-    "id": 15,
-    "time": "Monday, May 24, 2021 3:36 PM",
-    "cumRapId": 3,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 16,
-    "time": "Monday, May 24, 2021 2:08 PM",
-    "cumRapId": 6,
-    "phongChieuId": 2,
-    "movieId": 1
-  },
-  {
-    "id": 17,
-    "time": "Saturday, May 22, 2021 11:45 PM",
-    "cumRapId": 9,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 18,
-    "time": "Friday, May 21, 2021 8:49 PM",
-    "cumRapId": 1,
-    "phongChieuId": 2,
-    "movieId": 5
-  },
-  {
-    "id": 19,
-    "time": "Friday, May 21, 2021 1:09 AM",
-    "cumRapId": 3,
-    "phongChieuId": 9,
-    "movieId": 2
-  },
-  {
-    "id": 20,
-    "time": "Sunday, May 23, 2021 9:39 AM",
-    "cumRapId": 3,
-    "phongChieuId": 9,
-    "movieId": 5
-  },
-  {
-    "id": 21,
-    "time": "Monday, May 24, 2021 1:15 AM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 3
-  },
-  {
-    "id": 22,
-    "time": "Saturday, May 22, 2021 7:43 AM",
-    "cumRapId": 2,
-    "phongChieuId": 8,
-    "movieId": 9
-  },
-  {
-    "id": 23,
-    "time": "Tuesday, May 25, 2021 5:59 PM",
-    "cumRapId": 7,
-    "phongChieuId": 6,
-    "movieId": 2
-  },
-  {
-    "id": 24,
-    "time": "Tuesday, May 25, 2021 3:31 AM",
-    "cumRapId": 10,
-    "phongChieuId": 5,
-    "movieId": 5
-  },
-  {
-    "id": 25,
-    "time": "Tuesday, May 25, 2021 12:19 PM",
-    "cumRapId": 10,
-    "phongChieuId": 2,
-    "movieId": 8
-  },
-  {
-    "id": 26,
-    "time": "Tuesday, May 25, 2021 3:36 AM",
-    "cumRapId": 8,
-    "phongChieuId": 6,
-    "movieId": 10
-  },
-  {
-    "id": 27,
-    "time": "Tuesday, May 25, 2021 10:59 AM",
-    "cumRapId": 8,
-    "phongChieuId": 8,
-    "movieId": 7
-  },
-  {
-    "id": 28,
-    "time": "Sunday, May 23, 2021 12:46 PM",
-    "cumRapId": 3,
-    "phongChieuId": 7,
-    "movieId": 6
-  },
-  {
-    "id": 29,
-    "time": "Tuesday, May 25, 2021 2:23 PM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 7
-  },
-  {
-    "id": 30,
-    "time": "Sunday, May 23, 2021 5:52 AM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 3
-  },
-  {
-    "id": 31,
-    "time": "Monday, May 24, 2021 7:03 AM",
-    "cumRapId": 5,
-    "phongChieuId": 6,
-    "movieId": 7
-  },
-  {
-    "id": 32,
-    "time": "Sunday, May 23, 2021 2:35 AM",
-    "cumRapId": 8,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 33,
-    "time": "Monday, May 24, 2021 11:24 PM",
-    "cumRapId": 7,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 34,
-    "time": "Tuesday, May 25, 2021 7:28 PM",
-    "cumRapId": 6,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 35,
-    "time": "Saturday, May 22, 2021 5:29 PM",
-    "cumRapId": 7,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 36,
-    "time": "Tuesday, May 25, 2021 9:05 AM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 1
-  },
-  {
-    "id": 37,
-    "time": "Sunday, May 23, 2021 11:47 PM",
-    "cumRapId": 2,
-    "phongChieuId": 3,
-    "movieId": 10
-  },
-  {
-    "id": 38,
-    "time": "Sunday, May 23, 2021 12:58 AM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 5
-  },
-  {
-    "id": 39,
-    "time": "Sunday, May 23, 2021 11:36 PM",
-    "cumRapId": 4,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 40,
-    "time": "Wednesday, May 26, 2021 8:04 AM",
-    "cumRapId": 1,
-    "phongChieuId": 3,
-    "movieId": 8
-  },
-  {
-    "id": 41,
-    "time": "Monday, May 24, 2021 11:43 AM",
-    "cumRapId": 3,
-    "phongChieuId": 4,
-    "movieId": 8
-  },
-  {
-    "id": 42,
-    "time": "Sunday, May 23, 2021 6:28 AM",
-    "cumRapId": 8,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 43,
-    "time": "Saturday, May 22, 2021 8:11 PM",
-    "cumRapId": 4,
-    "phongChieuId": 4,
-    "movieId": 7
-  },
-  {
-    "id": 44,
-    "time": "Monday, May 24, 2021 5:27 AM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 2
-  },
-  {
-    "id": 45,
-    "time": "Tuesday, May 25, 2021 4:57 AM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 1
-  },
-  {
-    "id": 46,
-    "time": "Sunday, May 23, 2021 5:40 AM",
-    "cumRapId": 1,
-    "phongChieuId": 3,
-    "movieId": 10
-  },
-  {
-    "id": 47,
-    "time": "Sunday, May 23, 2021 8:42 AM",
-    "cumRapId": 2,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 48,
-    "time": "Saturday, May 22, 2021 11:18 AM",
-    "cumRapId": 5,
-    "phongChieuId": 3,
-    "movieId": 2
-  },
-  {
-    "id": 49,
-    "time": "Tuesday, May 25, 2021 9:50 AM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 10
-  },
-  {
-    "id": 50,
-    "time": "Tuesday, May 25, 2021 9:28 PM",
-    "cumRapId": 2,
-    "phongChieuId": 9,
-    "movieId": 4
-  },
-  {
-    "id": 51,
-    "time": "Friday, May 21, 2021 8:29 AM",
-    "cumRapId": 9,
-    "phongChieuId": 9,
-    "movieId": 2
-  },
-  {
-    "id": 52,
-    "time": "Friday, May 21, 2021 5:46 PM",
-    "cumRapId": 7,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 53,
-    "time": "Tuesday, May 25, 2021 12:54 AM",
-    "cumRapId": 6,
-    "phongChieuId": 10,
-    "movieId": 10
-  },
-  {
-    "id": 54,
-    "time": "Sunday, May 23, 2021 11:52 AM",
-    "cumRapId": 8,
-    "phongChieuId": 1,
-    "movieId": 8
-  },
-  {
-    "id": 55,
-    "time": "Wednesday, May 26, 2021 7:42 AM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 56,
-    "time": "Sunday, May 23, 2021 2:52 AM",
-    "cumRapId": 10,
-    "phongChieuId": 7,
-    "movieId": 1
-  },
-  {
-    "id": 57,
-    "time": "Friday, May 21, 2021 1:41 PM",
-    "cumRapId": 7,
-    "phongChieuId": 3,
-    "movieId": 1
-  },
-  {
-    "id": 58,
-    "time": "Tuesday, May 25, 2021 2:36 PM",
-    "cumRapId": 4,
-    "phongChieuId": 9,
-    "movieId": 10
-  },
-  {
-    "id": 59,
-    "time": "Friday, May 21, 2021 11:00 AM",
-    "cumRapId": 8,
-    "phongChieuId": 3,
-    "movieId": 1
-  },
-  {
-    "id": 60,
-    "time": "Sunday, May 23, 2021 1:46 AM",
-    "cumRapId": 6,
-    "phongChieuId": 4,
-    "movieId": 8
-  },
-  {
-    "id": 61,
-    "time": "Sunday, May 23, 2021 10:43 AM",
-    "cumRapId": 8,
-    "phongChieuId": 10,
-    "movieId": 10
-  },
-  {
-    "id": 62,
-    "time": "Friday, May 21, 2021 1:32 AM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 2
-  },
-  {
-    "id": 63,
-    "time": "Monday, May 24, 2021 2:04 PM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 6
-  },
-  {
-    "id": 64,
-    "time": "Wednesday, May 26, 2021 5:29 AM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 8
-  },
-  {
-    "id": 65,
-    "time": "Sunday, May 23, 2021 10:10 AM",
-    "cumRapId": 10,
-    "phongChieuId": 5,
-    "movieId": 4
-  },
-  {
-    "id": 66,
-    "time": "Tuesday, May 25, 2021 9:25 PM",
-    "cumRapId": 6,
-    "phongChieuId": 10,
-    "movieId": 5
-  },
-  {
-    "id": 67,
-    "time": "Tuesday, May 25, 2021 4:44 AM",
-    "cumRapId": 10,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 68,
-    "time": "Friday, May 21, 2021 4:30 PM",
-    "cumRapId": 4,
-    "phongChieuId": 7,
-    "movieId": 6
-  },
-  {
-    "id": 69,
-    "time": "Friday, May 21, 2021 1:12 AM",
-    "cumRapId": 4,
-    "phongChieuId": 6,
-    "movieId": 4
-  },
-  {
-    "id": 70,
-    "time": "Wednesday, May 26, 2021 5:38 PM",
-    "cumRapId": 7,
-    "phongChieuId": 6,
-    "movieId": 5
-  },
-  {
-    "id": 71,
-    "time": "Monday, May 24, 2021 9:20 PM",
-    "cumRapId": 9,
-    "phongChieuId": 1,
-    "movieId": 9
-  },
-  {
-    "id": 72,
-    "time": "Monday, May 24, 2021 5:23 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 9
-  },
-  {
-    "id": 73,
-    "time": "Tuesday, May 25, 2021 4:47 AM",
-    "cumRapId": 3,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 74,
-    "time": "Monday, May 24, 2021 4:51 AM",
-    "cumRapId": 9,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 75,
-    "time": "Monday, May 24, 2021 12:06 AM",
-    "cumRapId": 4,
-    "phongChieuId": 2,
-    "movieId": 7
-  },
-  {
-    "id": 76,
-    "time": "Tuesday, May 25, 2021 11:39 AM",
-    "cumRapId": 7,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 77,
-    "time": "Wednesday, May 26, 2021 1:26 PM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 3
-  },
-  {
-    "id": 78,
-    "time": "Sunday, May 23, 2021 4:59 PM",
-    "cumRapId": 5,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 79,
-    "time": "Tuesday, May 25, 2021 9:31 PM",
-    "cumRapId": 7,
-    "phongChieuId": 10,
-    "movieId": 7
-  },
-  {
-    "id": 80,
-    "time": "Wednesday, May 26, 2021 8:37 AM",
-    "cumRapId": 5,
-    "phongChieuId": 9,
-    "movieId": 1
-  },
-  {
-    "id": 81,
-    "time": "Tuesday, May 25, 2021 11:58 PM",
-    "cumRapId": 9,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 82,
-    "time": "Wednesday, May 26, 2021 6:22 PM",
-    "cumRapId": 5,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 83,
-    "time": "Friday, May 21, 2021 9:14 PM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 2
-  },
-  {
-    "id": 84,
-    "time": "Friday, May 21, 2021 4:10 AM",
-    "cumRapId": 6,
-    "phongChieuId": 10,
-    "movieId": 3
-  },
-  {
-    "id": 85,
-    "time": "Sunday, May 23, 2021 11:35 AM",
-    "cumRapId": 6,
-    "phongChieuId": 6,
-    "movieId": 6
-  },
-  {
-    "id": 86,
-    "time": "Sunday, May 23, 2021 10:58 PM",
-    "cumRapId": 6,
-    "phongChieuId": 4,
-    "movieId": 6
-  },
-  {
-    "id": 87,
-    "time": "Friday, May 21, 2021 2:28 PM",
-    "cumRapId": 1,
-    "phongChieuId": 6,
-    "movieId": 5
-  },
-  {
-    "id": 88,
-    "time": "Sunday, May 23, 2021 10:26 AM",
-    "cumRapId": 6,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 89,
-    "time": "Monday, May 24, 2021 11:16 AM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 90,
-    "time": "Wednesday, May 26, 2021 2:59 AM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 4
-  },
-  {
-    "id": 91,
-    "time": "Monday, May 24, 2021 12:00 PM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 5
-  },
-  {
-    "id": 92,
-    "time": "Sunday, May 23, 2021 9:25 PM",
-    "cumRapId": 1,
-    "phongChieuId": 2,
-    "movieId": 2
-  },
-  {
-    "id": 93,
-    "time": "Tuesday, May 25, 2021 3:48 PM",
-    "cumRapId": 1,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 94,
-    "time": "Monday, May 24, 2021 10:23 PM",
-    "cumRapId": 5,
-    "phongChieuId": 10,
-    "movieId": 10
-  },
-  {
-    "id": 95,
-    "time": "Monday, May 24, 2021 5:50 PM",
-    "cumRapId": 10,
-    "phongChieuId": 5,
-    "movieId": 9
-  },
-  {
-    "id": 96,
-    "time": "Friday, May 21, 2021 10:18 PM",
-    "cumRapId": 6,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 97,
-    "time": "Sunday, May 23, 2021 2:48 PM",
-    "cumRapId": 9,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 98,
-    "time": "Friday, May 21, 2021 10:48 PM",
-    "cumRapId": 5,
-    "phongChieuId": 7,
-    "movieId": 1
-  },
-  {
-    "id": 99,
-    "time": "Saturday, May 22, 2021 11:41 AM",
-    "cumRapId": 8,
-    "phongChieuId": 9,
-    "movieId": 6
-  },
-  {
-    "id": 100,
-    "time": "Friday, May 21, 2021 2:54 AM",
-    "cumRapId": 1,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 101,
-    "time": "Tuesday, May 25, 2021 4:59 AM",
-    "cumRapId": 2,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 102,
-    "time": "Saturday, May 22, 2021 12:59 PM",
-    "cumRapId": 7,
-    "phongChieuId": 6,
-    "movieId": 3
-  },
-  {
-    "id": 103,
-    "time": "Sunday, May 23, 2021 5:15 PM",
-    "cumRapId": 7,
-    "phongChieuId": 4,
-    "movieId": 2
-  },
-  {
-    "id": 104,
-    "time": "Saturday, May 22, 2021 11:36 AM",
-    "cumRapId": 6,
-    "phongChieuId": 6,
-    "movieId": 3
-  },
-  {
-    "id": 105,
-    "time": "Tuesday, May 25, 2021 6:00 AM",
-    "cumRapId": 1,
-    "phongChieuId": 9,
-    "movieId": 8
-  },
-  {
-    "id": 106,
-    "time": "Sunday, May 23, 2021 10:18 AM",
-    "cumRapId": 8,
-    "phongChieuId": 1,
-    "movieId": 5
-  },
-  {
-    "id": 107,
-    "time": "Sunday, May 23, 2021 6:35 PM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 108,
-    "time": "Saturday, May 22, 2021 12:26 PM",
-    "cumRapId": 5,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 109,
-    "time": "Wednesday, May 26, 2021 6:53 PM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 6
-  },
-  {
-    "id": 110,
-    "time": "Sunday, May 23, 2021 10:37 AM",
-    "cumRapId": 8,
-    "phongChieuId": 3,
-    "movieId": 2
-  },
-  {
-    "id": 111,
-    "time": "Tuesday, May 25, 2021 2:42 PM",
-    "cumRapId": 7,
-    "phongChieuId": 2,
-    "movieId": 10
-  },
-  {
-    "id": 112,
-    "time": "Monday, May 24, 2021 8:56 AM",
-    "cumRapId": 3,
-    "phongChieuId": 3,
-    "movieId": 10
-  },
-  {
-    "id": 113,
-    "time": "Monday, May 24, 2021 11:09 PM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 114,
-    "time": "Monday, May 24, 2021 3:27 AM",
-    "cumRapId": 2,
-    "phongChieuId": 2,
-    "movieId": 10
-  },
-  {
-    "id": 115,
-    "time": "Monday, May 24, 2021 6:39 PM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 1
-  },
-  {
-    "id": 116,
-    "time": "Saturday, May 22, 2021 10:26 PM",
-    "cumRapId": 3,
-    "phongChieuId": 7,
-    "movieId": 1
-  },
-  {
-    "id": 117,
-    "time": "Wednesday, May 26, 2021 1:40 AM",
-    "cumRapId": 3,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 118,
-    "time": "Tuesday, May 25, 2021 12:47 AM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 2
-  },
-  {
-    "id": 119,
-    "time": "Saturday, May 22, 2021 8:02 AM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 1
-  },
-  {
-    "id": 120,
-    "time": "Saturday, May 22, 2021 1:56 AM",
-    "cumRapId": 5,
-    "phongChieuId": 8,
-    "movieId": 8
-  },
-  {
-    "id": 121,
-    "time": "Tuesday, May 25, 2021 6:36 AM",
-    "cumRapId": 3,
-    "phongChieuId": 7,
-    "movieId": 1
-  },
-  {
-    "id": 122,
-    "time": "Monday, May 24, 2021 5:47 PM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 123,
-    "time": "Monday, May 24, 2021 8:15 AM",
-    "cumRapId": 5,
-    "phongChieuId": 8,
-    "movieId": 5
-  },
-  {
-    "id": 124,
-    "time": "Monday, May 24, 2021 8:45 AM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 125,
-    "time": "Wednesday, May 26, 2021 6:40 PM",
-    "cumRapId": 5,
-    "phongChieuId": 9,
-    "movieId": 2
-  },
-  {
-    "id": 126,
-    "time": "Monday, May 24, 2021 4:19 PM",
-    "cumRapId": 10,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 127,
-    "time": "Sunday, May 23, 2021 2:37 AM",
-    "cumRapId": 4,
-    "phongChieuId": 7,
-    "movieId": 1
-  },
-  {
-    "id": 128,
-    "time": "Sunday, May 23, 2021 11:51 PM",
-    "cumRapId": 8,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 129,
-    "time": "Wednesday, May 26, 2021 3:03 PM",
-    "cumRapId": 6,
-    "phongChieuId": 10,
-    "movieId": 1
-  },
-  {
-    "id": 130,
-    "time": "Tuesday, May 25, 2021 7:24 PM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 1
-  },
-  {
-    "id": 131,
-    "time": "Tuesday, May 25, 2021 2:28 AM",
-    "cumRapId": 5,
-    "phongChieuId": 2,
-    "movieId": 4
-  },
-  {
-    "id": 132,
-    "time": "Wednesday, May 26, 2021 5:18 AM",
-    "cumRapId": 10,
-    "phongChieuId": 1,
-    "movieId": 8
-  },
-  {
-    "id": 133,
-    "time": "Friday, May 21, 2021 10:40 AM",
-    "cumRapId": 7,
-    "phongChieuId": 8,
-    "movieId": 2
-  },
-  {
-    "id": 134,
-    "time": "Saturday, May 22, 2021 11:33 AM",
-    "cumRapId": 7,
-    "phongChieuId": 9,
-    "movieId": 8
-  },
-  {
-    "id": 135,
-    "time": "Sunday, May 23, 2021 7:02 PM",
-    "cumRapId": 1,
-    "phongChieuId": 2,
-    "movieId": 5
-  },
-  {
-    "id": 136,
-    "time": "Friday, May 21, 2021 9:59 PM",
-    "cumRapId": 8,
-    "phongChieuId": 3,
-    "movieId": 9
-  },
-  {
-    "id": 137,
-    "time": "Sunday, May 23, 2021 2:08 PM",
-    "cumRapId": 8,
-    "phongChieuId": 7,
-    "movieId": 8
-  },
-  {
-    "id": 138,
-    "time": "Sunday, May 23, 2021 8:08 AM",
-    "cumRapId": 3,
-    "phongChieuId": 4,
-    "movieId": 6
-  },
-  {
-    "id": 139,
-    "time": "Monday, May 24, 2021 5:57 AM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 140,
-    "time": "Wednesday, May 26, 2021 3:43 AM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 9
-  },
-  {
-    "id": 141,
-    "time": "Saturday, May 22, 2021 8:44 PM",
-    "cumRapId": 1,
-    "phongChieuId": 6,
-    "movieId": 10
-  },
-  {
-    "id": 142,
-    "time": "Wednesday, May 26, 2021 5:44 PM",
-    "cumRapId": 7,
-    "phongChieuId": 5,
-    "movieId": 9
-  },
-  {
-    "id": 143,
-    "time": "Tuesday, May 25, 2021 10:48 AM",
-    "cumRapId": 6,
-    "phongChieuId": 2,
-    "movieId": 10
-  },
-  {
-    "id": 144,
-    "time": "Wednesday, May 26, 2021 12:01 PM",
-    "cumRapId": 6,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 145,
-    "time": "Friday, May 21, 2021 4:12 AM",
-    "cumRapId": 10,
-    "phongChieuId": 6,
-    "movieId": 10
-  },
-  {
-    "id": 146,
-    "time": "Wednesday, May 26, 2021 6:18 AM",
-    "cumRapId": 5,
-    "phongChieuId": 6,
-    "movieId": 1
-  },
-  {
-    "id": 147,
-    "time": "Friday, May 21, 2021 7:47 PM",
-    "cumRapId": 2,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 148,
-    "time": "Tuesday, May 25, 2021 3:08 AM",
-    "cumRapId": 3,
-    "phongChieuId": 5,
-    "movieId": 6
-  },
-  {
-    "id": 149,
-    "time": "Wednesday, May 26, 2021 7:23 PM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 3
-  },
-  {
-    "id": 150,
-    "time": "Sunday, May 23, 2021 10:31 PM",
-    "cumRapId": 2,
-    "phongChieuId": 2,
-    "movieId": 5
-  },
-  {
-    "id": 151,
-    "time": "Friday, May 21, 2021 12:33 AM",
-    "cumRapId": 4,
-    "phongChieuId": 6,
-    "movieId": 5
-  },
-  {
-    "id": 152,
-    "time": "Saturday, May 22, 2021 2:42 AM",
-    "cumRapId": 5,
-    "phongChieuId": 4,
-    "movieId": 2
-  },
-  {
-    "id": 153,
-    "time": "Tuesday, May 25, 2021 5:48 AM",
-    "cumRapId": 2,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 154,
-    "time": "Tuesday, May 25, 2021 11:15 PM",
-    "cumRapId": 2,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 155,
-    "time": "Sunday, May 23, 2021 8:26 PM",
-    "cumRapId": 5,
-    "phongChieuId": 9,
-    "movieId": 2
-  },
-  {
-    "id": 156,
-    "time": "Sunday, May 23, 2021 1:08 AM",
-    "cumRapId": 3,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 157,
-    "time": "Saturday, May 22, 2021 7:18 PM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 9
-  },
-  {
-    "id": 158,
-    "time": "Wednesday, May 26, 2021 6:17 AM",
-    "cumRapId": 4,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 159,
-    "time": "Friday, May 21, 2021 8:20 AM",
-    "cumRapId": 7,
-    "phongChieuId": 3,
-    "movieId": 2
-  },
-  {
-    "id": 160,
-    "time": "Wednesday, May 26, 2021 5:33 AM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 9
-  },
-  {
-    "id": 161,
-    "time": "Tuesday, May 25, 2021 8:44 PM",
-    "cumRapId": 7,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 162,
-    "time": "Monday, May 24, 2021 10:32 PM",
-    "cumRapId": 6,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 163,
-    "time": "Friday, May 21, 2021 6:53 AM",
-    "cumRapId": 10,
-    "phongChieuId": 2,
-    "movieId": 6
-  },
-  {
-    "id": 164,
-    "time": "Sunday, May 23, 2021 3:17 PM",
-    "cumRapId": 3,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 165,
-    "time": "Wednesday, May 26, 2021 5:56 PM",
-    "cumRapId": 5,
-    "phongChieuId": 2,
-    "movieId": 3
-  },
-  {
-    "id": 166,
-    "time": "Sunday, May 23, 2021 12:55 PM",
-    "cumRapId": 5,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 167,
-    "time": "Monday, May 24, 2021 1:41 PM",
-    "cumRapId": 3,
-    "phongChieuId": 6,
-    "movieId": 10
-  },
-  {
-    "id": 168,
-    "time": "Sunday, May 23, 2021 11:12 AM",
-    "cumRapId": 9,
-    "phongChieuId": 1,
-    "movieId": 8
-  },
-  {
-    "id": 169,
-    "time": "Sunday, May 23, 2021 9:22 AM",
-    "cumRapId": 1,
-    "phongChieuId": 3,
-    "movieId": 9
-  },
-  {
-    "id": 170,
-    "time": "Friday, May 21, 2021 8:19 PM",
-    "cumRapId": 6,
-    "phongChieuId": 8,
-    "movieId": 2
-  },
-  {
-    "id": 171,
-    "time": "Friday, May 21, 2021 3:39 AM",
-    "cumRapId": 5,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 172,
-    "time": "Saturday, May 22, 2021 10:07 PM",
-    "cumRapId": 10,
-    "phongChieuId": 6,
-    "movieId": 7
-  },
-  {
-    "id": 173,
-    "time": "Monday, May 24, 2021 7:41 AM",
-    "cumRapId": 1,
-    "phongChieuId": 1,
-    "movieId": 8
-  },
-  {
-    "id": 174,
-    "time": "Wednesday, May 26, 2021 7:40 AM",
-    "cumRapId": 8,
-    "phongChieuId": 2,
-    "movieId": 8
-  },
-  {
-    "id": 175,
-    "time": "Friday, May 21, 2021 12:29 AM",
-    "cumRapId": 2,
-    "phongChieuId": 3,
-    "movieId": 3
-  },
-  {
-    "id": 176,
-    "time": "Tuesday, May 25, 2021 10:28 AM",
-    "cumRapId": 1,
-    "phongChieuId": 6,
-    "movieId": 10
-  },
-  {
-    "id": 177,
-    "time": "Monday, May 24, 2021 1:26 AM",
-    "cumRapId": 6,
-    "phongChieuId": 4,
-    "movieId": 6
-  },
-  {
-    "id": 178,
-    "time": "Sunday, May 23, 2021 9:55 AM",
-    "cumRapId": 8,
-    "phongChieuId": 1,
-    "movieId": 7
-  },
-  {
-    "id": 179,
-    "time": "Saturday, May 22, 2021 5:25 PM",
-    "cumRapId": 6,
-    "phongChieuId": 2,
-    "movieId": 1
-  },
-  {
-    "id": 180,
-    "time": "Saturday, May 22, 2021 7:02 AM",
-    "cumRapId": 9,
-    "phongChieuId": 2,
-    "movieId": 3
-  },
-  {
-    "id": 181,
-    "time": "Saturday, May 22, 2021 2:49 PM",
-    "cumRapId": 6,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 182,
-    "time": "Monday, May 24, 2021 8:28 AM",
-    "cumRapId": 3,
-    "phongChieuId": 1,
-    "movieId": 3
-  },
-  {
-    "id": 183,
-    "time": "Wednesday, May 26, 2021 4:38 AM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 4
-  },
-  {
-    "id": 184,
-    "time": "Sunday, May 23, 2021 1:32 AM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 10
-  },
-  {
-    "id": 185,
-    "time": "Saturday, May 22, 2021 9:04 PM",
-    "cumRapId": 3,
-    "phongChieuId": 6,
-    "movieId": 9
-  },
-  {
-    "id": 186,
-    "time": "Saturday, May 22, 2021 10:07 AM",
-    "cumRapId": 10,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 187,
-    "time": "Wednesday, May 26, 2021 4:55 PM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 8
-  },
-  {
-    "id": 188,
-    "time": "Saturday, May 22, 2021 9:58 PM",
-    "cumRapId": 1,
-    "phongChieuId": 9,
-    "movieId": 10
-  },
-  {
-    "id": 189,
-    "time": "Friday, May 21, 2021 4:19 PM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 3
-  },
-  {
-    "id": 190,
-    "time": "Monday, May 24, 2021 11:33 AM",
-    "cumRapId": 9,
-    "phongChieuId": 10,
-    "movieId": 5
-  },
-  {
-    "id": 191,
-    "time": "Sunday, May 23, 2021 8:28 AM",
-    "cumRapId": 8,
-    "phongChieuId": 10,
-    "movieId": 10
-  },
-  {
-    "id": 192,
-    "time": "Monday, May 24, 2021 5:48 PM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 10
-  },
-  {
-    "id": 193,
-    "time": "Monday, May 24, 2021 7:29 AM",
-    "cumRapId": 4,
-    "phongChieuId": 7,
-    "movieId": 3
-  },
-  {
-    "id": 194,
-    "time": "Saturday, May 22, 2021 5:48 AM",
-    "cumRapId": 1,
-    "phongChieuId": 6,
-    "movieId": 3
-  },
-  {
-    "id": 195,
-    "time": "Tuesday, May 25, 2021 3:41 PM",
-    "cumRapId": 8,
-    "phongChieuId": 5,
-    "movieId": 3
-  },
-  {
-    "id": 196,
-    "time": "Tuesday, May 25, 2021 1:41 AM",
-    "cumRapId": 8,
-    "phongChieuId": 6,
-    "movieId": 5
-  },
-  {
-    "id": 197,
-    "time": "Wednesday, May 26, 2021 6:32 AM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 198,
-    "time": "Friday, May 21, 2021 11:35 AM",
-    "cumRapId": 5,
-    "phongChieuId": 4,
-    "movieId": 7
-  },
-  {
-    "id": 199,
-    "time": "Monday, May 24, 2021 5:15 PM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 4
-  },
-  {
-    "id": 300,
-    "time": "Tuesday, May 25, 2021 5:30 AM",
-    "cumRapId": 7,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 301,
-    "time": "Monday, May 24, 2021 11:22 AM",
-    "cumRapId": 6,
-    "phongChieuId": 2,
-    "movieId": 1
-  },
-  {
-    "id": 302,
-    "time": "Monday, May 24, 2021 8:04 PM",
-    "cumRapId": 7,
-    "phongChieuId": 4,
-    "movieId": 8
-  },
-  {
-    "id": 303,
-    "time": "Friday, May 21, 2021 12:13 PM",
-    "cumRapId": 9,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 304,
-    "time": "Wednesday, May 26, 2021 11:57 AM",
-    "cumRapId": 9,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 305,
-    "time": "Tuesday, May 25, 2021 10:57 PM",
-    "cumRapId": 4,
-    "phongChieuId": 6,
-    "movieId": 5
-  },
-  {
-    "id": 306,
-    "time": "Wednesday, May 26, 2021 1:10 AM",
-    "cumRapId": 6,
-    "phongChieuId": 6,
-    "movieId": 7
-  },
-  {
-    "id": 307,
-    "time": "Wednesday, May 26, 2021 6:58 AM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 308,
-    "time": "Wednesday, May 26, 2021 10:32 PM",
-    "cumRapId": 1,
-    "phongChieuId": 6,
-    "movieId": 7
-  },
-  {
-    "id": 309,
-    "time": "Monday, May 24, 2021 12:10 AM",
-    "cumRapId": 5,
-    "phongChieuId": 4,
-    "movieId": 5
-  },
-  {
-    "id": 310,
-    "time": "Saturday, May 22, 2021 1:40 AM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 1
-  },
-  {
-    "id": 311,
-    "time": "Tuesday, May 25, 2021 3:10 PM",
-    "cumRapId": 5,
-    "phongChieuId": 6,
-    "movieId": 5
-  },
-  {
-    "id": 312,
-    "time": "Monday, May 24, 2021 8:45 PM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 10
-  },
-  {
-    "id": 313,
-    "time": "Tuesday, May 25, 2021 5:39 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 7
-  },
-  {
-    "id": 314,
-    "time": "Saturday, May 22, 2021 6:56 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 10
-  },
-  {
-    "id": 315,
-    "time": "Saturday, May 22, 2021 9:39 PM",
-    "cumRapId": 9,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 316,
-    "time": "Friday, May 21, 2021 12:09 AM",
-    "cumRapId": 1,
-    "phongChieuId": 3,
-    "movieId": 2
-  },
-  {
-    "id": 317,
-    "time": "Friday, May 21, 2021 9:40 PM",
-    "cumRapId": 7,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 318,
-    "time": "Sunday, May 23, 2021 3:43 AM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 8
-  },
-  {
-    "id": 319,
-    "time": "Wednesday, May 26, 2021 2:22 PM",
-    "cumRapId": 4,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 320,
-    "time": "Monday, May 24, 2021 1:21 PM",
-    "cumRapId": 3,
-    "phongChieuId": 3,
-    "movieId": 9
-  },
-  {
-    "id": 321,
-    "time": "Friday, May 21, 2021 10:26 PM",
-    "cumRapId": 7,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 322,
-    "time": "Tuesday, May 25, 2021 2:56 PM",
-    "cumRapId": 4,
-    "phongChieuId": 4,
-    "movieId": 10
-  },
-  {
-    "id": 323,
-    "time": "Saturday, May 22, 2021 5:13 AM",
-    "cumRapId": 5,
-    "phongChieuId": 8,
-    "movieId": 3
-  },
-  {
-    "id": 324,
-    "time": "Wednesday, May 26, 2021 1:54 PM",
-    "cumRapId": 3,
-    "phongChieuId": 2,
-    "movieId": 1
-  },
-  {
-    "id": 325,
-    "time": "Tuesday, May 25, 2021 6:37 PM",
-    "cumRapId": 8,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 326,
-    "time": "Sunday, May 23, 2021 6:39 PM",
-    "cumRapId": 3,
-    "phongChieuId": 9,
-    "movieId": 4
-  },
-  {
-    "id": 327,
-    "time": "Friday, May 21, 2021 11:35 PM",
-    "cumRapId": 1,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 328,
-    "time": "Friday, May 21, 2021 4:42 PM",
-    "cumRapId": 7,
-    "phongChieuId": 5,
-    "movieId": 6
-  },
-  {
-    "id": 329,
-    "time": "Saturday, May 22, 2021 10:20 AM",
-    "cumRapId": 5,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 330,
-    "time": "Tuesday, May 25, 2021 9:08 PM",
-    "cumRapId": 7,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 331,
-    "time": "Tuesday, May 25, 2021 4:03 PM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 10
-  },
-  {
-    "id": 332,
-    "time": "Saturday, May 22, 2021 9:26 PM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 8
-  },
-  {
-    "id": 333,
-    "time": "Wednesday, May 26, 2021 7:46 PM",
-    "cumRapId": 1,
-    "phongChieuId": 1,
-    "movieId": 10
-  },
-  {
-    "id": 334,
-    "time": "Saturday, May 22, 2021 3:50 AM",
-    "cumRapId": 6,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 335,
-    "time": "Sunday, May 23, 2021 5:53 AM",
-    "cumRapId": 6,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 336,
-    "time": "Sunday, May 23, 2021 8:02 AM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 10
-  },
-  {
-    "id": 337,
-    "time": "Monday, May 24, 2021 9:43 AM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 7
-  },
-  {
-    "id": 338,
-    "time": "Friday, May 21, 2021 2:31 AM",
-    "cumRapId": 2,
-    "phongChieuId": 8,
-    "movieId": 5
-  },
-  {
-    "id": 339,
-    "time": "Friday, May 21, 2021 7:51 PM",
-    "cumRapId": 6,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 340,
-    "time": "Saturday, May 22, 2021 12:07 AM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 7
-  },
-  {
-    "id": 341,
-    "time": "Saturday, May 22, 2021 8:59 PM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 3
-  },
-  {
-    "id": 342,
-    "time": "Monday, May 24, 2021 5:16 PM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 7
-  },
-  {
-    "id": 343,
-    "time": "Friday, May 21, 2021 4:06 AM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 344,
-    "time": "Tuesday, May 25, 2021 9:04 AM",
-    "cumRapId": 9,
-    "phongChieuId": 6,
-    "movieId": 7
-  },
-  {
-    "id": 345,
-    "time": "Sunday, May 23, 2021 11:20 PM",
-    "cumRapId": 6,
-    "phongChieuId": 6,
-    "movieId": 10
-  },
-  {
-    "id": 346,
-    "time": "Sunday, May 23, 2021 11:10 PM",
-    "cumRapId": 7,
-    "phongChieuId": 10,
-    "movieId": 5
-  },
-  {
-    "id": 347,
-    "time": "Saturday, May 22, 2021 1:46 AM",
-    "cumRapId": 9,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 348,
-    "time": "Monday, May 24, 2021 5:04 AM",
-    "cumRapId": 10,
-    "phongChieuId": 6,
-    "movieId": 3
-  },
-  {
-    "id": 349,
-    "time": "Friday, May 21, 2021 1:58 AM",
-    "cumRapId": 10,
-    "phongChieuId": 7,
-    "movieId": 7
-  },
-  {
-    "id": 350,
-    "time": "Friday, May 21, 2021 3:27 PM",
-    "cumRapId": 9,
-    "phongChieuId": 2,
-    "movieId": 5
-  },
-  {
-    "id": 351,
-    "time": "Sunday, May 23, 2021 7:00 AM",
-    "cumRapId": 2,
-    "phongChieuId": 2,
-    "movieId": 8
-  },
-  {
-    "id": 352,
-    "time": "Monday, May 24, 2021 4:56 AM",
-    "cumRapId": 7,
-    "phongChieuId": 8,
-    "movieId": 1
-  },
-  {
-    "id": 353,
-    "time": "Friday, May 21, 2021 6:05 PM",
-    "cumRapId": 1,
-    "phongChieuId": 1,
-    "movieId": 5
-  },
-  {
-    "id": 354,
-    "time": "Wednesday, May 26, 2021 8:21 PM",
-    "cumRapId": 5,
-    "phongChieuId": 1,
-    "movieId": 9
-  },
-  {
-    "id": 355,
-    "time": "Friday, May 21, 2021 3:01 PM",
-    "cumRapId": 8,
-    "phongChieuId": 5,
-    "movieId": 4
-  },
-  {
-    "id": 356,
-    "time": "Saturday, May 22, 2021 6:31 PM",
-    "cumRapId": 4,
-    "phongChieuId": 9,
-    "movieId": 3
-  },
-  {
-    "id": 357,
-    "time": "Sunday, May 23, 2021 5:34 PM",
-    "cumRapId": 1,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 358,
-    "time": "Sunday, May 23, 2021 5:03 AM",
-    "cumRapId": 8,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 359,
-    "time": "Friday, May 21, 2021 6:36 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 360,
-    "time": "Wednesday, May 26, 2021 11:21 AM",
-    "cumRapId": 1,
-    "phongChieuId": 2,
-    "movieId": 4
-  },
-  {
-    "id": 361,
-    "time": "Monday, May 24, 2021 8:54 PM",
-    "cumRapId": 6,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 362,
-    "time": "Saturday, May 22, 2021 3:56 AM",
-    "cumRapId": 4,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 363,
-    "time": "Saturday, May 22, 2021 2:56 AM",
-    "cumRapId": 3,
-    "phongChieuId": 7,
-    "movieId": 7
-  },
-  {
-    "id": 364,
-    "time": "Friday, May 21, 2021 3:04 AM",
-    "cumRapId": 9,
-    "phongChieuId": 10,
-    "movieId": 2
-  },
-  {
-    "id": 365,
-    "time": "Saturday, May 22, 2021 1:32 AM",
-    "cumRapId": 4,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 366,
-    "time": "Wednesday, May 26, 2021 7:27 AM",
-    "cumRapId": 3,
-    "phongChieuId": 9,
-    "movieId": 8
-  },
-  {
-    "id": 367,
-    "time": "Friday, May 21, 2021 12:12 AM",
-    "cumRapId": 5,
-    "phongChieuId": 8,
-    "movieId": 6
-  },
-  {
-    "id": 368,
-    "time": "Sunday, May 23, 2021 10:33 PM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 1
-  },
-  {
-    "id": 369,
-    "time": "Tuesday, May 25, 2021 10:01 PM",
-    "cumRapId": 1,
-    "phongChieuId": 9,
-    "movieId": 6
-  },
-  {
-    "id": 370,
-    "time": "Wednesday, May 26, 2021 8:33 AM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 371,
-    "time": "Wednesday, May 26, 2021 3:37 PM",
-    "cumRapId": 9,
-    "phongChieuId": 8,
-    "movieId": 1
-  },
-  {
-    "id": 372,
-    "time": "Wednesday, May 26, 2021 10:00 PM",
-    "cumRapId": 1,
-    "phongChieuId": 1,
-    "movieId": 5
-  },
-  {
-    "id": 373,
-    "time": "Monday, May 24, 2021 5:12 AM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 10
-  },
-  {
-    "id": 374,
-    "time": "Saturday, May 22, 2021 12:42 AM",
-    "cumRapId": 9,
-    "phongChieuId": 4,
-    "movieId": 1
-  },
-  {
-    "id": 375,
-    "time": "Monday, May 24, 2021 5:53 PM",
-    "cumRapId": 10,
-    "phongChieuId": 4,
-    "movieId": 2
-  },
-  {
-    "id": 376,
-    "time": "Sunday, May 23, 2021 3:57 PM",
-    "cumRapId": 9,
-    "phongChieuId": 4,
-    "movieId": 9
-  },
-  {
-    "id": 377,
-    "time": "Monday, May 24, 2021 8:33 AM",
-    "cumRapId": 10,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 378,
-    "time": "Wednesday, May 26, 2021 11:52 PM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 4
-  },
-  {
-    "id": 379,
-    "time": "Friday, May 21, 2021 11:01 PM",
-    "cumRapId": 5,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 380,
-    "time": "Saturday, May 22, 2021 4:00 PM",
-    "cumRapId": 5,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 381,
-    "time": "Sunday, May 23, 2021 7:57 AM",
-    "cumRapId": 7,
-    "phongChieuId": 6,
-    "movieId": 5
-  },
-  {
-    "id": 382,
-    "time": "Wednesday, May 26, 2021 9:59 PM",
-    "cumRapId": 9,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 383,
-    "time": "Monday, May 24, 2021 7:27 AM",
-    "cumRapId": 5,
-    "phongChieuId": 10,
-    "movieId": 7
-  },
-  {
-    "id": 384,
-    "time": "Saturday, May 22, 2021 12:44 PM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 385,
-    "time": "Monday, May 24, 2021 7:43 AM",
-    "cumRapId": 2,
-    "phongChieuId": 7,
-    "movieId": 7
-  },
-  {
-    "id": 386,
-    "time": "Saturday, May 22, 2021 3:59 AM",
-    "cumRapId": 5,
-    "phongChieuId": 4,
-    "movieId": 1
-  },
-  {
-    "id": 387,
-    "time": "Tuesday, May 25, 2021 11:32 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 388,
-    "time": "Friday, May 21, 2021 7:18 PM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 6
-  },
-  {
-    "id": 389,
-    "time": "Wednesday, May 26, 2021 10:30 AM",
-    "cumRapId": 10,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 390,
-    "time": "Wednesday, May 26, 2021 5:45 PM",
-    "cumRapId": 8,
-    "phongChieuId": 5,
-    "movieId": 9
-  },
-  {
-    "id": 391,
-    "time": "Friday, May 21, 2021 6:02 AM",
-    "cumRapId": 3,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 392,
-    "time": "Friday, May 21, 2021 9:24 AM",
-    "cumRapId": 7,
-    "phongChieuId": 7,
-    "movieId": 3
-  },
-  {
-    "id": 393,
-    "time": "Friday, May 21, 2021 11:07 PM",
-    "cumRapId": 3,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 394,
-    "time": "Tuesday, May 25, 2021 6:02 PM",
-    "cumRapId": 3,
-    "phongChieuId": 3,
-    "movieId": 3
-  },
-  {
-    "id": 395,
-    "time": "Friday, May 21, 2021 10:16 PM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 8
-  },
-  {
-    "id": 396,
-    "time": "Tuesday, May 25, 2021 11:39 AM",
-    "cumRapId": 9,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 397,
-    "time": "Wednesday, May 26, 2021 5:27 PM",
-    "cumRapId": 8,
-    "phongChieuId": 10,
-    "movieId": 1
-  },
-  {
-    "id": 398,
-    "time": "Wednesday, May 26, 2021 6:23 PM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 3
-  },
-  {
-    "id": 399,
-    "time": "Tuesday, May 25, 2021 2:31 AM",
-    "cumRapId": 10,
-    "phongChieuId": 5,
-    "movieId": 6
-  },
-  {
-    "id": 400,
-    "time": "Monday, May 24, 2021 11:52 AM",
-    "cumRapId": 9,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 401,
-    "time": "Sunday, May 23, 2021 10:23 PM",
-    "cumRapId": 2,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 402,
-    "time": "Tuesday, May 25, 2021 7:08 PM",
-    "cumRapId": 5,
-    "phongChieuId": 10,
-    "movieId": 1
-  },
-  {
-    "id": 403,
-    "time": "Sunday, May 23, 2021 11:29 PM",
-    "cumRapId": 6,
-    "phongChieuId": 7,
-    "movieId": 7
-  },
-  {
-    "id": 404,
-    "time": "Friday, May 21, 2021 2:01 AM",
-    "cumRapId": 6,
-    "phongChieuId": 3,
-    "movieId": 4
-  },
-  {
-    "id": 405,
-    "time": "Saturday, May 22, 2021 1:31 AM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 406,
-    "time": "Sunday, May 23, 2021 2:17 PM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 7
-  },
-  {
-    "id": 407,
-    "time": "Monday, May 24, 2021 8:15 PM",
-    "cumRapId": 2,
-    "phongChieuId": 4,
-    "movieId": 2
-  },
-  {
-    "id": 408,
-    "time": "Friday, May 21, 2021 8:30 PM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 5
-  },
-  {
-    "id": 409,
-    "time": "Monday, May 24, 2021 12:56 PM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 7
-  },
-  {
-    "id": 410,
-    "time": "Friday, May 21, 2021 6:29 AM",
-    "cumRapId": 1,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 411,
-    "time": "Wednesday, May 26, 2021 6:47 PM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 10
-  },
-  {
-    "id": 412,
-    "time": "Saturday, May 22, 2021 1:39 AM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 413,
-    "time": "Monday, May 24, 2021 4:35 AM",
-    "cumRapId": 1,
-    "phongChieuId": 1,
-    "movieId": 8
-  },
-  {
-    "id": 414,
-    "time": "Tuesday, May 25, 2021 12:55 AM",
-    "cumRapId": 8,
-    "phongChieuId": 1,
-    "movieId": 9
-  },
-  {
-    "id": 415,
-    "time": "Friday, May 21, 2021 2:33 AM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 416,
-    "time": "Wednesday, May 26, 2021 12:24 AM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 8
-  },
-  {
-    "id": 417,
-    "time": "Saturday, May 22, 2021 12:45 PM",
-    "cumRapId": 5,
-    "phongChieuId": 2,
-    "movieId": 1
-  },
-  {
-    "id": 418,
-    "time": "Monday, May 24, 2021 6:14 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 8
-  },
-  {
-    "id": 419,
-    "time": "Sunday, May 23, 2021 6:06 PM",
-    "cumRapId": 4,
-    "phongChieuId": 8,
-    "movieId": 8
-  },
-  {
-    "id": 420,
-    "time": "Monday, May 24, 2021 2:42 AM",
-    "cumRapId": 7,
-    "phongChieuId": 4,
-    "movieId": 9
-  },
-  {
-    "id": 421,
-    "time": "Friday, May 21, 2021 1:25 PM",
-    "cumRapId": 6,
-    "phongChieuId": 7,
-    "movieId": 2
-  },
-  {
-    "id": 422,
-    "time": "Sunday, May 23, 2021 8:04 PM",
-    "cumRapId": 1,
-    "phongChieuId": 3,
-    "movieId": 3
-  },
-  {
-    "id": 423,
-    "time": "Friday, May 21, 2021 9:26 AM",
-    "cumRapId": 5,
-    "phongChieuId": 6,
-    "movieId": 2
-  },
-  {
-    "id": 424,
-    "time": "Saturday, May 22, 2021 5:00 PM",
-    "cumRapId": 3,
-    "phongChieuId": 7,
-    "movieId": 10
-  },
-  {
-    "id": 425,
-    "time": "Friday, May 21, 2021 12:16 PM",
-    "cumRapId": 6,
-    "phongChieuId": 8,
-    "movieId": 3
-  },
-  {
-    "id": 426,
-    "time": "Wednesday, May 26, 2021 3:17 PM",
-    "cumRapId": 10,
-    "phongChieuId": 6,
-    "movieId": 3
-  },
-  {
-    "id": 427,
-    "time": "Wednesday, May 26, 2021 3:40 PM",
-    "cumRapId": 7,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 428,
-    "time": "Saturday, May 22, 2021 9:57 AM",
-    "cumRapId": 5,
-    "phongChieuId": 8,
-    "movieId": 2
-  },
-  {
-    "id": 429,
-    "time": "Tuesday, May 25, 2021 9:36 PM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 1
-  },
-  {
-    "id": 430,
-    "time": "Sunday, May 23, 2021 2:20 AM",
-    "cumRapId": 8,
-    "phongChieuId": 5,
-    "movieId": 7
-  },
-  {
-    "id": 431,
-    "time": "Monday, May 24, 2021 11:07 PM",
-    "cumRapId": 2,
-    "phongChieuId": 10,
-    "movieId": 2
-  },
-  {
-    "id": 432,
-    "time": "Friday, May 21, 2021 5:44 PM",
-    "cumRapId": 4,
-    "phongChieuId": 9,
-    "movieId": 10
-  },
-  {
-    "id": 433,
-    "time": "Sunday, May 23, 2021 8:59 AM",
-    "cumRapId": 10,
-    "phongChieuId": 3,
-    "movieId": 8
-  },
-  {
-    "id": 434,
-    "time": "Wednesday, May 26, 2021 2:18 AM",
-    "cumRapId": 3,
-    "phongChieuId": 9,
-    "movieId": 1
-  },
-  {
-    "id": 435,
-    "time": "Tuesday, May 25, 2021 2:12 AM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 3
-  },
-  {
-    "id": 436,
-    "time": "Monday, May 24, 2021 4:24 PM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 437,
-    "time": "Monday, May 24, 2021 1:40 PM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 3
-  },
-  {
-    "id": 438,
-    "time": "Saturday, May 22, 2021 11:40 PM",
-    "cumRapId": 8,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 439,
-    "time": "Tuesday, May 25, 2021 6:21 PM",
-    "cumRapId": 7,
-    "phongChieuId": 8,
-    "movieId": 10
-  },
-  {
-    "id": 440,
-    "time": "Monday, May 24, 2021 6:53 AM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 5
-  },
-  {
-    "id": 441,
-    "time": "Monday, May 24, 2021 7:38 PM",
-    "cumRapId": 9,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 442,
-    "time": "Friday, May 21, 2021 12:21 AM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 6
-  },
-  {
-    "id": 443,
-    "time": "Wednesday, May 26, 2021 3:15 PM",
-    "cumRapId": 2,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 444,
-    "time": "Friday, May 21, 2021 9:54 PM",
-    "cumRapId": 9,
-    "phongChieuId": 4,
-    "movieId": 2
-  },
-  {
-    "id": 445,
-    "time": "Wednesday, May 26, 2021 3:10 PM",
-    "cumRapId": 4,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 446,
-    "time": "Friday, May 21, 2021 4:18 PM",
-    "cumRapId": 2,
-    "phongChieuId": 9,
-    "movieId": 5
-  },
-  {
-    "id": 447,
-    "time": "Friday, May 21, 2021 5:35 PM",
-    "cumRapId": 3,
-    "phongChieuId": 1,
-    "movieId": 8
-  },
-  {
-    "id": 448,
-    "time": "Tuesday, May 25, 2021 4:48 AM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 449,
-    "time": "Tuesday, May 25, 2021 10:10 AM",
-    "cumRapId": 4,
-    "phongChieuId": 3,
-    "movieId": 5
-  },
-  {
-    "id": 450,
-    "time": "Friday, May 21, 2021 4:47 AM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 1
-  },
-  {
-    "id": 451,
-    "time": "Friday, May 21, 2021 3:18 PM",
-    "cumRapId": 3,
-    "phongChieuId": 10,
-    "movieId": 2
-  },
-  {
-    "id": 452,
-    "time": "Saturday, May 22, 2021 6:57 PM",
-    "cumRapId": 5,
-    "phongChieuId": 7,
-    "movieId": 1
-  },
-  {
-    "id": 453,
-    "time": "Sunday, May 23, 2021 4:16 PM",
-    "cumRapId": 7,
-    "phongChieuId": 8,
-    "movieId": 8
-  },
-  {
-    "id": 454,
-    "time": "Monday, May 24, 2021 7:59 AM",
-    "cumRapId": 4,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 455,
-    "time": "Sunday, May 23, 2021 5:27 AM",
-    "cumRapId": 6,
-    "phongChieuId": 8,
-    "movieId": 6
-  },
-  {
-    "id": 456,
-    "time": "Sunday, May 23, 2021 6:33 PM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 8
-  },
-  {
-    "id": 457,
-    "time": "Tuesday, May 25, 2021 6:12 AM",
-    "cumRapId": 5,
-    "phongChieuId": 2,
-    "movieId": 10
-  },
-  {
-    "id": 458,
-    "time": "Tuesday, May 25, 2021 7:30 AM",
-    "cumRapId": 2,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 459,
-    "time": "Monday, May 24, 2021 3:56 AM",
-    "cumRapId": 3,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 460,
-    "time": "Sunday, May 23, 2021 3:07 AM",
-    "cumRapId": 7,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 461,
-    "time": "Sunday, May 23, 2021 12:36 PM",
-    "cumRapId": 10,
-    "phongChieuId": 2,
-    "movieId": 1
-  },
-  {
-    "id": 462,
-    "time": "Sunday, May 23, 2021 6:44 PM",
-    "cumRapId": 5,
-    "phongChieuId": 8,
-    "movieId": 6
-  },
-  {
-    "id": 463,
-    "time": "Friday, May 21, 2021 9:16 AM",
-    "cumRapId": 4,
-    "phongChieuId": 2,
-    "movieId": 5
-  },
-  {
-    "id": 464,
-    "time": "Tuesday, May 25, 2021 8:03 PM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 7
-  },
-  {
-    "id": 465,
-    "time": "Friday, May 21, 2021 1:56 PM",
-    "cumRapId": 10,
-    "phongChieuId": 7,
-    "movieId": 4
-  },
-  {
-    "id": 466,
-    "time": "Sunday, May 23, 2021 11:33 PM",
-    "cumRapId": 6,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 467,
-    "time": "Wednesday, May 26, 2021 10:42 PM",
-    "cumRapId": 8,
-    "phongChieuId": 6,
-    "movieId": 6
-  },
-  {
-    "id": 468,
-    "time": "Wednesday, May 26, 2021 4:37 PM",
-    "cumRapId": 5,
-    "phongChieuId": 8,
-    "movieId": 8
-  },
-  {
-    "id": 469,
-    "time": "Monday, May 24, 2021 1:05 PM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 6
-  },
-  {
-    "id": 470,
-    "time": "Friday, May 21, 2021 12:12 PM",
-    "cumRapId": 2,
-    "phongChieuId": 5,
-    "movieId": 10
-  },
-  {
-    "id": 471,
-    "time": "Tuesday, May 25, 2021 9:05 PM",
-    "cumRapId": 1,
-    "phongChieuId": 2,
-    "movieId": 4
-  },
-  {
-    "id": 472,
-    "time": "Friday, May 21, 2021 11:51 PM",
-    "cumRapId": 2,
-    "phongChieuId": 5,
-    "movieId": 6
-  },
-  {
-    "id": 473,
-    "time": "Wednesday, May 26, 2021 9:16 PM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 8
-  },
-  {
-    "id": 474,
-    "time": "Monday, May 24, 2021 12:09 AM",
-    "cumRapId": 2,
-    "phongChieuId": 10,
-    "movieId": 10
-  },
-  {
-    "id": 475,
-    "time": "Friday, May 21, 2021 8:37 PM",
-    "cumRapId": 9,
-    "phongChieuId": 9,
-    "movieId": 9
-  },
-  {
-    "id": 476,
-    "time": "Sunday, May 23, 2021 9:32 AM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 477,
-    "time": "Friday, May 21, 2021 11:36 PM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 2
-  },
-  {
-    "id": 478,
-    "time": "Tuesday, May 25, 2021 3:01 PM",
-    "cumRapId": 8,
-    "phongChieuId": 3,
-    "movieId": 5
-  },
-  {
-    "id": 479,
-    "time": "Friday, May 21, 2021 4:12 PM",
-    "cumRapId": 2,
-    "phongChieuId": 1,
-    "movieId": 9
-  },
-  {
-    "id": 480,
-    "time": "Friday, May 21, 2021 3:25 PM",
-    "cumRapId": 5,
-    "phongChieuId": 2,
-    "movieId": 3
-  },
-  {
-    "id": 481,
-    "time": "Sunday, May 23, 2021 1:15 PM",
-    "cumRapId": 9,
-    "phongChieuId": 6,
-    "movieId": 9
-  },
-  {
-    "id": 482,
-    "time": "Saturday, May 22, 2021 5:47 AM",
-    "cumRapId": 1,
-    "phongChieuId": 4,
-    "movieId": 1
-  },
-  {
-    "id": 483,
-    "time": "Tuesday, May 25, 2021 5:41 AM",
-    "cumRapId": 10,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 484,
-    "time": "Sunday, May 23, 2021 12:28 AM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 10
-  },
-  {
-    "id": 485,
-    "time": "Tuesday, May 25, 2021 8:56 AM",
-    "cumRapId": 6,
-    "phongChieuId": 6,
-    "movieId": 1
-  },
-  {
-    "id": 486,
-    "time": "Tuesday, May 25, 2021 9:50 AM",
-    "cumRapId": 2,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 487,
-    "time": "Sunday, May 23, 2021 8:56 AM",
-    "cumRapId": 6,
-    "phongChieuId": 8,
-    "movieId": 9
-  },
-  {
-    "id": 488,
-    "time": "Sunday, May 23, 2021 5:52 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 489,
-    "time": "Sunday, May 23, 2021 8:28 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 10
-  },
-  {
-    "id": 490,
-    "time": "Saturday, May 22, 2021 6:05 PM",
-    "cumRapId": 3,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 491,
-    "time": "Friday, May 21, 2021 1:13 PM",
-    "cumRapId": 4,
-    "phongChieuId": 10,
-    "movieId": 1
-  },
-  {
-    "id": 492,
-    "time": "Monday, May 24, 2021 9:21 AM",
-    "cumRapId": 6,
-    "phongChieuId": 1,
-    "movieId": 1
-  },
-  {
-    "id": 493,
-    "time": "Wednesday, May 26, 2021 1:35 AM",
-    "cumRapId": 8,
-    "phongChieuId": 9,
-    "movieId": 6
-  },
-  {
-    "id": 494,
-    "time": "Tuesday, May 25, 2021 7:06 AM",
-    "cumRapId": 4,
-    "phongChieuId": 7,
-    "movieId": 10
-  },
-  {
-    "id": 495,
-    "time": "Saturday, May 22, 2021 12:28 AM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 1
-  },
-  {
-    "id": 496,
-    "time": "Monday, May 24, 2021 3:57 PM",
-    "cumRapId": 4,
-    "phongChieuId": 1,
-    "movieId": 7
-  },
-  {
-    "id": 497,
-    "time": "Sunday, May 23, 2021 2:05 AM",
-    "cumRapId": 4,
-    "phongChieuId": 9,
-    "movieId": 9
-  },
-  {
-    "id": 498,
-    "time": "Tuesday, May 25, 2021 11:33 AM",
-    "cumRapId": 4,
-    "phongChieuId": 9,
-    "movieId": 6
-  },
-  {
-    "id": 499,
-    "time": "Wednesday, May 26, 2021 5:55 AM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 500,
-    "time": "Monday, May 24, 2021 3:57 AM",
-    "cumRapId": 8,
-    "phongChieuId": 10,
-    "movieId": 7
-  },
-  {
-    "id": 501,
-    "time": "Tuesday, May 25, 2021 2:21 PM",
-    "cumRapId": 3,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 502,
-    "time": "Tuesday, May 25, 2021 3:32 AM",
-    "cumRapId": 4,
-    "phongChieuId": 6,
-    "movieId": 6
-  },
-  {
-    "id": 503,
-    "time": "Tuesday, May 25, 2021 11:20 PM",
-    "cumRapId": 9,
-    "phongChieuId": 10,
-    "movieId": 3
-  },
-  {
-    "id": 504,
-    "time": "Saturday, May 22, 2021 11:39 PM",
-    "cumRapId": 4,
-    "phongChieuId": 7,
-    "movieId": 4
-  },
-  {
-    "id": 505,
-    "time": "Saturday, May 22, 2021 9:32 AM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 1
-  },
-  {
-    "id": 506,
-    "time": "Monday, May 24, 2021 2:53 PM",
-    "cumRapId": 9,
-    "phongChieuId": 10,
-    "movieId": 10
-  },
-  {
-    "id": 507,
-    "time": "Monday, May 24, 2021 3:33 AM",
-    "cumRapId": 8,
-    "phongChieuId": 3,
-    "movieId": 7
-  },
-  {
-    "id": 508,
-    "time": "Sunday, May 23, 2021 5:41 PM",
-    "cumRapId": 7,
-    "phongChieuId": 8,
-    "movieId": 8
-  },
-  {
-    "id": 509,
-    "time": "Monday, May 24, 2021 11:14 PM",
-    "cumRapId": 9,
-    "phongChieuId": 10,
-    "movieId": 8
-  },
-  {
-    "id": 510,
-    "time": "Friday, May 21, 2021 1:54 PM",
-    "cumRapId": 4,
-    "phongChieuId": 9,
-    "movieId": 8
-  },
-  {
-    "id": 511,
-    "time": "Tuesday, May 25, 2021 1:11 AM",
-    "cumRapId": 8,
-    "phongChieuId": 8,
-    "movieId": 10
-  },
-  {
-    "id": 512,
-    "time": "Tuesday, May 25, 2021 5:22 PM",
-    "cumRapId": 6,
-    "phongChieuId": 7,
-    "movieId": 10
-  },
-  {
-    "id": 513,
-    "time": "Friday, May 21, 2021 3:54 AM",
-    "cumRapId": 7,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 514,
-    "time": "Monday, May 24, 2021 3:41 AM",
-    "cumRapId": 3,
-    "phongChieuId": 10,
-    "movieId": 6
-  },
-  {
-    "id": 515,
-    "time": "Sunday, May 23, 2021 8:35 AM",
-    "cumRapId": 6,
-    "phongChieuId": 2,
-    "movieId": 7
-  },
-  {
-    "id": 516,
-    "time": "Saturday, May 22, 2021 5:36 PM",
-    "cumRapId": 2,
-    "phongChieuId": 5,
-    "movieId": 4
-  },
-  {
-    "id": 517,
-    "time": "Monday, May 24, 2021 11:18 AM",
-    "cumRapId": 2,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 518,
-    "time": "Saturday, May 22, 2021 1:42 PM",
-    "cumRapId": 2,
-    "phongChieuId": 2,
-    "movieId": 8
-  },
-  {
-    "id": 519,
-    "time": "Saturday, May 22, 2021 8:51 PM",
-    "cumRapId": 8,
-    "phongChieuId": 10,
-    "movieId": 1
-  },
-  {
-    "id": 520,
-    "time": "Monday, May 24, 2021 3:50 PM",
-    "cumRapId": 1,
-    "phongChieuId": 8,
-    "movieId": 2
-  },
-  {
-    "id": 521,
-    "time": "Tuesday, May 25, 2021 12:17 AM",
-    "cumRapId": 6,
-    "phongChieuId": 9,
-    "movieId": 4
-  },
-  {
-    "id": 522,
-    "time": "Saturday, May 22, 2021 1:26 AM",
-    "cumRapId": 6,
-    "phongChieuId": 10,
-    "movieId": 6
-  },
-  {
-    "id": 523,
-    "time": "Monday, May 24, 2021 6:56 PM",
-    "cumRapId": 2,
-    "phongChieuId": 8,
-    "movieId": 9
-  },
-  {
-    "id": 524,
-    "time": "Saturday, May 22, 2021 4:18 AM",
-    "cumRapId": 6,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 525,
-    "time": "Saturday, May 22, 2021 9:38 PM",
-    "cumRapId": 4,
-    "phongChieuId": 3,
-    "movieId": 8
-  },
-  {
-    "id": 526,
-    "time": "Wednesday, May 26, 2021 4:21 AM",
-    "cumRapId": 5,
-    "phongChieuId": 3,
-    "movieId": 6
-  },
-  {
-    "id": 527,
-    "time": "Wednesday, May 26, 2021 10:20 PM",
-    "cumRapId": 7,
-    "phongChieuId": 2,
-    "movieId": 6
-  },
-  {
-    "id": 528,
-    "time": "Tuesday, May 25, 2021 7:51 PM",
-    "cumRapId": 4,
-    "phongChieuId": 2,
-    "movieId": 10
-  },
-  {
-    "id": 529,
-    "time": "Sunday, May 23, 2021 6:11 PM",
-    "cumRapId": 8,
-    "phongChieuId": 10,
-    "movieId": 7
-  },
-  {
-    "id": 530,
-    "time": "Monday, May 24, 2021 2:14 PM",
-    "cumRapId": 4,
-    "phongChieuId": 7,
-    "movieId": 9
-  },
-  {
-    "id": 531,
-    "time": "Saturday, May 22, 2021 6:56 AM",
-    "cumRapId": 1,
-    "phongChieuId": 9,
-    "movieId": 8
-  },
-  {
-    "id": 532,
-    "time": "Tuesday, May 25, 2021 10:48 AM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 1
-  },
-  {
-    "id": 533,
-    "time": "Saturday, May 22, 2021 3:40 PM",
-    "cumRapId": 2,
-    "phongChieuId": 2,
-    "movieId": 1
-  },
-  {
-    "id": 534,
-    "time": "Tuesday, May 25, 2021 3:12 AM",
-    "cumRapId": 7,
-    "phongChieuId": 2,
-    "movieId": 8
-  },
-  {
-    "id": 535,
-    "time": "Friday, May 21, 2021 3:54 AM",
-    "cumRapId": 3,
-    "phongChieuId": 9,
-    "movieId": 10
-  },
-  {
-    "id": 536,
-    "time": "Tuesday, May 25, 2021 10:35 PM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 537,
-    "time": "Friday, May 21, 2021 2:14 AM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 538,
-    "time": "Tuesday, May 25, 2021 8:25 AM",
-    "cumRapId": 6,
-    "phongChieuId": 5,
-    "movieId": 9
-  },
-  {
-    "id": 539,
-    "time": "Saturday, May 22, 2021 11:50 PM",
-    "cumRapId": 6,
-    "phongChieuId": 8,
-    "movieId": 1
-  },
-  {
-    "id": 540,
-    "time": "Monday, May 24, 2021 10:24 PM",
-    "cumRapId": 1,
-    "phongChieuId": 6,
-    "movieId": 10
-  },
-  {
-    "id": 541,
-    "time": "Monday, May 24, 2021 11:26 PM",
-    "cumRapId": 7,
-    "phongChieuId": 2,
-    "movieId": 2
-  },
-  {
-    "id": 542,
-    "time": "Tuesday, May 25, 2021 8:47 AM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 8
-  },
-  {
-    "id": 543,
-    "time": "Monday, May 24, 2021 3:38 PM",
-    "cumRapId": 9,
-    "phongChieuId": 5,
-    "movieId": 1
-  },
-  {
-    "id": 544,
-    "time": "Sunday, May 23, 2021 8:24 AM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 3
-  },
-  {
-    "id": 545,
-    "time": "Friday, May 21, 2021 8:21 AM",
-    "cumRapId": 7,
-    "phongChieuId": 2,
-    "movieId": 5
-  },
-  {
-    "id": 546,
-    "time": "Sunday, May 23, 2021 2:50 PM",
-    "cumRapId": 2,
-    "phongChieuId": 1,
-    "movieId": 6
-  },
-  {
-    "id": 547,
-    "time": "Saturday, May 22, 2021 8:18 PM",
-    "cumRapId": 3,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 548,
-    "time": "Tuesday, May 25, 2021 10:32 AM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 7
-  },
-  {
-    "id": 549,
-    "time": "Wednesday, May 26, 2021 3:36 AM",
-    "cumRapId": 6,
-    "phongChieuId": 8,
-    "movieId": 8
-  },
-  {
-    "id": 550,
-    "time": "Saturday, May 22, 2021 10:28 PM",
-    "cumRapId": 2,
-    "phongChieuId": 1,
-    "movieId": 10
-  },
-  {
-    "id": 551,
-    "time": "Wednesday, May 26, 2021 2:28 PM",
-    "cumRapId": 9,
-    "phongChieuId": 6,
-    "movieId": 1
-  },
-  {
-    "id": 552,
-    "time": "Sunday, May 23, 2021 11:20 AM",
-    "cumRapId": 8,
-    "phongChieuId": 5,
-    "movieId": 4
-  },
-  {
-    "id": 553,
-    "time": "Monday, May 24, 2021 5:40 PM",
-    "cumRapId": 8,
-    "phongChieuId": 8,
-    "movieId": 6
-  },
-  {
-    "id": 554,
-    "time": "Monday, May 24, 2021 11:43 AM",
-    "cumRapId": 9,
-    "phongChieuId": 5,
-    "movieId": 8
-  },
-  {
-    "id": 555,
-    "time": "Tuesday, May 25, 2021 12:49 AM",
-    "cumRapId": 3,
-    "phongChieuId": 8,
-    "movieId": 7
-  },
-  {
-    "id": 556,
-    "time": "Wednesday, May 26, 2021 5:01 AM",
-    "cumRapId": 10,
-    "phongChieuId": 4,
-    "movieId": 6
-  },
-  {
-    "id": 557,
-    "time": "Wednesday, May 26, 2021 7:42 PM",
-    "cumRapId": 9,
-    "phongChieuId": 7,
-    "movieId": 10
-  },
-  {
-    "id": 558,
-    "time": "Tuesday, May 25, 2021 8:56 AM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 10
-  },
-  {
-    "id": 559,
-    "time": "Monday, May 24, 2021 12:22 PM",
-    "cumRapId": 4,
-    "phongChieuId": 3,
-    "movieId": 10
-  },
-  {
-    "id": 560,
-    "time": "Saturday, May 22, 2021 8:42 AM",
-    "cumRapId": 7,
-    "phongChieuId": 5,
-    "movieId": 2
-  },
-  {
-    "id": 561,
-    "time": "Monday, May 24, 2021 5:12 PM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 2
-  },
-  {
-    "id": 562,
-    "time": "Sunday, May 23, 2021 11:11 AM",
-    "cumRapId": 9,
-    "phongChieuId": 1,
-    "movieId": 6
-  },
-  {
-    "id": 563,
-    "time": "Saturday, May 22, 2021 11:48 PM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 4
-  },
-  {
-    "id": 564,
-    "time": "Tuesday, May 25, 2021 4:30 PM",
-    "cumRapId": 3,
-    "phongChieuId": 4,
-    "movieId": 6
-  },
-  {
-    "id": 565,
-    "time": "Tuesday, May 25, 2021 9:23 PM",
-    "cumRapId": 7,
-    "phongChieuId": 7,
-    "movieId": 8
-  },
-  {
-    "id": 566,
-    "time": "Tuesday, May 25, 2021 9:27 PM",
-    "cumRapId": 10,
-    "phongChieuId": 10,
-    "movieId": 6
-  },
-  {
-    "id": 567,
-    "time": "Monday, May 24, 2021 7:47 PM",
-    "cumRapId": 7,
-    "phongChieuId": 9,
-    "movieId": 9
-  },
-  {
-    "id": 568,
-    "time": "Sunday, May 23, 2021 7:39 AM",
-    "cumRapId": 7,
-    "phongChieuId": 8,
-    "movieId": 5
-  },
-  {
-    "id": 569,
-    "time": "Sunday, May 23, 2021 5:02 AM",
-    "cumRapId": 4,
-    "phongChieuId": 4,
-    "movieId": 8
-  },
-  {
-    "id": 570,
-    "time": "Sunday, May 23, 2021 6:41 PM",
-    "cumRapId": 7,
-    "phongChieuId": 9,
-    "movieId": 8
-  },
-  {
-    "id": 571,
-    "time": "Saturday, May 22, 2021 9:27 PM",
-    "cumRapId": 4,
-    "phongChieuId": 7,
-    "movieId": 5
-  },
-  {
-    "id": 572,
-    "time": "Sunday, May 23, 2021 1:14 AM",
-    "cumRapId": 1,
-    "phongChieuId": 6,
-    "movieId": 8
-  },
-  {
-    "id": 573,
-    "time": "Wednesday, May 26, 2021 11:15 PM",
-    "cumRapId": 9,
-    "phongChieuId": 9,
-    "movieId": 4
-  },
-  {
-    "id": 574,
-    "time": "Monday, May 24, 2021 10:15 AM",
-    "cumRapId": 7,
-    "phongChieuId": 2,
-    "movieId": 9
-  },
-  {
-    "id": 575,
-    "time": "Sunday, May 23, 2021 1:08 PM",
-    "cumRapId": 5,
-    "phongChieuId": 5,
-    "movieId": 7
-  },
-  {
-    "id": 576,
-    "time": "Friday, May 21, 2021 8:05 PM",
-    "cumRapId": 4,
-    "phongChieuId": 5,
-    "movieId": 4
-  },
-  {
-    "id": 577,
-    "time": "Sunday, May 23, 2021 3:31 PM",
-    "cumRapId": 10,
-    "phongChieuId": 2,
-    "movieId": 6
-  },
-  {
-    "id": 578,
-    "time": "Monday, May 24, 2021 3:12 AM",
-    "cumRapId": 9,
-    "phongChieuId": 2,
-    "movieId": 3
-  },
-  {
-    "id": 579,
-    "time": "Friday, May 21, 2021 5:52 PM",
-    "cumRapId": 9,
-    "phongChieuId": 2,
-    "movieId": 10
-  },
-  {
-    "id": 580,
-    "time": "Tuesday, May 25, 2021 9:58 PM",
-    "cumRapId": 7,
-    "phongChieuId": 1,
-    "movieId": 4
-  },
-  {
-    "id": 581,
-    "time": "Wednesday, May 26, 2021 1:20 PM",
-    "cumRapId": 4,
-    "phongChieuId": 2,
-    "movieId": 1
-  },
-  {
-    "id": 582,
-    "time": "Saturday, May 22, 2021 3:39 AM",
-    "cumRapId": 9,
-    "phongChieuId": 7,
-    "movieId": 6
-  },
-  {
-    "id": 583,
-    "time": "Saturday, May 22, 2021 11:01 AM",
-    "cumRapId": 6,
-    "phongChieuId": 2,
-    "movieId": 8
-  },
-  {
-    "id": 584,
-    "time": "Wednesday, May 26, 2021 8:17 PM",
-    "cumRapId": 3,
-    "phongChieuId": 10,
-    "movieId": 7
-  },
-  {
-    "id": 585,
-    "time": "Wednesday, May 26, 2021 4:24 PM",
-    "cumRapId": 3,
-    "phongChieuId": 4,
-    "movieId": 10
-  },
-  {
-    "id": 586,
-    "time": "Friday, May 21, 2021 6:04 PM",
-    "cumRapId": 6,
-    "phongChieuId": 8,
-    "movieId": 2
-  },
-  {
-    "id": 587,
-    "time": "Tuesday, May 25, 2021 3:16 AM",
-    "cumRapId": 4,
-    "phongChieuId": 8,
-    "movieId": 4
-  },
-  {
-    "id": 588,
-    "time": "Sunday, May 23, 2021 10:22 PM",
-    "cumRapId": 2,
-    "phongChieuId": 3,
-    "movieId": 10
-  },
-  {
-    "id": 589,
-    "time": "Sunday, May 23, 2021 2:42 AM",
-    "cumRapId": 2,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 590,
-    "time": "Saturday, May 22, 2021 11:27 PM",
-    "cumRapId": 8,
-    "phongChieuId": 8,
-    "movieId": 10
-  },
-  {
-    "id": 591,
-    "time": "Saturday, May 22, 2021 3:11 AM",
-    "cumRapId": 9,
-    "phongChieuId": 3,
-    "movieId": 8
-  },
-  {
-    "id": 592,
-    "time": "Saturday, May 22, 2021 2:01 AM",
-    "cumRapId": 10,
-    "phongChieuId": 4,
-    "movieId": 4
-  },
-  {
-    "id": 593,
-    "time": "Friday, May 21, 2021 1:50 PM",
-    "cumRapId": 3,
-    "phongChieuId": 1,
-    "movieId": 2
-  },
-  {
-    "id": 594,
-    "time": "Wednesday, May 26, 2021 4:58 PM",
-    "cumRapId": 8,
-    "phongChieuId": 4,
-    "movieId": 1
-  },
-  {
-    "id": 595,
-    "time": "Sunday, May 23, 2021 6:27 PM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 4
-  },
-  {
-    "id": 596,
-    "time": "Wednesday, May 26, 2021 6:58 PM",
-    "cumRapId": 1,
-    "phongChieuId": 10,
-    "movieId": 9
-  },
-  {
-    "id": 597,
-    "time": "Sunday, May 23, 2021 9:03 PM",
-    "cumRapId": 10,
-    "phongChieuId": 9,
-    "movieId": 1
-  },
-  {
-    "id": 598,
-    "time": "Friday, May 21, 2021 1:07 PM",
-    "cumRapId": 5,
-    "phongChieuId": 3,
-    "movieId": 2
-  },
-  {
-    "id": 599,
-    "time": "Tuesday, May 25, 2021 9:09 PM",
-    "cumRapId": 2,
-    "phongChieuId": 9,
-    "movieId": 3
-  }
-]
+[{
+  "id": 1,
+  "cumRapId": 6,
+  "phongChieuId": 3,
+  "movieId": 9,
+  "time": "2021-07-01T01:50:38Z"
+}, {
+  "id": 2,
+  "cumRapId": 5,
+  "phongChieuId": 23,
+  "movieId": 2,
+  "time": "2021-07-04T20:17:21Z"
+}, {
+  "id": 3,
+  "cumRapId": 8,
+  "phongChieuId": 15,
+  "movieId": 7,
+  "time": "2021-07-02T13:20:28Z"
+}, {
+  "id": 4,
+  "cumRapId": 4,
+  "phongChieuId": 18,
+  "movieId": 3,
+  "time": "2021-07-03T15:23:51Z"
+}, {
+  "id": 5,
+  "cumRapId": 5,
+  "phongChieuId": 6,
+  "movieId": 4,
+  "time": "2021-07-09T06:06:57Z"
+}, {
+  "id": 6,
+  "cumRapId": 7,
+  "phongChieuId": 21,
+  "movieId": 10,
+  "time": "2021-07-06T21:52:48Z"
+}, {
+  "id": 7,
+  "cumRapId": 4,
+  "phongChieuId": 23,
+  "movieId": 9,
+  "time": "2021-07-02T20:36:46Z"
+}, {
+  "id": 8,
+  "cumRapId": 6,
+  "phongChieuId": 29,
+  "movieId": 4,
+  "time": "2021-07-06T19:35:34Z"
+}, {
+  "id": 9,
+  "cumRapId": 6,
+  "phongChieuId": 16,
+  "movieId": 4,
+  "time": "2021-07-09T21:30:53Z"
+}, {
+  "id": 10,
+  "cumRapId": 4,
+  "phongChieuId": 15,
+  "movieId": 6,
+  "time": "2021-07-06T08:57:08Z"
+}, {
+  "id": 11,
+  "cumRapId": 5,
+  "phongChieuId": 29,
+  "movieId": 4,
+  "time": "2021-07-07T16:29:53Z"
+}, {
+  "id": 12,
+  "cumRapId": 10,
+  "phongChieuId": 12,
+  "movieId": 4,
+  "time": "2021-07-07T02:28:16Z"
+}, {
+  "id": 13,
+  "cumRapId": 5,
+  "phongChieuId": 11,
+  "movieId": 7,
+  "time": "2021-07-07T10:03:24Z"
+}, {
+  "id": 14,
+  "cumRapId": 10,
+  "phongChieuId": 23,
+  "movieId": 9,
+  "time": "2021-07-06T03:50:46Z"
+}, {
+  "id": 15,
+  "cumRapId": 2,
+  "phongChieuId": 22,
+  "movieId": 2,
+  "time": "2021-07-03T21:05:00Z"
+}, {
+  "id": 16,
+  "cumRapId": 2,
+  "phongChieuId": 28,
+  "movieId": 3,
+  "time": "2021-07-07T04:46:58Z"
+}, {
+  "id": 17,
+  "cumRapId": 3,
+  "phongChieuId": 1,
+  "movieId": 2,
+  "time": "2021-07-07T19:42:28Z"
+}, {
+  "id": 18,
+  "cumRapId": 7,
+  "phongChieuId": 27,
+  "movieId": 9,
+  "time": "2021-07-02T14:08:49Z"
+}, {
+  "id": 19,
+  "cumRapId": 3,
+  "phongChieuId": 26,
+  "movieId": 4,
+  "time": "2021-07-05T04:40:44Z"
+}, {
+  "id": 20,
+  "cumRapId": 5,
+  "phongChieuId": 29,
+  "movieId": 3,
+  "time": "2021-07-08T15:42:03Z"
+}, {
+  "id": 21,
+  "cumRapId": 7,
+  "phongChieuId": 27,
+  "movieId": 8,
+  "time": "2021-07-07T15:42:09Z"
+}, {
+  "id": 22,
+  "cumRapId": 1,
+  "phongChieuId": 14,
+  "movieId": 10,
+  "time": "2021-07-02T08:27:23Z"
+}, {
+  "id": 23,
+  "cumRapId": 10,
+  "phongChieuId": 25,
+  "movieId": 8,
+  "time": "2021-07-02T03:22:31Z"
+}, {
+  "id": 24,
+  "cumRapId": 5,
+  "phongChieuId": 8,
+  "movieId": 6,
+  "time": "2021-07-03T13:14:34Z"
+}, {
+  "id": 25,
+  "cumRapId": 5,
+  "phongChieuId": 10,
+  "movieId": 2,
+  "time": "2021-07-09T02:08:07Z"
+}, {
+  "id": 26,
+  "cumRapId": 9,
+  "phongChieuId": 3,
+  "movieId": 10,
+  "time": "2021-07-05T06:21:57Z"
+}, {
+  "id": 27,
+  "cumRapId": 8,
+  "phongChieuId": 4,
+  "movieId": 2,
+  "time": "2021-07-03T17:00:16Z"
+}, {
+  "id": 28,
+  "cumRapId": 10,
+  "phongChieuId": 14,
+  "movieId": 6,
+  "time": "2021-07-04T14:16:02Z"
+}, {
+  "id": 29,
+  "cumRapId": 4,
+  "phongChieuId": 24,
+  "movieId": 9,
+  "time": "2021-06-30T10:42:11Z"
+}, {
+  "id": 30,
+  "cumRapId": 10,
+  "phongChieuId": 23,
+  "movieId": 6,
+  "time": "2021-07-07T11:30:32Z"
+}, {
+  "id": 31,
+  "cumRapId": 9,
+  "phongChieuId": 2,
+  "movieId": 3,
+  "time": "2021-06-30T14:23:43Z"
+}, {
+  "id": 32,
+  "cumRapId": 7,
+  "phongChieuId": 21,
+  "movieId": 6,
+  "time": "2021-07-04T18:10:21Z"
+}, {
+  "id": 33,
+  "cumRapId": 1,
+  "phongChieuId": 15,
+  "movieId": 10,
+  "time": "2021-07-04T04:54:01Z"
+}, {
+  "id": 34,
+  "cumRapId": 6,
+  "phongChieuId": 6,
+  "movieId": 1,
+  "time": "2021-07-06T23:24:16Z"
+}, {
+  "id": 35,
+  "cumRapId": 4,
+  "phongChieuId": 10,
+  "movieId": 6,
+  "time": "2021-07-05T13:04:01Z"
+}, {
+  "id": 36,
+  "cumRapId": 10,
+  "phongChieuId": 30,
+  "movieId": 9,
+  "time": "2021-07-08T14:03:15Z"
+}, {
+  "id": 37,
+  "cumRapId": 10,
+  "phongChieuId": 16,
+  "movieId": 1,
+  "time": "2021-07-02T00:16:51Z"
+}, {
+  "id": 38,
+  "cumRapId": 2,
+  "phongChieuId": 29,
+  "movieId": 6,
+  "time": "2021-07-02T02:10:29Z"
+}, {
+  "id": 39,
+  "cumRapId": 5,
+  "phongChieuId": 15,
+  "movieId": 8,
+  "time": "2021-07-05T13:48:02Z"
+}, {
+  "id": 40,
+  "cumRapId": 4,
+  "phongChieuId": 10,
+  "movieId": 6,
+  "time": "2021-06-30T02:11:36Z"
+}, {
+  "id": 41,
+  "cumRapId": 3,
+  "phongChieuId": 4,
+  "movieId": 3,
+  "time": "2021-07-08T23:21:53Z"
+}, {
+  "id": 42,
+  "cumRapId": 1,
+  "phongChieuId": 27,
+  "movieId": 9,
+  "time": "2021-07-09T23:39:25Z"
+}, {
+  "id": 43,
+  "cumRapId": 3,
+  "phongChieuId": 26,
+  "movieId": 4,
+  "time": "2021-07-02T22:11:14Z"
+}, {
+  "id": 44,
+  "cumRapId": 10,
+  "phongChieuId": 29,
+  "movieId": 6,
+  "time": "2021-07-02T03:42:04Z"
+}, {
+  "id": 45,
+  "cumRapId": 6,
+  "phongChieuId": 4,
+  "movieId": 6,
+  "time": "2021-07-01T05:17:57Z"
+}, {
+  "id": 46,
+  "cumRapId": 4,
+  "phongChieuId": 6,
+  "movieId": 5,
+  "time": "2021-07-09T16:51:19Z"
+}, {
+  "id": 47,
+  "cumRapId": 10,
+  "phongChieuId": 15,
+  "movieId": 3,
+  "time": "2021-07-05T07:14:02Z"
+}, {
+  "id": 48,
+  "cumRapId": 4,
+  "phongChieuId": 21,
+  "movieId": 9,
+  "time": "2021-07-01T04:36:03Z"
+}, {
+  "id": 49,
+  "cumRapId": 5,
+  "phongChieuId": 22,
+  "movieId": 5,
+  "time": "2021-07-07T23:56:21Z"
+}, {
+  "id": 50,
+  "cumRapId": 9,
+  "phongChieuId": 22,
+  "movieId": 10,
+  "time": "2021-07-05T20:33:37Z"
+}, {
+  "id": 51,
+  "cumRapId": 2,
+  "phongChieuId": 5,
+  "movieId": 7,
+  "time": "2021-07-01T08:22:29Z"
+}, {
+  "id": 52,
+  "cumRapId": 9,
+  "phongChieuId": 30,
+  "movieId": 4,
+  "time": "2021-07-03T10:40:07Z"
+}, {
+  "id": 53,
+  "cumRapId": 2,
+  "phongChieuId": 8,
+  "movieId": 9,
+  "time": "2021-07-06T16:53:13Z"
+}, {
+  "id": 54,
+  "cumRapId": 6,
+  "phongChieuId": 17,
+  "movieId": 5,
+  "time": "2021-07-05T09:00:19Z"
+}, {
+  "id": 55,
+  "cumRapId": 4,
+  "phongChieuId": 19,
+  "movieId": 4,
+  "time": "2021-07-08T01:00:49Z"
+}, {
+  "id": 56,
+  "cumRapId": 6,
+  "phongChieuId": 2,
+  "movieId": 8,
+  "time": "2021-07-04T04:46:27Z"
+}, {
+  "id": 57,
+  "cumRapId": 2,
+  "phongChieuId": 27,
+  "movieId": 7,
+  "time": "2021-07-09T01:07:00Z"
+}, {
+  "id": 58,
+  "cumRapId": 2,
+  "phongChieuId": 18,
+  "movieId": 9,
+  "time": "2021-06-30T11:42:53Z"
+}, {
+  "id": 59,
+  "cumRapId": 6,
+  "phongChieuId": 11,
+  "movieId": 1,
+  "time": "2021-07-06T01:53:21Z"
+}, {
+  "id": 60,
+  "cumRapId": 5,
+  "phongChieuId": 25,
+  "movieId": 10,
+  "time": "2021-07-08T08:52:36Z"
+}, {
+  "id": 61,
+  "cumRapId": 10,
+  "phongChieuId": 4,
+  "movieId": 1,
+  "time": "2021-07-07T00:02:08Z"
+}, {
+  "id": 62,
+  "cumRapId": 3,
+  "phongChieuId": 10,
+  "movieId": 4,
+  "time": "2021-07-05T01:57:01Z"
+}, {
+  "id": 63,
+  "cumRapId": 8,
+  "phongChieuId": 1,
+  "movieId": 1,
+  "time": "2021-07-03T10:52:56Z"
+}, {
+  "id": 64,
+  "cumRapId": 7,
+  "phongChieuId": 29,
+  "movieId": 7,
+  "time": "2021-07-03T20:40:04Z"
+}, {
+  "id": 65,
+  "cumRapId": 6,
+  "phongChieuId": 20,
+  "movieId": 1,
+  "time": "2021-07-05T04:18:53Z"
+}, {
+  "id": 66,
+  "cumRapId": 1,
+  "phongChieuId": 26,
+  "movieId": 10,
+  "time": "2021-07-04T12:02:20Z"
+}, {
+  "id": 67,
+  "cumRapId": 5,
+  "phongChieuId": 10,
+  "movieId": 10,
+  "time": "2021-07-09T01:56:06Z"
+}, {
+  "id": 68,
+  "cumRapId": 5,
+  "phongChieuId": 25,
+  "movieId": 6,
+  "time": "2021-07-06T23:07:47Z"
+}, {
+  "id": 69,
+  "cumRapId": 7,
+  "phongChieuId": 1,
+  "movieId": 9,
+  "time": "2021-06-30T07:21:56Z"
+}, {
+  "id": 70,
+  "cumRapId": 1,
+  "phongChieuId": 27,
+  "movieId": 7,
+  "time": "2021-06-30T03:21:25Z"
+}, {
+  "id": 71,
+  "cumRapId": 5,
+  "phongChieuId": 11,
+  "movieId": 8,
+  "time": "2021-07-08T09:21:56Z"
+}, {
+  "id": 72,
+  "cumRapId": 5,
+  "phongChieuId": 27,
+  "movieId": 7,
+  "time": "2021-07-02T06:05:25Z"
+}, {
+  "id": 73,
+  "cumRapId": 10,
+  "phongChieuId": 17,
+  "movieId": 7,
+  "time": "2021-07-08T02:14:46Z"
+}, {
+  "id": 74,
+  "cumRapId": 3,
+  "phongChieuId": 27,
+  "movieId": 4,
+  "time": "2021-07-02T20:54:07Z"
+}, {
+  "id": 75,
+  "cumRapId": 4,
+  "phongChieuId": 8,
+  "movieId": 3,
+  "time": "2021-06-30T03:01:08Z"
+}, {
+  "id": 76,
+  "cumRapId": 9,
+  "phongChieuId": 4,
+  "movieId": 1,
+  "time": "2021-07-02T15:35:33Z"
+}, {
+  "id": 77,
+  "cumRapId": 6,
+  "phongChieuId": 18,
+  "movieId": 9,
+  "time": "2021-07-07T07:18:54Z"
+}, {
+  "id": 78,
+  "cumRapId": 8,
+  "phongChieuId": 29,
+  "movieId": 9,
+  "time": "2021-07-08T13:24:40Z"
+}, {
+  "id": 79,
+  "cumRapId": 10,
+  "phongChieuId": 19,
+  "movieId": 4,
+  "time": "2021-07-06T17:11:33Z"
+}, {
+  "id": 80,
+  "cumRapId": 3,
+  "phongChieuId": 3,
+  "movieId": 9,
+  "time": "2021-07-07T00:29:17Z"
+}, {
+  "id": 81,
+  "cumRapId": 7,
+  "phongChieuId": 13,
+  "movieId": 10,
+  "time": "2021-07-03T14:23:07Z"
+}, {
+  "id": 82,
+  "cumRapId": 4,
+  "phongChieuId": 6,
+  "movieId": 3,
+  "time": "2021-07-07T03:44:42Z"
+}, {
+  "id": 83,
+  "cumRapId": 2,
+  "phongChieuId": 7,
+  "movieId": 3,
+  "time": "2021-07-07T12:32:18Z"
+}, {
+  "id": 84,
+  "cumRapId": 4,
+  "phongChieuId": 12,
+  "movieId": 2,
+  "time": "2021-07-05T12:56:51Z"
+}, {
+  "id": 85,
+  "cumRapId": 1,
+  "phongChieuId": 8,
+  "movieId": 7,
+  "time": "2021-07-02T07:47:31Z"
+}, {
+  "id": 86,
+  "cumRapId": 3,
+  "phongChieuId": 18,
+  "movieId": 8,
+  "time": "2021-07-09T04:35:59Z"
+}, {
+  "id": 87,
+  "cumRapId": 6,
+  "phongChieuId": 14,
+  "movieId": 5,
+  "time": "2021-07-01T06:01:40Z"
+}, {
+  "id": 88,
+  "cumRapId": 8,
+  "phongChieuId": 24,
+  "movieId": 1,
+  "time": "2021-07-06T05:23:31Z"
+}, {
+  "id": 89,
+  "cumRapId": 1,
+  "phongChieuId": 26,
+  "movieId": 6,
+  "time": "2021-07-08T03:37:11Z"
+}, {
+  "id": 90,
+  "cumRapId": 7,
+  "phongChieuId": 12,
+  "movieId": 9,
+  "time": "2021-07-04T10:41:15Z"
+}, {
+  "id": 91,
+  "cumRapId": 6,
+  "phongChieuId": 7,
+  "movieId": 4,
+  "time": "2021-07-04T08:46:13Z"
+}, {
+  "id": 92,
+  "cumRapId": 8,
+  "phongChieuId": 6,
+  "movieId": 6,
+  "time": "2021-06-30T02:32:26Z"
+}, {
+  "id": 93,
+  "cumRapId": 5,
+  "phongChieuId": 1,
+  "movieId": 2,
+  "time": "2021-07-01T08:39:08Z"
+}, {
+  "id": 94,
+  "cumRapId": 8,
+  "phongChieuId": 13,
+  "movieId": 2,
+  "time": "2021-07-03T17:50:32Z"
+}, {
+  "id": 95,
+  "cumRapId": 6,
+  "phongChieuId": 15,
+  "movieId": 1,
+  "time": "2021-07-06T16:36:00Z"
+}, {
+  "id": 96,
+  "cumRapId": 10,
+  "phongChieuId": 24,
+  "movieId": 2,
+  "time": "2021-07-08T16:53:46Z"
+}, {
+  "id": 97,
+  "cumRapId": 8,
+  "phongChieuId": 20,
+  "movieId": 3,
+  "time": "2021-07-04T14:09:14Z"
+}, {
+  "id": 98,
+  "cumRapId": 3,
+  "phongChieuId": 4,
+  "movieId": 10,
+  "time": "2021-07-01T09:00:08Z"
+}, {
+  "id": 99,
+  "cumRapId": 8,
+  "phongChieuId": 10,
+  "movieId": 6,
+  "time": "2021-07-06T15:34:08Z"
+}, {
+  "id": 100,
+  "cumRapId": 10,
+  "phongChieuId": 28,
+  "movieId": 8,
+  "time": "2021-07-07T12:46:17Z"
+},
+{
+  "id": 101,
+  "cumRapId": 3,
+  "phongChieuId": 1,
+  "movieId": 3,
+  "time": "2021-07-06T02:42:23Z"
+}, {
+  "id": 102,
+  "cumRapId": 6,
+  "phongChieuId": 7,
+  "movieId": 5,
+  "time": "2021-07-03T16:26:43Z"
+}, {
+  "id": 103,
+  "cumRapId": 5,
+  "phongChieuId": 4,
+  "movieId": 8,
+  "time": "2021-07-03T21:37:58Z"
+}, {
+  "id": 104,
+  "cumRapId": 4,
+  "phongChieuId": 26,
+  "movieId": 5,
+  "time": "2021-07-09T12:19:20Z"
+}, {
+  "id": 105,
+  "cumRapId": 3,
+  "phongChieuId": 12,
+  "movieId": 10,
+  "time": "2021-07-01T11:34:39Z"
+}, {
+  "id": 106,
+  "cumRapId": 5,
+  "phongChieuId": 11,
+  "movieId": 10,
+  "time": "2021-07-04T04:32:08Z"
+}, {
+  "id": 107,
+  "cumRapId": 6,
+  "phongChieuId": 24,
+  "movieId": 2,
+  "time": "2021-07-08T20:43:28Z"
+}, {
+  "id": 108,
+  "cumRapId": 6,
+  "phongChieuId": 1,
+  "movieId": 5,
+  "time": "2021-07-07T07:50:16Z"
+}, {
+  "id": 109,
+  "cumRapId": 6,
+  "phongChieuId": 11,
+  "movieId": 4,
+  "time": "2021-07-07T10:23:30Z"
+}, {
+  "id": 110,
+  "cumRapId": 9,
+  "phongChieuId": 12,
+  "movieId": 1,
+  "time": "2021-07-06T02:38:13Z"
+}, {
+  "id": 111,
+  "cumRapId": 9,
+  "phongChieuId": 15,
+  "movieId": 3,
+  "time": "2021-07-03T15:42:32Z"
+}, {
+  "id": 112,
+  "cumRapId": 1,
+  "phongChieuId": 15,
+  "movieId": 1,
+  "time": "2021-07-07T17:56:58Z"
+}, {
+  "id": 113,
+  "cumRapId": 5,
+  "phongChieuId": 3,
+  "movieId": 6,
+  "time": "2021-07-02T22:08:00Z"
+}, {
+  "id": 114,
+  "cumRapId": 6,
+  "phongChieuId": 5,
+  "movieId": 2,
+  "time": "2021-07-09T07:25:13Z"
+}, {
+  "id": 115,
+  "cumRapId": 7,
+  "phongChieuId": 20,
+  "movieId": 1,
+  "time": "2021-07-03T15:03:29Z"
+}, {
+  "id": 116,
+  "cumRapId": 2,
+  "phongChieuId": 21,
+  "movieId": 9,
+  "time": "2021-07-06T01:04:04Z"
+}, {
+  "id": 117,
+  "cumRapId": 8,
+  "phongChieuId": 12,
+  "movieId": 1,
+  "time": "2021-07-09T03:14:21Z"
+}, {
+  "id": 118,
+  "cumRapId": 1,
+  "phongChieuId": 17,
+  "movieId": 6,
+  "time": "2021-07-04T04:16:12Z"
+}, {
+  "id": 119,
+  "cumRapId": 1,
+  "phongChieuId": 8,
+  "movieId": 3,
+  "time": "2021-07-01T10:07:15Z"
+}, {
+  "id": 120,
+  "cumRapId": 4,
+  "phongChieuId": 30,
+  "movieId": 10,
+  "time": "2021-07-08T22:53:44Z"
+}, {
+  "id": 121,
+  "cumRapId": 10,
+  "phongChieuId": 13,
+  "movieId": 1,
+  "time": "2021-07-09T10:29:15Z"
+}, {
+  "id": 122,
+  "cumRapId": 10,
+  "phongChieuId": 24,
+  "movieId": 9,
+  "time": "2021-06-30T09:25:49Z"
+}, {
+  "id": 123,
+  "cumRapId": 5,
+  "phongChieuId": 6,
+  "movieId": 2,
+  "time": "2021-07-08T06:52:30Z"
+}, {
+  "id": 124,
+  "cumRapId": 5,
+  "phongChieuId": 1,
+  "movieId": 4,
+  "time": "2021-07-06T17:19:49Z"
+}, {
+  "id": 125,
+  "cumRapId": 5,
+  "phongChieuId": 5,
+  "movieId": 8,
+  "time": "2021-07-07T01:45:33Z"
+}, {
+  "id": 126,
+  "cumRapId": 10,
+  "phongChieuId": 24,
+  "movieId": 7,
+  "time": "2021-07-06T05:14:13Z"
+}, {
+  "id": 127,
+  "cumRapId": 6,
+  "phongChieuId": 6,
+  "movieId": 6,
+  "time": "2021-07-03T15:02:22Z"
+}, {
+  "id": 128,
+  "cumRapId": 2,
+  "phongChieuId": 14,
+  "movieId": 3,
+  "time": "2021-06-30T19:59:26Z"
+}, {
+  "id": 129,
+  "cumRapId": 7,
+  "phongChieuId": 24,
+  "movieId": 9,
+  "time": "2021-06-30T05:04:09Z"
+}, {
+  "id": 130,
+  "cumRapId": 10,
+  "phongChieuId": 25,
+  "movieId": 4,
+  "time": "2021-07-02T15:52:58Z"
+}, {
+  "id": 131,
+  "cumRapId": 8,
+  "phongChieuId": 24,
+  "movieId": 4,
+  "time": "2021-06-30T02:41:20Z"
+}, {
+  "id": 132,
+  "cumRapId": 1,
+  "phongChieuId": 21,
+  "movieId": 1,
+  "time": "2021-07-07T02:13:47Z"
+}, {
+  "id": 133,
+  "cumRapId": 4,
+  "phongChieuId": 11,
+  "movieId": 2,
+  "time": "2021-07-03T22:31:29Z"
+}, {
+  "id": 134,
+  "cumRapId": 9,
+  "phongChieuId": 27,
+  "movieId": 2,
+  "time": "2021-07-08T23:49:28Z"
+}, {
+  "id": 135,
+  "cumRapId": 6,
+  "phongChieuId": 7,
+  "movieId": 7,
+  "time": "2021-07-08T11:14:39Z"
+}, {
+  "id": 136,
+  "cumRapId": 7,
+  "phongChieuId": 1,
+  "movieId": 1,
+  "time": "2021-07-03T06:29:11Z"
+}, {
+  "id": 137,
+  "cumRapId": 7,
+  "phongChieuId": 25,
+  "movieId": 1,
+  "time": "2021-07-07T22:28:34Z"
+}, {
+  "id": 138,
+  "cumRapId": 10,
+  "phongChieuId": 6,
+  "movieId": 7,
+  "time": "2021-07-09T12:39:52Z"
+}, {
+  "id": 139,
+  "cumRapId": 10,
+  "phongChieuId": 6,
+  "movieId": 2,
+  "time": "2021-07-05T23:42:09Z"
+}, {
+  "id": 140,
+  "cumRapId": 5,
+  "phongChieuId": 25,
+  "movieId": 2,
+  "time": "2021-07-06T16:59:55Z"
+}, {
+  "id": 141,
+  "cumRapId": 1,
+  "phongChieuId": 11,
+  "movieId": 8,
+  "time": "2021-07-03T10:00:28Z"
+}, {
+  "id": 142,
+  "cumRapId": 8,
+  "phongChieuId": 1,
+  "movieId": 5,
+  "time": "2021-07-09T04:37:44Z"
+}, {
+  "id": 143,
+  "cumRapId": 7,
+  "phongChieuId": 19,
+  "movieId": 2,
+  "time": "2021-07-02T09:23:54Z"
+}, {
+  "id": 144,
+  "cumRapId": 4,
+  "phongChieuId": 30,
+  "movieId": 8,
+  "time": "2021-07-01T20:23:46Z"
+}, {
+  "id": 145,
+  "cumRapId": 7,
+  "phongChieuId": 18,
+  "movieId": 4,
+  "time": "2021-06-30T00:27:47Z"
+}, {
+  "id": 146,
+  "cumRapId": 5,
+  "phongChieuId": 29,
+  "movieId": 9,
+  "time": "2021-06-30T13:33:38Z"
+}, {
+  "id": 147,
+  "cumRapId": 8,
+  "phongChieuId": 30,
+  "movieId": 8,
+  "time": "2021-07-03T17:42:26Z"
+}, {
+  "id": 148,
+  "cumRapId": 5,
+  "phongChieuId": 26,
+  "movieId": 9,
+  "time": "2021-07-07T01:16:02Z"
+}, {
+  "id": 149,
+  "cumRapId": 4,
+  "phongChieuId": 26,
+  "movieId": 4,
+  "time": "2021-07-02T00:14:46Z"
+}, {
+  "id": 150,
+  "cumRapId": 9,
+  "phongChieuId": 8,
+  "movieId": 8,
+  "time": "2021-07-06T16:47:59Z"
+}, {
+  "id": 151,
+  "cumRapId": 4,
+  "phongChieuId": 24,
+  "movieId": 9,
+  "time": "2021-07-05T19:08:09Z"
+}, {
+  "id": 152,
+  "cumRapId": 4,
+  "phongChieuId": 10,
+  "movieId": 10,
+  "time": "2021-07-06T08:02:03Z"
+}, {
+  "id": 153,
+  "cumRapId": 8,
+  "phongChieuId": 11,
+  "movieId": 4,
+  "time": "2021-07-07T23:15:04Z"
+}, {
+  "id": 154,
+  "cumRapId": 10,
+  "phongChieuId": 1,
+  "movieId": 4,
+  "time": "2021-07-07T07:09:24Z"
+}, {
+  "id": 155,
+  "cumRapId": 6,
+  "phongChieuId": 11,
+  "movieId": 7,
+  "time": "2021-07-05T04:48:14Z"
+}, {
+  "id": 156,
+  "cumRapId": 5,
+  "phongChieuId": 29,
+  "movieId": 6,
+  "time": "2021-07-02T16:25:06Z"
+}, {
+  "id": 157,
+  "cumRapId": 4,
+  "phongChieuId": 30,
+  "movieId": 5,
+  "time": "2021-07-06T11:07:56Z"
+}, {
+  "id": 158,
+  "cumRapId": 6,
+  "phongChieuId": 1,
+  "movieId": 9,
+  "time": "2021-07-04T03:45:28Z"
+}, {
+  "id": 159,
+  "cumRapId": 8,
+  "phongChieuId": 28,
+  "movieId": 2,
+  "time": "2021-07-09T22:08:51Z"
+}, {
+  "id": 160,
+  "cumRapId": 7,
+  "phongChieuId": 19,
+  "movieId": 1,
+  "time": "2021-07-01T05:08:29Z"
+}, {
+  "id": 161,
+  "cumRapId": 4,
+  "phongChieuId": 23,
+  "movieId": 10,
+  "time": "2021-07-01T19:47:21Z"
+}, {
+  "id": 162,
+  "cumRapId": 1,
+  "phongChieuId": 22,
+  "movieId": 10,
+  "time": "2021-07-01T15:57:09Z"
+}, {
+  "id": 163,
+  "cumRapId": 7,
+  "phongChieuId": 28,
+  "movieId": 2,
+  "time": "2021-07-04T07:27:48Z"
+}, {
+  "id": 164,
+  "cumRapId": 10,
+  "phongChieuId": 30,
+  "movieId": 5,
+  "time": "2021-07-06T03:20:32Z"
+}, {
+  "id": 165,
+  "cumRapId": 1,
+  "phongChieuId": 2,
+  "movieId": 4,
+  "time": "2021-07-07T03:13:10Z"
+}, {
+  "id": 166,
+  "cumRapId": 2,
+  "phongChieuId": 25,
+  "movieId": 2,
+  "time": "2021-07-05T03:59:32Z"
+}, {
+  "id": 167,
+  "cumRapId": 4,
+  "phongChieuId": 5,
+  "movieId": 5,
+  "time": "2021-07-06T21:58:34Z"
+}, {
+  "id": 168,
+  "cumRapId": 2,
+  "phongChieuId": 16,
+  "movieId": 2,
+  "time": "2021-07-08T07:34:45Z"
+}, {
+  "id": 169,
+  "cumRapId": 6,
+  "phongChieuId": 12,
+  "movieId": 10,
+  "time": "2021-07-09T05:04:53Z"
+}, {
+  "id": 170,
+  "cumRapId": 10,
+  "phongChieuId": 25,
+  "movieId": 1,
+  "time": "2021-06-30T13:55:25Z"
+}, {
+  "id": 171,
+  "cumRapId": 3,
+  "phongChieuId": 3,
+  "movieId": 5,
+  "time": "2021-07-06T10:14:09Z"
+}, {
+  "id": 172,
+  "cumRapId": 6,
+  "phongChieuId": 5,
+  "movieId": 8,
+  "time": "2021-07-01T20:28:20Z"
+}, {
+  "id": 173,
+  "cumRapId": 3,
+  "phongChieuId": 27,
+  "movieId": 1,
+  "time": "2021-07-02T00:50:50Z"
+}, {
+  "id": 174,
+  "cumRapId": 10,
+  "phongChieuId": 5,
+  "movieId": 8,
+  "time": "2021-07-05T06:31:21Z"
+}, {
+  "id": 175,
+  "cumRapId": 3,
+  "phongChieuId": 30,
+  "movieId": 7,
+  "time": "2021-07-03T06:47:28Z"
+}, {
+  "id": 176,
+  "cumRapId": 2,
+  "phongChieuId": 4,
+  "movieId": 8,
+  "time": "2021-07-02T08:07:57Z"
+}, {
+  "id": 177,
+  "cumRapId": 2,
+  "phongChieuId": 2,
+  "movieId": 10,
+  "time": "2021-07-06T06:11:36Z"
+}, {
+  "id": 178,
+  "cumRapId": 7,
+  "phongChieuId": 19,
+  "movieId": 9,
+  "time": "2021-07-09T03:18:01Z"
+}, {
+  "id": 179,
+  "cumRapId": 3,
+  "phongChieuId": 5,
+  "movieId": 6,
+  "time": "2021-06-30T09:39:12Z"
+}, {
+  "id": 180,
+  "cumRapId": 8,
+  "phongChieuId": 30,
+  "movieId": 9,
+  "time": "2021-07-06T22:43:21Z"
+}, {
+  "id": 181,
+  "cumRapId": 1,
+  "phongChieuId": 7,
+  "movieId": 4,
+  "time": "2021-07-02T07:57:02Z"
+}, {
+  "id": 182,
+  "cumRapId": 3,
+  "phongChieuId": 20,
+  "movieId": 8,
+  "time": "2021-07-03T00:25:04Z"
+}, {
+  "id": 183,
+  "cumRapId": 1,
+  "phongChieuId": 9,
+  "movieId": 5,
+  "time": "2021-07-08T10:00:11Z"
+}, {
+  "id": 184,
+  "cumRapId": 6,
+  "phongChieuId": 14,
+  "movieId": 9,
+  "time": "2021-07-05T00:03:35Z"
+}, {
+  "id": 185,
+  "cumRapId": 2,
+  "phongChieuId": 19,
+  "movieId": 8,
+  "time": "2021-07-08T04:44:58Z"
+}, {
+  "id": 186,
+  "cumRapId": 3,
+  "phongChieuId": 15,
+  "movieId": 8,
+  "time": "2021-07-09T10:24:39Z"
+}, {
+  "id": 187,
+  "cumRapId": 8,
+  "phongChieuId": 26,
+  "movieId": 3,
+  "time": "2021-07-05T15:22:18Z"
+}, {
+  "id": 188,
+  "cumRapId": 1,
+  "phongChieuId": 18,
+  "movieId": 6,
+  "time": "2021-07-07T22:10:33Z"
+}, {
+  "id": 189,
+  "cumRapId": 2,
+  "phongChieuId": 3,
+  "movieId": 5,
+  "time": "2021-07-03T17:26:54Z"
+}, {
+  "id": 190,
+  "cumRapId": 10,
+  "phongChieuId": 18,
+  "movieId": 5,
+  "time": "2021-07-02T00:11:31Z"
+}, {
+  "id": 191,
+  "cumRapId": 10,
+  "phongChieuId": 24,
+  "movieId": 3,
+  "time": "2021-07-04T11:37:28Z"
+}, {
+  "id": 192,
+  "cumRapId": 8,
+  "phongChieuId": 19,
+  "movieId": 2,
+  "time": "2021-07-08T21:21:52Z"
+}, {
+  "id": 193,
+  "cumRapId": 2,
+  "phongChieuId": 1,
+  "movieId": 6,
+  "time": "2021-07-08T07:54:50Z"
+}, {
+  "id": 194,
+  "cumRapId": 1,
+  "phongChieuId": 24,
+  "movieId": 3,
+  "time": "2021-07-08T15:23:28Z"
+}, {
+  "id": 195,
+  "cumRapId": 1,
+  "phongChieuId": 29,
+  "movieId": 6,
+  "time": "2021-07-04T19:00:18Z"
+}, {
+  "id": 196,
+  "cumRapId": 1,
+  "phongChieuId": 12,
+  "movieId": 1,
+  "time": "2021-07-06T21:01:15Z"
+}, {
+  "id": 197,
+  "cumRapId": 10,
+  "phongChieuId": 24,
+  "movieId": 2,
+  "time": "2021-07-06T22:34:16Z"
+}, {
+  "id": 198,
+  "cumRapId": 5,
+  "phongChieuId": 14,
+  "movieId": 8,
+  "time": "2021-07-01T21:10:14Z"
+}, {
+  "id": 199,
+  "cumRapId": 4,
+  "phongChieuId": 9,
+  "movieId": 1,
+  "time": "2021-07-05T07:29:22Z"
+}, {
+  "id": 200,
+  "cumRapId": 10,
+  "phongChieuId": 19,
+  "movieId": 8,
+  "time": "2021-07-09T21:43:18Z"
+},
+{
+  "id": 201,
+  "cumRapId": 10,
+  "phongChieuId": 3,
+  "movieId": 7,
+  "time": "2021-07-03T01:57:54Z"
+}, {
+  "id": 202,
+  "cumRapId": 2,
+  "phongChieuId": 2,
+  "movieId": 9,
+  "time": "2021-07-09T13:16:41Z"
+}, {
+  "id": 203,
+  "cumRapId": 7,
+  "phongChieuId": 17,
+  "movieId": 8,
+  "time": "2021-07-02T07:38:45Z"
+}, {
+  "id": 204,
+  "cumRapId": 5,
+  "phongChieuId": 29,
+  "movieId": 6,
+  "time": "2021-07-05T08:31:10Z"
+}, {
+  "id": 205,
+  "cumRapId": 3,
+  "phongChieuId": 13,
+  "movieId": 9,
+  "time": "2021-07-04T11:09:06Z"
+}, {
+  "id": 206,
+  "cumRapId": 1,
+  "phongChieuId": 19,
+  "movieId": 9,
+  "time": "2021-07-01T03:34:01Z"
+}, {
+  "id": 207,
+  "cumRapId": 5,
+  "phongChieuId": 23,
+  "movieId": 10,
+  "time": "2021-06-30T20:59:06Z"
+}, {
+  "id": 208,
+  "cumRapId": 5,
+  "phongChieuId": 24,
+  "movieId": 1,
+  "time": "2021-07-03T17:50:20Z"
+}, {
+  "id": 209,
+  "cumRapId": 4,
+  "phongChieuId": 26,
+  "movieId": 5,
+  "time": "2021-07-04T00:42:02Z"
+}, {
+  "id": 210,
+  "cumRapId": 7,
+  "phongChieuId": 18,
+  "movieId": 6,
+  "time": "2021-07-06T21:42:28Z"
+}, {
+  "id": 211,
+  "cumRapId": 2,
+  "phongChieuId": 11,
+  "movieId": 8,
+  "time": "2021-07-09T03:45:59Z"
+}, {
+  "id": 212,
+  "cumRapId": 7,
+  "phongChieuId": 13,
+  "movieId": 7,
+  "time": "2021-07-06T13:28:33Z"
+}, {
+  "id": 213,
+  "cumRapId": 3,
+  "phongChieuId": 29,
+  "movieId": 2,
+  "time": "2021-07-01T23:58:21Z"
+}, {
+  "id": 214,
+  "cumRapId": 1,
+  "phongChieuId": 24,
+  "movieId": 3,
+  "time": "2021-07-08T15:29:19Z"
+}, {
+  "id": 215,
+  "cumRapId": 9,
+  "phongChieuId": 29,
+  "movieId": 1,
+  "time": "2021-07-04T04:22:00Z"
+}, {
+  "id": 216,
+  "cumRapId": 7,
+  "phongChieuId": 26,
+  "movieId": 3,
+  "time": "2021-07-09T09:45:05Z"
+}, {
+  "id": 217,
+  "cumRapId": 2,
+  "phongChieuId": 28,
+  "movieId": 6,
+  "time": "2021-07-05T23:15:42Z"
+}, {
+  "id": 218,
+  "cumRapId": 1,
+  "phongChieuId": 24,
+  "movieId": 1,
+  "time": "2021-07-08T20:28:52Z"
+}, {
+  "id": 219,
+  "cumRapId": 5,
+  "phongChieuId": 12,
+  "movieId": 8,
+  "time": "2021-07-06T10:13:54Z"
+}, {
+  "id": 220,
+  "cumRapId": 5,
+  "phongChieuId": 18,
+  "movieId": 10,
+  "time": "2021-06-30T17:15:26Z"
+}, {
+  "id": 221,
+  "cumRapId": 7,
+  "phongChieuId": 6,
+  "movieId": 9,
+  "time": "2021-07-08T08:55:32Z"
+}, {
+  "id": 222,
+  "cumRapId": 5,
+  "phongChieuId": 14,
+  "movieId": 2,
+  "time": "2021-06-30T15:44:19Z"
+}, {
+  "id": 223,
+  "cumRapId": 10,
+  "phongChieuId": 19,
+  "movieId": 9,
+  "time": "2021-07-02T17:39:54Z"
+}, {
+  "id": 224,
+  "cumRapId": 1,
+  "phongChieuId": 2,
+  "movieId": 4,
+  "time": "2021-07-08T10:38:19Z"
+}, {
+  "id": 225,
+  "cumRapId": 6,
+  "phongChieuId": 8,
+  "movieId": 9,
+  "time": "2021-07-03T02:19:32Z"
+}, {
+  "id": 226,
+  "cumRapId": 8,
+  "phongChieuId": 20,
+  "movieId": 8,
+  "time": "2021-07-08T06:38:47Z"
+}, {
+  "id": 227,
+  "cumRapId": 9,
+  "phongChieuId": 16,
+  "movieId": 10,
+  "time": "2021-07-05T06:43:37Z"
+}, {
+  "id": 228,
+  "cumRapId": 6,
+  "phongChieuId": 16,
+  "movieId": 3,
+  "time": "2021-07-07T18:40:30Z"
+}, {
+  "id": 229,
+  "cumRapId": 7,
+  "phongChieuId": 6,
+  "movieId": 3,
+  "time": "2021-07-01T02:30:23Z"
+}, {
+  "id": 230,
+  "cumRapId": 8,
+  "phongChieuId": 13,
+  "movieId": 8,
+  "time": "2021-07-05T18:23:43Z"
+}, {
+  "id": 231,
+  "cumRapId": 10,
+  "phongChieuId": 2,
+  "movieId": 4,
+  "time": "2021-07-07T00:31:04Z"
+}, {
+  "id": 232,
+  "cumRapId": 1,
+  "phongChieuId": 13,
+  "movieId": 7,
+  "time": "2021-07-07T20:45:26Z"
+}, {
+  "id": 233,
+  "cumRapId": 3,
+  "phongChieuId": 12,
+  "movieId": 1,
+  "time": "2021-07-08T07:11:21Z"
+}, {
+  "id": 234,
+  "cumRapId": 1,
+  "phongChieuId": 3,
+  "movieId": 7,
+  "time": "2021-06-30T12:25:42Z"
+}, {
+  "id": 235,
+  "cumRapId": 8,
+  "phongChieuId": 18,
+  "movieId": 4,
+  "time": "2021-07-01T04:26:51Z"
+}, {
+  "id": 236,
+  "cumRapId": 2,
+  "phongChieuId": 12,
+  "movieId": 7,
+  "time": "2021-07-06T06:08:08Z"
+}, {
+  "id": 237,
+  "cumRapId": 1,
+  "phongChieuId": 11,
+  "movieId": 6,
+  "time": "2021-07-03T21:29:31Z"
+}, {
+  "id": 238,
+  "cumRapId": 7,
+  "phongChieuId": 23,
+  "movieId": 1,
+  "time": "2021-07-02T08:51:35Z"
+}, {
+  "id": 239,
+  "cumRapId": 3,
+  "phongChieuId": 6,
+  "movieId": 4,
+  "time": "2021-07-02T00:39:06Z"
+}, {
+  "id": 240,
+  "cumRapId": 8,
+  "phongChieuId": 28,
+  "movieId": 1,
+  "time": "2021-07-09T21:59:04Z"
+}, {
+  "id": 241,
+  "cumRapId": 5,
+  "phongChieuId": 4,
+  "movieId": 7,
+  "time": "2021-07-02T20:47:20Z"
+}, {
+  "id": 242,
+  "cumRapId": 1,
+  "phongChieuId": 28,
+  "movieId": 1,
+  "time": "2021-07-03T15:10:13Z"
+}, {
+  "id": 243,
+  "cumRapId": 6,
+  "phongChieuId": 23,
+  "movieId": 8,
+  "time": "2021-07-01T10:44:13Z"
+}, {
+  "id": 244,
+  "cumRapId": 1,
+  "phongChieuId": 3,
+  "movieId": 9,
+  "time": "2021-07-08T19:35:19Z"
+}, {
+  "id": 245,
+  "cumRapId": 2,
+  "phongChieuId": 3,
+  "movieId": 8,
+  "time": "2021-07-02T23:09:47Z"
+}, {
+  "id": 246,
+  "cumRapId": 10,
+  "phongChieuId": 27,
+  "movieId": 6,
+  "time": "2021-07-05T01:13:47Z"
+}, {
+  "id": 247,
+  "cumRapId": 9,
+  "phongChieuId": 21,
+  "movieId": 1,
+  "time": "2021-07-06T13:09:43Z"
+}, {
+  "id": 248,
+  "cumRapId": 2,
+  "phongChieuId": 24,
+  "movieId": 5,
+  "time": "2021-07-05T17:56:07Z"
+}, {
+  "id": 249,
+  "cumRapId": 4,
+  "phongChieuId": 3,
+  "movieId": 3,
+  "time": "2021-07-02T16:12:09Z"
+}, {
+  "id": 250,
+  "cumRapId": 9,
+  "phongChieuId": 10,
+  "movieId": 1,
+  "time": "2021-07-07T03:51:43Z"
+}, {
+  "id": 251,
+  "cumRapId": 10,
+  "phongChieuId": 8,
+  "movieId": 9,
+  "time": "2021-07-09T09:55:45Z"
+}, {
+  "id": 252,
+  "cumRapId": 4,
+  "phongChieuId": 8,
+  "movieId": 5,
+  "time": "2021-07-01T02:55:28Z"
+}, {
+  "id": 253,
+  "cumRapId": 6,
+  "phongChieuId": 12,
+  "movieId": 8,
+  "time": "2021-07-09T17:08:48Z"
+}, {
+  "id": 254,
+  "cumRapId": 4,
+  "phongChieuId": 2,
+  "movieId": 6,
+  "time": "2021-06-30T03:24:34Z"
+}, {
+  "id": 255,
+  "cumRapId": 3,
+  "phongChieuId": 7,
+  "movieId": 7,
+  "time": "2021-07-05T19:55:43Z"
+}, {
+  "id": 256,
+  "cumRapId": 1,
+  "phongChieuId": 24,
+  "movieId": 8,
+  "time": "2021-07-05T05:23:27Z"
+}, {
+  "id": 257,
+  "cumRapId": 9,
+  "phongChieuId": 22,
+  "movieId": 9,
+  "time": "2021-07-03T19:52:02Z"
+}, {
+  "id": 258,
+  "cumRapId": 1,
+  "phongChieuId": 7,
+  "movieId": 2,
+  "time": "2021-07-04T20:24:19Z"
+}, {
+  "id": 259,
+  "cumRapId": 3,
+  "phongChieuId": 25,
+  "movieId": 9,
+  "time": "2021-07-01T09:28:40Z"
+}, {
+  "id": 260,
+  "cumRapId": 3,
+  "phongChieuId": 21,
+  "movieId": 10,
+  "time": "2021-07-04T04:40:26Z"
+}, {
+  "id": 261,
+  "cumRapId": 7,
+  "phongChieuId": 17,
+  "movieId": 3,
+  "time": "2021-07-07T05:26:01Z"
+}, {
+  "id": 262,
+  "cumRapId": 10,
+  "phongChieuId": 7,
+  "movieId": 6,
+  "time": "2021-07-05T05:26:00Z"
+}, {
+  "id": 263,
+  "cumRapId": 9,
+  "phongChieuId": 15,
+  "movieId": 5,
+  "time": "2021-07-05T06:43:26Z"
+}, {
+  "id": 264,
+  "cumRapId": 4,
+  "phongChieuId": 6,
+  "movieId": 2,
+  "time": "2021-07-01T20:39:37Z"
+}, {
+  "id": 265,
+  "cumRapId": 1,
+  "phongChieuId": 9,
+  "movieId": 2,
+  "time": "2021-06-30T10:28:22Z"
+}, {
+  "id": 266,
+  "cumRapId": 8,
+  "phongChieuId": 8,
+  "movieId": 3,
+  "time": "2021-07-05T03:29:28Z"
+}, {
+  "id": 267,
+  "cumRapId": 10,
+  "phongChieuId": 26,
+  "movieId": 2,
+  "time": "2021-07-07T00:36:29Z"
+}, {
+  "id": 268,
+  "cumRapId": 4,
+  "phongChieuId": 1,
+  "movieId": 9,
+  "time": "2021-07-07T05:58:14Z"
+}, {
+  "id": 269,
+  "cumRapId": 3,
+  "phongChieuId": 1,
+  "movieId": 4,
+  "time": "2021-07-06T13:04:26Z"
+}, {
+  "id": 270,
+  "cumRapId": 7,
+  "phongChieuId": 16,
+  "movieId": 8,
+  "time": "2021-07-05T10:01:55Z"
+}, {
+  "id": 271,
+  "cumRapId": 5,
+  "phongChieuId": 23,
+  "movieId": 3,
+  "time": "2021-07-05T19:24:56Z"
+}, {
+  "id": 272,
+  "cumRapId": 2,
+  "phongChieuId": 24,
+  "movieId": 10,
+  "time": "2021-07-09T05:29:04Z"
+}, {
+  "id": 273,
+  "cumRapId": 10,
+  "phongChieuId": 16,
+  "movieId": 4,
+  "time": "2021-06-30T03:07:05Z"
+}, {
+  "id": 274,
+  "cumRapId": 9,
+  "phongChieuId": 11,
+  "movieId": 10,
+  "time": "2021-07-03T18:05:47Z"
+}, {
+  "id": 275,
+  "cumRapId": 7,
+  "phongChieuId": 25,
+  "movieId": 1,
+  "time": "2021-07-01T04:10:14Z"
+}, {
+  "id": 276,
+  "cumRapId": 3,
+  "phongChieuId": 26,
+  "movieId": 7,
+  "time": "2021-07-08T14:49:36Z"
+}, {
+  "id": 277,
+  "cumRapId": 5,
+  "phongChieuId": 8,
+  "movieId": 7,
+  "time": "2021-07-07T17:05:32Z"
+}, {
+  "id": 278,
+  "cumRapId": 10,
+  "phongChieuId": 13,
+  "movieId": 3,
+  "time": "2021-07-01T11:11:47Z"
+}, {
+  "id": 279,
+  "cumRapId": 6,
+  "phongChieuId": 17,
+  "movieId": 6,
+  "time": "2021-07-08T10:08:39Z"
+}, {
+  "id": 280,
+  "cumRapId": 6,
+  "phongChieuId": 10,
+  "movieId": 3,
+  "time": "2021-06-30T11:52:22Z"
+}, {
+  "id": 281,
+  "cumRapId": 2,
+  "phongChieuId": 17,
+  "movieId": 1,
+  "time": "2021-06-30T08:06:44Z"
+}, {
+  "id": 282,
+  "cumRapId": 1,
+  "phongChieuId": 20,
+  "movieId": 2,
+  "time": "2021-07-09T10:59:33Z"
+}, {
+  "id": 283,
+  "cumRapId": 2,
+  "phongChieuId": 28,
+  "movieId": 3,
+  "time": "2021-07-09T08:36:23Z"
+}, {
+  "id": 284,
+  "cumRapId": 9,
+  "phongChieuId": 24,
+  "movieId": 6,
+  "time": "2021-07-08T15:14:37Z"
+}, {
+  "id": 285,
+  "cumRapId": 5,
+  "phongChieuId": 4,
+  "movieId": 2,
+  "time": "2021-07-03T02:12:57Z"
+}, {
+  "id": 286,
+  "cumRapId": 1,
+  "phongChieuId": 30,
+  "movieId": 7,
+  "time": "2021-07-09T01:11:51Z"
+}, {
+  "id": 287,
+  "cumRapId": 6,
+  "phongChieuId": 14,
+  "movieId": 1,
+  "time": "2021-07-04T01:14:41Z"
+}, {
+  "id": 288,
+  "cumRapId": 8,
+  "phongChieuId": 6,
+  "movieId": 10,
+  "time": "2021-07-01T13:37:31Z"
+}, {
+  "id": 289,
+  "cumRapId": 4,
+  "phongChieuId": 14,
+  "movieId": 10,
+  "time": "2021-06-30T16:32:25Z"
+}, {
+  "id": 290,
+  "cumRapId": 4,
+  "phongChieuId": 17,
+  "movieId": 9,
+  "time": "2021-07-06T12:21:06Z"
+}, {
+  "id": 291,
+  "cumRapId": 1,
+  "phongChieuId": 30,
+  "movieId": 1,
+  "time": "2021-07-02T08:41:11Z"
+}, {
+  "id": 292,
+  "cumRapId": 2,
+  "phongChieuId": 18,
+  "movieId": 7,
+  "time": "2021-06-30T02:57:48Z"
+}, {
+  "id": 293,
+  "cumRapId": 9,
+  "phongChieuId": 18,
+  "movieId": 10,
+  "time": "2021-07-01T09:37:44Z"
+}, {
+  "id": 294,
+  "cumRapId": 4,
+  "phongChieuId": 6,
+  "movieId": 8,
+  "time": "2021-07-01T09:04:36Z"
+}, {
+  "id": 295,
+  "cumRapId": 6,
+  "phongChieuId": 26,
+  "movieId": 10,
+  "time": "2021-07-08T03:08:49Z"
+}, {
+  "id": 296,
+  "cumRapId": 6,
+  "phongChieuId": 26,
+  "movieId": 1,
+  "time": "2021-07-08T20:20:34Z"
+}, {
+  "id": 297,
+  "cumRapId": 4,
+  "phongChieuId": 30,
+  "movieId": 3,
+  "time": "2021-06-30T21:16:22Z"
+}, {
+  "id": 298,
+  "cumRapId": 9,
+  "phongChieuId": 6,
+  "movieId": 5,
+  "time": "2021-07-03T16:56:08Z"
+}, {
+  "id": 299,
+  "cumRapId": 3,
+  "phongChieuId": 1,
+  "movieId": 4,
+  "time": "2021-07-09T19:16:46Z"
+}, {
+  "id": 300,
+  "cumRapId": 5,
+  "phongChieuId": 8,
+  "movieId": 1,
+  "time": "2021-07-06T01:30:12Z"
+},
+{
+  "id": 301,
+  "cumRapId": 6,
+  "phongChieuId": 27,
+  "movieId": 10,
+  "time": "2021-06-30T01:30:20Z"
+}, {
+  "id": 302,
+  "cumRapId": 10,
+  "phongChieuId": 26,
+  "movieId": 2,
+  "time": "2021-07-04T03:45:24Z"
+}, {
+  "id": 303,
+  "cumRapId": 1,
+  "phongChieuId": 12,
+  "movieId": 1,
+  "time": "2021-07-06T13:19:10Z"
+}, {
+  "id": 304,
+  "cumRapId": 10,
+  "phongChieuId": 9,
+  "movieId": 6,
+  "time": "2021-07-06T00:32:55Z"
+}, {
+  "id": 305,
+  "cumRapId": 4,
+  "phongChieuId": 3,
+  "movieId": 10,
+  "time": "2021-07-08T21:18:50Z"
+}, {
+  "id": 306,
+  "cumRapId": 4,
+  "phongChieuId": 7,
+  "movieId": 2,
+  "time": "2021-07-03T00:03:31Z"
+}, {
+  "id": 307,
+  "cumRapId": 1,
+  "phongChieuId": 17,
+  "movieId": 9,
+  "time": "2021-07-07T00:25:47Z"
+}, {
+  "id": 308,
+  "cumRapId": 10,
+  "phongChieuId": 5,
+  "movieId": 6,
+  "time": "2021-07-08T19:10:22Z"
+}, {
+  "id": 309,
+  "cumRapId": 1,
+  "phongChieuId": 24,
+  "movieId": 8,
+  "time": "2021-07-07T12:34:52Z"
+}, {
+  "id": 310,
+  "cumRapId": 9,
+  "phongChieuId": 9,
+  "movieId": 8,
+  "time": "2021-06-30T02:04:18Z"
+}, {
+  "id": 311,
+  "cumRapId": 1,
+  "phongChieuId": 1,
+  "movieId": 2,
+  "time": "2021-07-07T05:11:29Z"
+}, {
+  "id": 312,
+  "cumRapId": 6,
+  "phongChieuId": 21,
+  "movieId": 8,
+  "time": "2021-07-06T11:49:08Z"
+}, {
+  "id": 313,
+  "cumRapId": 7,
+  "phongChieuId": 30,
+  "movieId": 10,
+  "time": "2021-07-08T10:38:40Z"
+}, {
+  "id": 314,
+  "cumRapId": 4,
+  "phongChieuId": 13,
+  "movieId": 8,
+  "time": "2021-07-06T14:24:41Z"
+}, {
+  "id": 315,
+  "cumRapId": 8,
+  "phongChieuId": 17,
+  "movieId": 9,
+  "time": "2021-07-06T10:24:56Z"
+}, {
+  "id": 316,
+  "cumRapId": 4,
+  "phongChieuId": 14,
+  "movieId": 7,
+  "time": "2021-07-09T19:13:41Z"
+}, {
+  "id": 317,
+  "cumRapId": 4,
+  "phongChieuId": 30,
+  "movieId": 5,
+  "time": "2021-07-05T09:28:40Z"
+}, {
+  "id": 318,
+  "cumRapId": 1,
+  "phongChieuId": 19,
+  "movieId": 5,
+  "time": "2021-07-05T14:47:54Z"
+}, {
+  "id": 319,
+  "cumRapId": 7,
+  "phongChieuId": 12,
+  "movieId": 4,
+  "time": "2021-07-04T11:10:50Z"
+}, {
+  "id": 320,
+  "cumRapId": 5,
+  "phongChieuId": 22,
+  "movieId": 2,
+  "time": "2021-07-09T03:36:35Z"
+}, {
+  "id": 321,
+  "cumRapId": 2,
+  "phongChieuId": 29,
+  "movieId": 9,
+  "time": "2021-07-07T05:40:17Z"
+}, {
+  "id": 322,
+  "cumRapId": 7,
+  "phongChieuId": 7,
+  "movieId": 5,
+  "time": "2021-07-02T16:55:56Z"
+}, {
+  "id": 323,
+  "cumRapId": 7,
+  "phongChieuId": 2,
+  "movieId": 2,
+  "time": "2021-07-03T07:13:12Z"
+}, {
+  "id": 324,
+  "cumRapId": 10,
+  "phongChieuId": 26,
+  "movieId": 2,
+  "time": "2021-07-05T01:23:15Z"
+}, {
+  "id": 325,
+  "cumRapId": 9,
+  "phongChieuId": 2,
+  "movieId": 5,
+  "time": "2021-07-03T02:14:26Z"
+}, {
+  "id": 326,
+  "cumRapId": 9,
+  "phongChieuId": 23,
+  "movieId": 2,
+  "time": "2021-07-01T02:08:24Z"
+}, {
+  "id": 327,
+  "cumRapId": 8,
+  "phongChieuId": 6,
+  "movieId": 8,
+  "time": "2021-07-01T13:02:13Z"
+}, {
+  "id": 328,
+  "cumRapId": 5,
+  "phongChieuId": 7,
+  "movieId": 4,
+  "time": "2021-07-06T19:21:57Z"
+}, {
+  "id": 329,
+  "cumRapId": 4,
+  "phongChieuId": 21,
+  "movieId": 3,
+  "time": "2021-07-04T17:31:43Z"
+}, {
+  "id": 330,
+  "cumRapId": 7,
+  "phongChieuId": 26,
+  "movieId": 2,
+  "time": "2021-07-08T07:55:52Z"
+}, {
+  "id": 331,
+  "cumRapId": 6,
+  "phongChieuId": 6,
+  "movieId": 9,
+  "time": "2021-07-09T18:54:46Z"
+}, {
+  "id": 332,
+  "cumRapId": 8,
+  "phongChieuId": 15,
+  "movieId": 4,
+  "time": "2021-07-07T08:11:23Z"
+}, {
+  "id": 333,
+  "cumRapId": 6,
+  "phongChieuId": 19,
+  "movieId": 2,
+  "time": "2021-07-09T05:24:07Z"
+}, {
+  "id": 334,
+  "cumRapId": 6,
+  "phongChieuId": 20,
+  "movieId": 5,
+  "time": "2021-06-30T02:47:59Z"
+}, {
+  "id": 335,
+  "cumRapId": 10,
+  "phongChieuId": 8,
+  "movieId": 10,
+  "time": "2021-07-06T12:51:18Z"
+}, {
+  "id": 336,
+  "cumRapId": 3,
+  "phongChieuId": 15,
+  "movieId": 3,
+  "time": "2021-07-07T15:59:11Z"
+}, {
+  "id": 337,
+  "cumRapId": 1,
+  "phongChieuId": 8,
+  "movieId": 1,
+  "time": "2021-07-06T21:42:32Z"
+}, {
+  "id": 338,
+  "cumRapId": 7,
+  "phongChieuId": 27,
+  "movieId": 2,
+  "time": "2021-07-04T14:50:40Z"
+}, {
+  "id": 339,
+  "cumRapId": 5,
+  "phongChieuId": 14,
+  "movieId": 9,
+  "time": "2021-07-05T19:56:25Z"
+}, {
+  "id": 340,
+  "cumRapId": 6,
+  "phongChieuId": 17,
+  "movieId": 4,
+  "time": "2021-07-05T14:59:39Z"
+}, {
+  "id": 341,
+  "cumRapId": 4,
+  "phongChieuId": 22,
+  "movieId": 1,
+  "time": "2021-07-09T03:19:46Z"
+}, {
+  "id": 342,
+  "cumRapId": 5,
+  "phongChieuId": 27,
+  "movieId": 1,
+  "time": "2021-06-30T23:12:47Z"
+}, {
+  "id": 343,
+  "cumRapId": 2,
+  "phongChieuId": 21,
+  "movieId": 6,
+  "time": "2021-07-07T18:37:02Z"
+}, {
+  "id": 344,
+  "cumRapId": 7,
+  "phongChieuId": 15,
+  "movieId": 4,
+  "time": "2021-07-06T23:35:29Z"
+}, {
+  "id": 345,
+  "cumRapId": 3,
+  "phongChieuId": 5,
+  "movieId": 9,
+  "time": "2021-07-01T04:22:24Z"
+}, {
+  "id": 346,
+  "cumRapId": 5,
+  "phongChieuId": 16,
+  "movieId": 1,
+  "time": "2021-07-06T21:42:12Z"
+}, {
+  "id": 347,
+  "cumRapId": 4,
+  "phongChieuId": 7,
+  "movieId": 8,
+  "time": "2021-07-01T07:04:10Z"
+}, {
+  "id": 348,
+  "cumRapId": 10,
+  "phongChieuId": 16,
+  "movieId": 9,
+  "time": "2021-07-01T00:50:34Z"
+}, {
+  "id": 349,
+  "cumRapId": 8,
+  "phongChieuId": 12,
+  "movieId": 3,
+  "time": "2021-07-01T15:39:18Z"
+}, {
+  "id": 350,
+  "cumRapId": 4,
+  "phongChieuId": 14,
+  "movieId": 1,
+  "time": "2021-07-03T02:30:30Z"
+}, {
+  "id": 351,
+  "cumRapId": 10,
+  "phongChieuId": 6,
+  "movieId": 1,
+  "time": "2021-07-09T18:13:02Z"
+}, {
+  "id": 352,
+  "cumRapId": 5,
+  "phongChieuId": 23,
+  "movieId": 10,
+  "time": "2021-06-30T05:13:31Z"
+}, {
+  "id": 353,
+  "cumRapId": 6,
+  "phongChieuId": 28,
+  "movieId": 3,
+  "time": "2021-07-05T22:54:35Z"
+}, {
+  "id": 354,
+  "cumRapId": 5,
+  "phongChieuId": 23,
+  "movieId": 1,
+  "time": "2021-06-30T01:50:53Z"
+}, {
+  "id": 355,
+  "cumRapId": 5,
+  "phongChieuId": 5,
+  "movieId": 5,
+  "time": "2021-07-06T12:12:33Z"
+}, {
+  "id": 356,
+  "cumRapId": 8,
+  "phongChieuId": 7,
+  "movieId": 4,
+  "time": "2021-07-04T21:10:43Z"
+}, {
+  "id": 357,
+  "cumRapId": 7,
+  "phongChieuId": 12,
+  "movieId": 2,
+  "time": "2021-07-06T19:25:43Z"
+}, {
+  "id": 358,
+  "cumRapId": 2,
+  "phongChieuId": 6,
+  "movieId": 10,
+  "time": "2021-07-07T19:31:35Z"
+}, {
+  "id": 359,
+  "cumRapId": 10,
+  "phongChieuId": 3,
+  "movieId": 3,
+  "time": "2021-07-08T17:21:44Z"
+}, {
+  "id": 360,
+  "cumRapId": 5,
+  "phongChieuId": 7,
+  "movieId": 6,
+  "time": "2021-07-08T05:59:15Z"
+}, {
+  "id": 361,
+  "cumRapId": 10,
+  "phongChieuId": 9,
+  "movieId": 7,
+  "time": "2021-07-03T00:07:52Z"
+}, {
+  "id": 362,
+  "cumRapId": 8,
+  "phongChieuId": 17,
+  "movieId": 5,
+  "time": "2021-07-09T04:57:54Z"
+}, {
+  "id": 363,
+  "cumRapId": 10,
+  "phongChieuId": 14,
+  "movieId": 1,
+  "time": "2021-07-02T11:40:40Z"
+}, {
+  "id": 364,
+  "cumRapId": 9,
+  "phongChieuId": 26,
+  "movieId": 1,
+  "time": "2021-07-05T09:17:23Z"
+}, {
+  "id": 365,
+  "cumRapId": 10,
+  "phongChieuId": 25,
+  "movieId": 8,
+  "time": "2021-07-03T03:56:10Z"
+}, {
+  "id": 366,
+  "cumRapId": 6,
+  "phongChieuId": 3,
+  "movieId": 3,
+  "time": "2021-07-02T01:55:25Z"
+}, {
+  "id": 367,
+  "cumRapId": 2,
+  "phongChieuId": 27,
+  "movieId": 10,
+  "time": "2021-07-06T01:52:16Z"
+}, {
+  "id": 368,
+  "cumRapId": 1,
+  "phongChieuId": 15,
+  "movieId": 1,
+  "time": "2021-07-05T17:55:21Z"
+}, {
+  "id": 369,
+  "cumRapId": 8,
+  "phongChieuId": 17,
+  "movieId": 6,
+  "time": "2021-07-05T02:13:56Z"
+}, {
+  "id": 370,
+  "cumRapId": 3,
+  "phongChieuId": 29,
+  "movieId": 9,
+  "time": "2021-07-01T02:16:05Z"
+}, {
+  "id": 371,
+  "cumRapId": 3,
+  "phongChieuId": 25,
+  "movieId": 1,
+  "time": "2021-07-07T14:47:12Z"
+}, {
+  "id": 372,
+  "cumRapId": 7,
+  "phongChieuId": 1,
+  "movieId": 3,
+  "time": "2021-07-07T06:57:29Z"
+}, {
+  "id": 373,
+  "cumRapId": 5,
+  "phongChieuId": 21,
+  "movieId": 2,
+  "time": "2021-07-02T02:19:31Z"
+}, {
+  "id": 374,
+  "cumRapId": 6,
+  "phongChieuId": 5,
+  "movieId": 4,
+  "time": "2021-07-08T23:05:35Z"
+}, {
+  "id": 375,
+  "cumRapId": 1,
+  "phongChieuId": 24,
+  "movieId": 2,
+  "time": "2021-07-08T12:01:13Z"
+}, {
+  "id": 376,
+  "cumRapId": 1,
+  "phongChieuId": 29,
+  "movieId": 8,
+  "time": "2021-07-03T17:38:55Z"
+}, {
+  "id": 377,
+  "cumRapId": 6,
+  "phongChieuId": 9,
+  "movieId": 3,
+  "time": "2021-06-30T05:13:45Z"
+}, {
+  "id": 378,
+  "cumRapId": 6,
+  "phongChieuId": 29,
+  "movieId": 3,
+  "time": "2021-07-06T11:25:18Z"
+}, {
+  "id": 379,
+  "cumRapId": 4,
+  "phongChieuId": 14,
+  "movieId": 1,
+  "time": "2021-07-07T12:19:48Z"
+}, {
+  "id": 380,
+  "cumRapId": 9,
+  "phongChieuId": 4,
+  "movieId": 9,
+  "time": "2021-07-09T19:01:15Z"
+}, {
+  "id": 381,
+  "cumRapId": 8,
+  "phongChieuId": 19,
+  "movieId": 10,
+  "time": "2021-07-03T00:49:10Z"
+}, {
+  "id": 382,
+  "cumRapId": 5,
+  "phongChieuId": 17,
+  "movieId": 6,
+  "time": "2021-07-08T23:39:15Z"
+}, {
+  "id": 383,
+  "cumRapId": 9,
+  "phongChieuId": 15,
+  "movieId": 10,
+  "time": "2021-07-01T18:02:52Z"
+}, {
+  "id": 384,
+  "cumRapId": 9,
+  "phongChieuId": 7,
+  "movieId": 8,
+  "time": "2021-07-06T11:56:26Z"
+}, {
+  "id": 385,
+  "cumRapId": 2,
+  "phongChieuId": 5,
+  "movieId": 7,
+  "time": "2021-07-07T16:03:48Z"
+}, {
+  "id": 386,
+  "cumRapId": 7,
+  "phongChieuId": 17,
+  "movieId": 2,
+  "time": "2021-07-07T08:53:40Z"
+}, {
+  "id": 387,
+  "cumRapId": 6,
+  "phongChieuId": 14,
+  "movieId": 4,
+  "time": "2021-07-08T00:41:32Z"
+}, {
+  "id": 388,
+  "cumRapId": 7,
+  "phongChieuId": 14,
+  "movieId": 8,
+  "time": "2021-06-30T03:24:24Z"
+}, {
+  "id": 389,
+  "cumRapId": 2,
+  "phongChieuId": 27,
+  "movieId": 9,
+  "time": "2021-07-03T20:42:12Z"
+}, {
+  "id": 390,
+  "cumRapId": 2,
+  "phongChieuId": 21,
+  "movieId": 6,
+  "time": "2021-07-02T02:24:55Z"
+}, {
+  "id": 391,
+  "cumRapId": 3,
+  "phongChieuId": 13,
+  "movieId": 10,
+  "time": "2021-07-03T05:12:33Z"
+}, {
+  "id": 392,
+  "cumRapId": 8,
+  "phongChieuId": 11,
+  "movieId": 4,
+  "time": "2021-07-05T19:11:01Z"
+}, {
+  "id": 393,
+  "cumRapId": 4,
+  "phongChieuId": 11,
+  "movieId": 9,
+  "time": "2021-07-01T22:52:35Z"
+}, {
+  "id": 394,
+  "cumRapId": 10,
+  "phongChieuId": 21,
+  "movieId": 1,
+  "time": "2021-07-01T12:43:29Z"
+}, {
+  "id": 395,
+  "cumRapId": 3,
+  "phongChieuId": 9,
+  "movieId": 3,
+  "time": "2021-07-04T05:40:43Z"
+}, {
+  "id": 396,
+  "cumRapId": 4,
+  "phongChieuId": 23,
+  "movieId": 5,
+  "time": "2021-07-08T14:46:39Z"
+}, {
+  "id": 397,
+  "cumRapId": 10,
+  "phongChieuId": 8,
+  "movieId": 1,
+  "time": "2021-07-04T12:11:22Z"
+}, {
+  "id": 398,
+  "cumRapId": 8,
+  "phongChieuId": 25,
+  "movieId": 2,
+  "time": "2021-07-09T18:49:24Z"
+}, {
+  "id": 399,
+  "cumRapId": 9,
+  "phongChieuId": 7,
+  "movieId": 1,
+  "time": "2021-06-30T05:41:23Z"
+}, {
+  "id": 400,
+  "cumRapId": 5,
+  "phongChieuId": 20,
+  "movieId": 8,
+  "time": "2021-07-06T11:45:29Z"
+}]
 `);
+export const revenueByTheaterSystem = () => {
+  return listTheaterSystem.map((e) => {
+    return {
+      TENHETHONGRAP: e.name,
+      DOANHTHU: Math.floor(Math.random() * 100000000) + 1000000,
+    };
+  });
+};
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export const revenueByMovie = () => {
+  return listMovies.map((e, index) => {
+    let from = 1000000000 - (index + 1) * 100000000;
+    let to = 1000000000 - index * 100000000;
+    console.log(from, to);
+    return {
+      TENPHIM: e.name,
+      DOANHTHU: getRandomInt(from, to),
+    };
+  });
+};

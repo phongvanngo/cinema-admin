@@ -54,28 +54,28 @@ const theaterApi = {
     // return response;
   },
   getListPhongChieuInCumRap: async (cumRapId) => {
-    if (cumRapId === null) return theaterApi.getListPhongChieu();
-    let data_response = null;
-    let status = null;
-    const url = `/cum-raps/${cumRapId}/raps`;
-    let res = await axiosClient.get(url).then((res) => res);
-    console.log("getListPhongChieu, response", res);
-    return {
-      status: res?.status,
-      data: {
-        listPhongChieu: res?.data.map((element) => {
-          const { maRap, tenRap, soGhe, maCumRap } = element;
-          return {
-            id: maRap,
-            name: tenRap,
-            amountSeats: soGhe,
-            maRap: maRap,
-            theaterSystemId: maCumRap,
-            theaterSystemName: maCumRap,
-          };
-        }),
-      },
-    };
+    // if (cumRapId === null) return theaterApi.getListPhongChieu();
+    // let data_response = null;
+    // let status = null;
+    // const url = `/cum-raps/${cumRapId}/raps`;
+    // let res = await axiosClient.get(url).then((res) => res);
+    // console.log("getListPhongChieu, response", res);
+    // return {
+    //   status: res?.status,
+    //   data: {
+    //     listPhongChieu: res?.data.map((element) => {
+    //       const { maRap, tenRap, soGhe, maCumRap } = element;
+    //       return {
+    //         id: maRap,
+    //         name: tenRap,
+    //         amountSeats: soGhe,
+    //         maRap: maRap,
+    //         theaterSystemId: maCumRap,
+    //         theaterSystemName: maCumRap,
+    //       };
+    //     }),
+    //   },
+    // };
     // let send = await axiosClient.get(url).then((response) => {
     //   status = response.status;
     //   if (response.status === 200) {
@@ -110,61 +110,73 @@ const theaterApi = {
     //     data: data_response,
     //   });
     // });
+
+    let response = await fakeApi({
+      // request: loginInfo,
+      response: {
+        status: 200,
+        data: {
+          listPhongChieu: listPhongChieu(cumRapId),
+        },
+      },
+      timeOut: 1000,
+    });
+    return response;
   },
   postPhongChieu: async (phongChieu) => {
-    const url = "/raps";
-    const { name, cumRapId } = phongChieu;
-    const data_request = {
-      tenRap: name,
-      maCumRap: cumRapId,
-      soGhe: 120,
-    };
-    let response = await axiosClient.post(url, data_request).then((res) => {
-      console.log("postPhongChieuApi, response", res);
-      return res;
-    });
-
-    return { status: response?.status, data: { id: name } };
-
-    // let response = await fakeApi({
-    //   // request: loginInfo,
-    //   response: {
-    //     status: 200,
-    //     data: {
-    //       id: Math.floor(Math.random() * 1000),
-    //     },
-    //   },
-    //   timeOut: 1000,
+    // const url = "/raps";
+    // const { name, cumRapId } = phongChieu;
+    // const data_request = {
+    //   tenRap: name,
+    //   maCumRap: cumRapId,
+    //   soGhe: 120,
+    // };
+    // let response = await axiosClient.post(url, data_request).then((res) => {
+    //   console.log("postPhongChieuApi, response", res);
+    //   return res;
     // });
-    // return response;
+
+    // return { status: response?.status, data: { id: name } };
+
+    let response = await fakeApi({
+      // request: loginInfo,
+      response: {
+        status: 200,
+        data: {
+          id: Math.floor(Math.random() * 1000),
+        },
+      },
+      timeOut: 1000,
+    });
+    return response;
   },
   patchPhongChieu: async (phongChieu) => {
-    const { id, name, cumRapId } = phongChieu;
-    const url = `/raps/${id}`;
-    const data_request = {
-      tenRap: name,
-      maCumRap: cumRapId,
-      soGhe: 120,
-    };
-    let response = await axiosClient.patch(url, data_request).then((res) => {
-      console.log("patchPhongChieu, response", res);
-      return res;
-    });
-    let status =
-      response.status === 200 || response.status === 204
-        ? 200
-        : response.status;
-    return { status, data: response.data };
+    // const { id, name, cumRapId } = phongChieu;
+    // const url = `/raps/${id}`;
+    // const data_request = {
+    //   tenRap: name,
+    //   maCumRap: cumRapId,
+    //   soGhe: 120,
+    // };
+    // let response = await axiosClient.patch(url, data_request).then((res) => {
+    //   console.log("patchPhongChieu, response", res);
+    //   return res;
+    // });
+    // let status =
+    //   response.status === 200 || response.status === 204
+    //     ? 200
+    //     : response.status;
+    // return { status, data: response.data };
 
-    //   let response = await fakeApi({
-    //     // request: loginInfo,
-    //     response: {
-    //       status: 200,
-    //       data: {},
-    //     },
-    //     timeOut: 1000,
-    //   });
-    //   return response;
+    let response = await fakeApi({
+      // request: loginInfo,
+      response: {
+        status: 200,
+        data: {},
+      },
+      timeOut: 1000,
+    });
+    return response;
   },
   deletePhongChieu: async (phongChieu) => {
     const id = phongChieu;

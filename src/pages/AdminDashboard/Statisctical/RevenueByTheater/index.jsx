@@ -17,24 +17,9 @@ export default function RevenueByTheater() {
   useEffect(() => {
     dispatch(changeAdminNavbarTitle("Thống kê doanh thu"));
     dispatch(startLoading());
-    // dispatch(fetchListMovie());
     dispatch(fetchListTheaterSystem({}));
     dispatch(fetchRevenueByTheaterSystem({}));
-    // (async () => {
-    //   try {
-    //     let res = await statisticalApi.getRevenueByTheaterSystem();
-    //     if (res.status === 200 || res.status === 204) {
-    //       setRevenues(res.data.revenues);
-    //     } else {
-    //       toast.error("Không thể kết nối đến hệ thống");
-    //     }
-    //   } catch (error) {
-    //     console.log("getRevenueByTheaterError", error);
-    //     toast.error("Có lỗi xảy ra");
-    //   } finally {
-    //     dispatch(stopLoading());
-    //   }
-    // })();
+
   }, []);
   return (
     <div className="pt-10 px-10">

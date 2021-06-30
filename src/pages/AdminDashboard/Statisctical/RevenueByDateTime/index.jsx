@@ -10,8 +10,8 @@ export default function RevenueByTheater() {
 
   useEffect(() => {
     dispatch(changeAdminNavbarTitle("Thống kê doanh thu"));
-    dispatch(startLoading());
-    dispatch(fetchRevenueByDateTime({}));
+    // dispatch(startLoading());
+    // dispatch(fetchRevenueByDateTime({}));
   }, []);
   return (
     <div className="pt-10 px-10">
