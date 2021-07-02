@@ -53,6 +53,7 @@ export default function LandingPage() {
     MOVIE_TYPE_MANAGEMENT,
     USER_TYPE_MANAGEMENT,
     USER_MANAGEMENT,
+    INTRODUCTION,
 
     REVENUE_BY_DATETIME,
     REVENUE_BY_THEATER,
@@ -89,12 +90,14 @@ export default function LandingPage() {
           </header>
           <div className="menu-container">
             <ul className="menu-list">
-              <li className="menu-item">
-                <div className="menu-item__title">
-                  <i className="bx bxs-home menu-item__title__icon"></i>
-                  <span className="menu-item__title__name">Trang chủ</span>
-                </div>
-              </li>
+              <Link to={INTRODUCTION}>
+                <li className="menu-item">
+                  <div className="menu-item__title">
+                    <i className="bx bxs-home menu-item__title__icon"></i>
+                    <span className="menu-item__title__name">Trang chủ</span>
+                  </div>
+                </li>
+              </Link>
               <li className="menu-item">
                 <div className="menu-item__title">
                   <i className="bx bx-line-chart menu-item__title__icon"></i>

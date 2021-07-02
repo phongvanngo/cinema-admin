@@ -20,19 +20,34 @@ export default function UserBoard({ listUsers }) {
   for (let user of currentListUsers) {
     switch (user.maLoaiNguoiDung) {
       case 6:
-        diamond.push(user);
+        diamond.push({
+          ...user,
+          tongDiemTichLuy: Math.floor(Math.random() * 1000000) + 5000,
+        });
         break;
       case 5:
-        gold.push(user);
+        gold.push({
+          ...user,
+          tongDiemTichLuy: Math.floor(Math.random() * 5000) + 3000,
+        });
         break;
       case 4:
-        sliver.push(user);
+        sliver.push({
+          ...user,
+          tongDiemTichLuy: Math.floor(Math.random() * 3000) + 2000,
+        });
         break;
       case 3:
-        loyal.push(user);
+        loyal.push({
+          ...user,
+          tongDiemTichLuy: Math.floor(Math.random() * 2000) + 100,
+        });
         break;
       case 2:
-        ordinary.push(user);
+        ordinary.push({
+          ...user,
+          tongDiemTichLuy: Math.floor(Math.random() * 100) + 0,
+        });
         break;
       default:
         break;
