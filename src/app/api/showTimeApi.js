@@ -311,17 +311,19 @@ const theaterApi = {
     const id = phongChieuId;
     const url = `/lay-ghe-cua-rap/${id}`;
 
-    let send = await axiosClient.get(url).then((response) => {
-      status = response.status;
-      if (status === 204) status = 200;
-      if (status === 200) {
-        data_response = {
-          listSeatsPhongChieu: response.data,
-        };
-      } else {
-        data_response = null;
-      }
-    });
+    let send = await axiosClient
+      .get(url, { params: { filter: JSON.stringify({ order: "stt asc" }) } })
+      .then((response) => {
+        status = response.status;
+        if (status === 204) status = 200;
+        if (status === 200) {
+          data_response = {
+            listSeatsPhongChieu: response.data,
+          };
+        } else {
+          data_response = null;
+        }
+      });
     return new Promise((resolve, reject) => {
       resolve({
         status: status,

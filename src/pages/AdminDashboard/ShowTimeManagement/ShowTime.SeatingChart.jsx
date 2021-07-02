@@ -23,6 +23,7 @@ export default function SeatingChart() {
   const seletedCumRap = useSelector((state) => state.showTime.seletedCumRap);
 
   console.log("SeatingChart, listPhongChieu", listPhongChieu);
+  console.log("SeatingChart, listBookedSeat", listBookedSeats);
   console.log("SeatingChart, listMovie", listMovie);
 
   console.log("SeatingChart, selectedShowTime: ", selectedShowTime);
