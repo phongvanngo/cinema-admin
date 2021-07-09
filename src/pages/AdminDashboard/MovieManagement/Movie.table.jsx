@@ -122,7 +122,9 @@ export default function MovieTable({ listMovie }) {
                     <td className="px-2 py-4">
                       {convertDateTime(premiereDay)}
                     </td>
-                    <td className="px-2 py-4">{rate}</td>
+                    <td className="px-2 py-4">
+                      {Math.round(rate * 100) / 100}
+                    </td>
                     <td className="px-2 py-4">
                       <MenuDropdown
                         handleDelete={() => {

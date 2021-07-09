@@ -25,12 +25,13 @@ export default function RevenueBarChar() {
   let revenues = month.map((e) => {
     return { name: e, value: Math.floor(Math.random() * 10000000) + 1000000 };
   });
-  for (let element of revenueByDateTime) {
-    let index = parseInt(element.THANG, 10);
-    if (index > 0 && index < 13) revenues[index - 1].value = element.DOANHTHU;
-  }
-
   const [year, setYear] = useState(2021);
+  if (year == 2021) {
+    for (let element of revenueByDateTime) {
+      let index = parseInt(element.THANG, 10);
+      if (index > 0 && index < 13) revenues[index - 1].value = element.DOANHTHU;
+    }
+  }
 
   let yearToSelect = [];
   for (let i = 2011; i <= 2021; i++) yearToSelect.push(i);
@@ -42,10 +43,10 @@ export default function RevenueBarChar() {
       <div className="p-6  min-h-20 border-b border-gray-200 rounded-t-3xl bg-white">
         <div className="flex justify-between items-center">
           <h1 className="text-xl font-medium">
-            Biểu đồ thể hiện doanh thu theo trong năm {" " + year}
+            Biểu đồ thể hiện doanh thu từng tháng trong năm {" " + year}
           </h1>
-          <div>
-            <label>Chọn năm</label>
+          <div className="flex items-center" style={{ width: "max-content" }}>
+            <div>Chọn năm</div>
             <select
               value={year}
               onChange={(e) => setYear(e.target.value)}

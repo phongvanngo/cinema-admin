@@ -10,6 +10,7 @@ import { createMovie, updateMovie } from "app/redux/movieSlice";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import FilterMovieType from "./Movie.formDialog.filterMovieType";
+import { toast } from "react-toastify";
 
 const CustomDatePickerInput = forwardRef(
   ({ value, onClick, onChange }, ref) => (
@@ -26,7 +27,20 @@ const CustomDatePickerInput = forwardRef(
 const schema = yup.object().shape({
   name: yup.string().required(),
   trailer: yup.string().required(),
-  image: yup.string().required(),
+  image: yup
+    .string()
+    .matches(
+      /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+      "Enter correct url!"
+    )
+    .required(),
+  trailer: yup
+    .string()
+    .matches(
+      /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+      "Enter correct url!"
+    )
+    .required(),
 });
 
 export default function MovieFormModal() {
@@ -54,6 +68,17 @@ export default function MovieFormModal() {
   const [startDate, setStartDate] = useState(new Date());
 
   function onSaveData(data) {
+    // console.log("hello");
+    // let a = new Date(startDate).getTime();
+    // let b = Date.now();
+    // console.log(a, b);
+    // console.log();
+    // if (a < b) {
+    //   console.log("invalid date");
+    //   toast.error("Ngày khởi chiếu không hợp lệ");
+    //   return;
+    // }
+
     let movieTypeInfo = {
       movieTypeId: selectedMovieType?.id,
       movieTypeName: selectedMovieType?.name,
@@ -179,17 +204,29 @@ export default function MovieFormModal() {
                         ""
                       )}
                     </div>
-
                     <div className="mb-8">
-                      <span className="font-extrabold mb-2 flex flex-col">
+                      <span className="mb-2 flex flex-col font-extrabold">
                         Hình ảnh
                       </span>
                       <input
                         type="text"
                         {...register("image", {})}
-                        className="h-full w-full appearance-none rounded-full border w-30 py-4 px-6 leading-tight focus:outline-none focus:border-indigo-500 text-gray-500"
+                        className={
+                          "h-full w-full appearance-none rounded-full  w-30 py-4 px-6 leading-tight focus:outline-none border  text-gray-500" +
+                          (errors.image
+                            ? " border-red-500"
+                            : " focus:border-indigo-500")
+                        }
                       />
+                      {errors.image ? (
+                        <span className="ml-2 mt-2 text-red-500">
+                          *Hình ảnh không hợp lệ
+                        </span>
+                      ) : (
+                        ""
+                      )}
                     </div>
+
                     {/* 
                     <div className="mb-8">
                       <span className="font-extrabold mb-2 flex flex-col">
@@ -203,14 +240,26 @@ export default function MovieFormModal() {
                     </div> */}
 
                     <div className="mb-8">
-                      <span className="font-extrabold mb-2 flex flex-col">
+                      <span className="mb-2 flex flex-col font-extrabold">
                         Trailer url
                       </span>
                       <input
                         type="text"
                         {...register("trailer", {})}
-                        className="h-full w-full appearance-none rounded-full border w-30 py-4 px-6 leading-tight focus:outline-none focus:border-indigo-500 text-gray-500"
+                        className={
+                          "h-full w-full appearance-none rounded-full  w-30 py-4 px-6 leading-tight focus:outline-none border  text-gray-500" +
+                          (errors.trailer
+                            ? " border-red-500"
+                            : " focus:border-indigo-500")
+                        }
                       />
+                      {errors.trailer ? (
+                        <span className="ml-2 mt-2 text-red-500">
+                          *URL không hợp lệ
+                        </span>
+                      ) : (
+                        ""
+                      )}
                     </div>
                     <div className="mb-8">
                       <span className="font-extrabold mb-2 flex flex-col">
