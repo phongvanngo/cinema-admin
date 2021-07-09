@@ -33,7 +33,7 @@ export const fetchListTheaterSystem = createAsyncThunk(
           dispatch(adminLogOut());
 
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -72,7 +72,7 @@ export const createTheaterSystem = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -111,7 +111,7 @@ export const updateTheaterSystem = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -149,7 +149,7 @@ export const deleteTheaterSystem = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);

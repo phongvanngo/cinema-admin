@@ -31,7 +31,7 @@ export const fetchRevenueByTheaterSystem = createAsyncThunk(
           dispatch(adminLogOut());
 
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -70,7 +70,7 @@ export const fetchRevenueByMovie = createAsyncThunk(
           dispatch(adminLogOut());
 
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -108,7 +108,7 @@ export const fetchRevenueByDateTime = createAsyncThunk(
           dispatch(adminLogOut());
 
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);

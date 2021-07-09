@@ -30,7 +30,7 @@ export const fetchListUser = createAsyncThunk(
           dispatch(adminLogOut());
 
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -68,7 +68,7 @@ export const createUser = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -105,7 +105,7 @@ export const updateUser = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -143,7 +143,7 @@ export const deleteUser = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);

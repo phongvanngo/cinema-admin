@@ -36,7 +36,7 @@ export const fetchListPhongChieu = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       dispatch(stopLoading());
@@ -65,7 +65,7 @@ export const fetchListPhongChieuInCumRap = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       dispatch(stopLoading());
@@ -96,7 +96,7 @@ export const createPhongChieu = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -135,7 +135,7 @@ export const updatePhongChieu = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -173,7 +173,7 @@ export const deletePhongChieu = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);

@@ -34,7 +34,7 @@ export const fetchListMovieType = createAsyncThunk(
           dispatch(adminLogOut());
 
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -73,7 +73,7 @@ export const createMovieType = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -112,7 +112,7 @@ export const updateMovieType = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -150,7 +150,7 @@ export const deleteMovieType = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);

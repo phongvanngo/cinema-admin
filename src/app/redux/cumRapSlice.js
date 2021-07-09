@@ -31,7 +31,7 @@ export const fetchListCumRap = createAsyncThunk(
           dispatch(adminLogOut());
 
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -71,7 +71,7 @@ export const fetchListCumRapInTheaterSystem = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -110,7 +110,7 @@ export const createCumRap = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -149,7 +149,7 @@ export const updateCumRap = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
@@ -187,7 +187,7 @@ export const deleteCumRap = createAsyncThunk(
         case 403:
           dispatch(adminLogOut());
         default:
-          throw { mess: "Thất bại, hãy thử lại" };
+          throw { mess: "Không thể thực hiện" };
       }
     } catch (error) {
       console.log("reduxSlice-error", error);
