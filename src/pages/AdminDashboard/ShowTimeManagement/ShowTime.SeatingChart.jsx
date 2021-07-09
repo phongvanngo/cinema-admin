@@ -1,5 +1,5 @@
 import { convertDateTime2 } from "app/myLibrary/utilities";
-import { deleteShowTime } from "app/redux/showTimeSlice";
+import { deleteShowTime, setSelectedShowtime } from "app/redux/showTimeSlice";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -97,7 +97,10 @@ export default function SeatingChart() {
             onClick={() => {
               // dispatch(openShowTimeFormDialog());
               if (selectedShowTime) {
-                dispatch(deleteShowTime(selectedShowTime.id));
+                if (window.confirm("Bạn có chắc chắn xóa")) {
+                  dispatch(deleteShowTime(selectedShowTime.id));
+                  dispatch(setSelectedShowtime(null));
+                }
               }
             }}
             className="flex-none hover:bg-red-900 focus:outline-none flex items-center bg-red-500 appearance-none  rounded-full w-100 h-full  py-2 px-5 text-admin_color_2 leading-tight"

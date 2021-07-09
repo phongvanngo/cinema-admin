@@ -91,6 +91,14 @@ export default function ShowTimeFormModal() {
         listPhongChieu.find((element) => element.id === phongChieuId) || {}
       );
     } else {
+      setValue("name", "");
+      setValue("information", "");
+      setValue("giaVe", "");
+      setValue("thoiLuong", "");
+      setSelectedPhongChieu([]);
+      setSelectedMovie([]);
+      setSelectedHour([]);
+      setSelectedMinute([]);
     }
   }, [setValue, defaultData]);
 

@@ -128,7 +128,10 @@ export const createShowTime = createAsyncThunk(
         case 442:
           throw { mess: "Dữ liệu đầu vào không hợp lệ" };
         case 400:
-          throw { mess: response?.data?.mess };
+          // throw { mess: response?.data?.mess };
+          let mess = response?.data?.mess;
+          let formatMess = mess.slice(mess.indexOf("Đụng"), mess.length);
+          throw { mess: formatMess };
         case 401:
           throw { mess: "Bạn không có quyền thực hiện thao tác này" };
         case 403:
