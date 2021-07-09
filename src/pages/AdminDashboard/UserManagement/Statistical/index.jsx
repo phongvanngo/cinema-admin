@@ -9,7 +9,7 @@ export default function UserManagement() {
   const listUsers = useSelector((state) => state.user.listUser);
 
   useEffect(() => {
-    dispatch(changeAdminNavbarTitle("Quản lý người dùng"));
+    dispatch(changeAdminNavbarTitle("Thống kê người dùng"));
     dispatch(fetchListUser({}));
   }, [dispatch]);
 

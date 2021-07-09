@@ -170,61 +170,61 @@ const theaterApi = {
     // });
   },
   postShowTime: async (showTime) => {
-    const url = "/lich-chieu";
-    const {
-      time,
-      phongChieuId,
-      movieId,
-      giaVe,
-      thoiLuong,
-      maCumRap,
-      maHeThongRap,
-    } = showTime;
-    const data_request = {
-      ngayChieuGioChieu: time,
-      giaVe: giaVe,
-      maPhim: movieId,
-      maRap: phongChieuId,
-      thoiLuong: thoiLuong,
-      maCumRap: maCumRap,
-      maHeThongRap: maHeThongRap,
-    };
+    //   const url = "/lich-chieu";
+    //   const {
+    //     time,
+    //     phongChieuId,
+    //     movieId,
+    //     giaVe,
+    //     thoiLuong,
+    //     maCumRap,
+    //     maHeThongRap,
+    //   } = showTime;
+    //   const data_request = {
+    //     ngayChieuGioChieu: time,
+    //     giaVe: giaVe,
+    //     maPhim: movieId,
+    //     maRap: phongChieuId,
+    //     thoiLuong: thoiLuong,
+    //     maCumRap: maCumRap,
+    //     maHeThongRap: maHeThongRap,
+    //   };
 
-    let res = await axiosClient.post(url, data_request).then((res) => res);
-    console.log("postShowTime, response:", res);
-    let status = res?.status === 200 || res?.status === 204 ? 200 : res?.status;
-    if (status === 200) {
-      return { status: res.status, data: { id: res?.data.maLichChieu } };
-    } else {
-      return { status: res.status, data: { mess: res?.data.message } };
-    }
-
-    // let send = await axiosClient.post(url, data_request).then((response) => {
-    //   status = response.status;
-    //   if (response.status === 200) {
-    //     data_response = { id: null };
+    //   let res = await axiosClient.post(url, data_request).then((res) => res);
+    //   console.log("postShowTime, response:", res);
+    //   let status = res?.status === 200 || res?.status === 204 ? 200 : res?.status;
+    //   if (status === 200) {
+    //     return { status: res.status, data: { id: res?.data.maLichChieu } };
     //   } else {
-    //     data_response = {mess:data?.message}
+    //     return { status: res.status, data: { mess: res?.data.message } };
     //   }
-    // });
-    // return new Promise((resolve, reject) => {
-    //   resolve({
-    //     status: status,
-    //     data: data_response,
-    //   });
-    // });
 
-    // let response = await fakeApi({
-    //   // request: loginInfo,
-    //   response: {
-    //     status: 200,
-    //     data: {
-    //       id: Math.floor(Math.random() * 1000),
-    //     },
-    //   },
-    //   timeOut: 1000,
-    // });
-    // return response;
+    //   // let send = await axiosClient.post(url, data_request).then((response) => {
+    //   //   status = response.status;
+    //   //   if (response.status === 200) {
+    //   //     data_response = { id: null };
+    //   //   } else {
+    //   //     data_response = {mess:data?.message}
+    //   //   }
+    //   // });
+    //   // return new Promise((resolve, reject) => {
+    //   //   resolve({
+    //   //     status: status,
+    //   //     data: data_response,
+    //   //   });
+    //   // });
+
+    let response = await fakeApi({
+      // request: loginInfo,
+      response: {
+        status: 200,
+        data: {
+          id: Math.floor(Math.random() * 1000),
+        },
+      },
+      timeOut: 1000,
+    });
+    return response;
   },
   patchShowTime: async (showTime) => {
     let data_response = null;
