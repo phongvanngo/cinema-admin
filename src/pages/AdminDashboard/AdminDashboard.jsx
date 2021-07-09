@@ -114,6 +114,9 @@ export default function LandingPage() {
                   <Link to={REVENUE_BY_DATETIME}>
                     <li>Doanh thu theo tháng</li>
                   </Link>
+                  <Link to={USER_TYPE_MANAGEMENT}>
+                    <li>Thống kê người dùng</li>
+                  </Link>
                 </ul>
               </li>
               <li className="menu-item">
@@ -159,9 +162,6 @@ export default function LandingPage() {
                   <i className="bx bx-chevron-down menu-item__title__submenu-icon"></i>
                 </div>
                 <ul className="submenu-list">
-                  <Link to={USER_TYPE_MANAGEMENT}>
-                    <li>Phân loại người dùng</li>
-                  </Link>
                   <Link to={USER_MANAGEMENT}>
                     <li>Tất cả người dùng</li>
                   </Link>

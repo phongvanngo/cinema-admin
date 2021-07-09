@@ -1,6 +1,7 @@
 import { convertDateTime2 } from "app/myLibrary/utilities";
+import { deleteShowTime } from "app/redux/showTimeSlice";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const theaterType = { row: 10, col: 12 };
 
@@ -11,6 +12,7 @@ function checkContains(theArray, value) {
 }
 
 export default function SeatingChart() {
+  const dispatch = useDispatch();
   const { listSeatsPhongChieu, listBookedSeats, selectedShowTime } =
     useSelector((state) => state.showTime);
 
@@ -67,22 +69,45 @@ export default function SeatingChart() {
 
   return (
     <div className="p-2 border mt-5">
-      <span>Mã lịch chiếu: </span>&nbsp;{" "}
-      <span className="font-bold">{selectedShowTime?.id || "chưa chọn"}</span>
-      <br />
-      <span>Phòng chiếu</span>&nbsp;{" "}
-      <span className="font-bold">{phongChieu?.name || "chưa chọn"}</span>
-      <br />
-      <span>Tên phim</span>&nbsp;{" "}
-      <span className="font-bold">{movie?.name || "chưa chọn"}</span>
-      <br />
-      <span>Giờ chiếu</span>&nbsp;{" "}
-      <span className="font-bold">{convertDateTime2(time) || "chưa chọn"}</span>
-      <br />
-      <span>Thời lượng</span>&nbsp;{" "}
-      <span className="font-bold">
-        {(selectedShowTime?.thoiLuong || 0) + " phút"}
-      </span>
+      <div className="flex justify-between place-items-start">
+        <div>
+          <span>Mã lịch chiếu: </span>&nbsp;{" "}
+          <span className="font-bold">
+            {selectedShowTime?.id || "chưa chọn"}
+          </span>
+          <br />
+          <span>Phòng chiếu</span>&nbsp;{" "}
+          <span className="font-bold">{phongChieu?.name || "chưa chọn"}</span>
+          <br />
+          <span>Tên phim</span>&nbsp;{" "}
+          <span className="font-bold">{movie?.name || "chưa chọn"}</span>
+          <br />
+          <span>Giờ chiếu</span>&nbsp;{" "}
+          <span className="font-bold">
+            {convertDateTime2(time) || "chưa chọn"}
+          </span>
+          <br />
+          <span>Thời lượng</span>&nbsp;{" "}
+          <span className="font-bold">
+            {(selectedShowTime?.thoiLuong || 0) + " phút"}
+          </span>
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              // dispatch(openShowTimeFormDialog());
+              if (selectedShowTime) {
+                dispatch(deleteShowTime(selectedShowTime.id));
+              }
+            }}
+            className="flex-none hover:bg-red-900 focus:outline-none flex items-center bg-red-500 appearance-none  rounded-full w-100 h-full  py-2 px-5 text-admin_color_2 leading-tight"
+          >
+            <i className="bx bxs mr-2 align-middle block"></i>
+            <span>Xóa</span>
+          </button>
+        </div>
+      </div>
+
       <table className="table-auto">
         <thead>
           <tr className="">
