@@ -135,7 +135,7 @@ export default function UserTable({ listUser }) {
           </table>
           {currentListUser.length === 0 ? (
             <div className="text-center text-xl text-gray-500">
-              <span>Không có thể loại phim nào</span>
+              <span>Không có người dùng nào</span>
             </div>
           ) : null}
         </div>

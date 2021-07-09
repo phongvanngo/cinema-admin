@@ -130,7 +130,13 @@ export const createShowTime = createAsyncThunk(
         case 400:
           // throw { mess: response?.data?.mess };
           let mess = response?.data?.mess;
-          let formatMess = mess.slice(mess.indexOf("Đụng"), mess.length);
+          let start = mess.indexOf("Đụng");
+          let formatMess;
+          if (start >= 0) {
+            formatMess = mess.slice(start, mess.length);
+          } else {
+            formatMess = mess;
+          }
           throw { mess: formatMess };
         case 401:
           throw { mess: "Bạn không có quyền thực hiện thao tác này" };
